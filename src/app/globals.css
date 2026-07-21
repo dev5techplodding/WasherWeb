@@ -1,26 +1,362 @@
 @import "tailwindcss";
 
+/* ─────────────────────────────────────────────────
+   WASHR DESIGN SYSTEM — Color Tokens
+   Extracted from brand logo (logoLogin.png)
+   ───────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary — Structure & Text */
+  --washr-blue: #1B3A5C;
+  --washr-blue-deep: #122840;
+  --washr-blue-light: #2A5580;
+
+  /* Primary — Accent / CTA (strictly for actions & active states) */
+  --washr-orange: #F28C28;
+  --washr-orange-hover: #E07B1A;
+  --washr-orange-glow: rgba(242, 140, 40, 0.25);
+
+  /* Neutral Surfaces */
+  --washr-white: #FFFFFF;
+  --washr-gray: #F8F9FA;
+  --washr-gray-mid: #E9ECEF;
+  --washr-silver: #C0C0C0;
+  --washr-silver-light: #DEE2E6;
+
+  /* Typography */
+  --washr-text-primary: #1B3A5C;
+  --washr-text-secondary: #5A7A9A;
+  --washr-text-muted: #8FA4B8;
+
+  /* Shadows */
+  --washr-shadow-sm: 0 2px 8px rgba(27, 58, 92, 0.06);
+  --washr-shadow-md: 0 4px 24px rgba(27, 58, 92, 0.08);
+  --washr-shadow-lg: 0 8px 40px rgba(27, 58, 92, 0.12);
+  --washr-shadow-card: 0 8px 32px rgba(27, 58, 92, 0.07), 0 2px 8px rgba(27, 58, 92, 0.04);
+
+  /* Layout */
+  --washr-radius: 24px;
+  --washr-radius-sm: 16px;
+  --washr-radius-pill: 9999px;
+
+  /* Transitions */
+  --washr-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --washr-duration: 0.5s;
 }
 
+/* ─────────────────────────────────────────────────
+   Tailwind v4 Theme Extension
+   ───────────────────────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-washr-blue: var(--washr-blue);
+  --color-washr-blue-deep: var(--washr-blue-deep);
+  --color-washr-blue-light: var(--washr-blue-light);
+  --color-washr-orange: var(--washr-orange);
+  --color-washr-orange-hover: var(--washr-orange-hover);
+  --color-washr-white: var(--washr-white);
+  --color-washr-gray: var(--washr-gray);
+  --color-washr-gray-mid: var(--washr-gray-mid);
+  --color-washr-silver: var(--washr-silver);
+  --color-washr-silver-light: var(--washr-silver-light);
+  --color-washr-text-primary: var(--washr-text-primary);
+  --color-washr-text-secondary: var(--washr-text-secondary);
+  --color-washr-text-muted: var(--washr-text-muted);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─────────────────────────────────────────────────
+   Base Reset & Defaults
+   ───────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--washr-white);
+  color: var(--washr-text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
+/* ─────────────────────────────────────────────────
+   Accessibility — Reduced Motion
+   ───────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .gsap-animated {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────
+   Animation Utilities
+   ───────────────────────────────────────────────── */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ─────────────────────────────────────────────────
+   Glassmorphism Card
+   ───────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--washr-radius);
+  box-shadow: var(--washr-shadow-card);
+}
+
+/* ─────────────────────────────────────────────────
+   Selection Style
+   ───────────────────────────────────────────────── */
+::selection {
+  background-color: var(--washr-orange);
+  color: var(--washr-white);
+}
+
+/* ─────────────────────────────────────────────────
+   Scrollbar Styling (Webkit)
+   ───────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--washr-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--washr-silver);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--washr-blue-light);
+}
+
+/* ─────────────────────────────────────────────────
+   Focus-Visible (WCAG 2.2 AA compliance)
+   ───────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--washr-orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--washr-orange);
+  outline-offset: 3px;
+}
+
+/* ─────────────────────────────────────────────────
+   Scroll Reveal Base (GSAP applies transforms)
+   ───────────────────────────────────────────────── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────
+   Image Container with Premium Overflow
+   ───────────────────────────────────────────────── */
+.img-container {
+  border-radius: var(--washr-radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--washr-ease);
+}
+
+.img-container:hover img {
+  transform: scale(1.03);
+}
+
+/* ─────────────────────────────────────────────────
+   Star Rating
+   ───────────────────────────────────────────────── */
+.star-rating {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--washr-orange);
+}
+
+/* ─────────────────────────────────────────────────
+   Gradient Overlay
+   ───────────────────────────────────────────────── */
+.gradient-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(27, 58, 92, 0.03) 100%
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* ─────────────────────────────────────────────────
+   Pill Badge
+   ───────────────────────────────────────────────── */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: var(--washr-radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ─────────────────────────────────────────────────
+   Section Divider
+   ───────────────────────────────────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--washr-gray-mid),
+    transparent
+  );
+}
+
+/* ─────────────────────────────────────────────────
+   Marquee Animation
+   ───────────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-scroll 25s linear infinite reverse;
+}
+
+.animate-marquee-fast {
+  animation: marquee-scroll 15s linear infinite;
+}
+
+/* ─────────────────────────────────────────────────
+   Wavy SVG Transitions
+   ───────────────────────────────────────────────── */
+.wavy-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  fill: currentColor;
+}
+
+/* ─────────────────────────────────────────────────
+   Tactile / Floating Stickers
+   ───────────────────────────────────────────────── */
+.tactile-sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: var(--washr-shadow-md);
+  transition: transform 0.2s var(--washr-ease);
+}
+
+.tactile-sticker:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ─────────────────────────────────────────────────
+   Preloader SVG Drawing Dash
+   ───────────────────────────────────────────────── */
+@keyframes draw-path {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.draw-path-animated {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-path 1.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+
+/* ─────────────────────────────────────────────────
+   Polaroid Border & Shadow
+   ───────────────────────────────────────────────── */
+.polaroid-frame {
+  background: white;
+  padding: 12px 12px 28px 12px;
+  box-shadow: 0 10px 30px rgba(27, 58, 92, 0.1), 0 1px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(27, 58, 92, 0.06);
+  border-radius: 4px;
+  transition: transform 0.4s var(--washr-ease);
+}
+
+.polaroid-frame:hover {
+  transform: translateY(-8px) scale(1.02) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(27, 58, 92, 0.15), 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
