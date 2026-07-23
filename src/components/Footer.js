@@ -21,19 +21,19 @@ const FOOTER_LINKS = {
   company: {
     title: 'Company',
     links: [
-      { label: 'About Washr', href: '#about' },
-      { label: 'How It Works', href: '#how-it-works-trigger' },
+      { label: 'About Spinny', href: '/about' },
+      { label: 'How It Works', href: '/#how-it-works-trigger' },
       { label: 'Pricing', href: '#' },
-      { label: 'Vendor Partners', href: '#' },
+      { label: 'Vendor Partners', href: '/procedure' },
       { label: 'Careers', href: '#' },
     ],
   },
   support: {
     title: 'Support',
     links: [
-      { label: 'Help Center', href: '#' },
-      { label: 'Contact Us', href: '#' },
-      { label: 'FAQs', href: '#' },
+      { label: 'Help Center', href: '/help-center' },
+      { label: 'Contact Us', href: '/contact' },
+      { label: 'FAQs', href: '/help-center#faq' },
       { label: 'Service Areas', href: '#' },
       { label: 'Status Page', href: '#' },
     ],
@@ -41,7 +41,7 @@ const FOOTER_LINKS = {
   legal: {
     title: 'Legal',
     links: [
-      { label: 'Privacy Policy', href: '#' },
+      { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Terms of Service', href: '#' },
       { label: 'Cookie Policy', href: '#' },
       { label: 'Accessibility', href: '#' },
@@ -214,7 +214,7 @@ export default function Footer() {
               lineHeight: 1,
             }}
           >
-            WASHR
+            SPINNY
           </span>
         </div>
 
@@ -240,8 +240,8 @@ export default function Footer() {
             <div ref={brandRef} className="lg:col-span-4">
               <div className="mb-5">
                 <Image
-                  src="/logoLogin.png"
-                  alt="Washr"
+                  src="/Logo.png"
+                  alt="Spinny"
                   width={130}
                   height={40}
                   className="h-auto w-auto brightness-0 invert opacity-90"
@@ -334,7 +334,7 @@ export default function Footer() {
                 className="font-semibold"
                 style={{ color: 'var(--washr-orange)', opacity: 0.8 }}
               >
-                Washr Inc.
+                Spinny Inc.
               </span>
               {' '}All rights reserved. Premium garment care, delivered across Canada.
             </p>

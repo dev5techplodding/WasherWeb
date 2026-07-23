@@ -1,17 +1,19 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { gsap } from 'gsap';
 
 /* ─────────────────────────────────────────────────
    Navigation Links
    ───────────────────────────────────────────────── */
 const NAV_LINKS = [
-  { label: 'How It Works', href: '#how-it-works-trigger', section: 'cinematic-scroll-section' },
-  { label: 'About', href: '#about', section: 'about' },
-  { label: 'Testimonials', href: '#testimonials', section: 'testimonials' },
-  { label: 'Pricing', href: '#', section: null },
+  { label: 'Home', href: '/', section: null },
+  { label: 'Services', href: '/services', section: null },
+  { label: 'About', href: '/about', section: null },
+  { label: 'How it Works', href: '/procedure', section: null },
 ];
 
 /* ─────────────────────────────────────────────────
@@ -21,8 +23,10 @@ const NAV_LINKS = [
    - Magnetic CTA button (elastic snap)
    - Sliding underline on nav links (scaleX from center)
    - Dark mobile full-screen overlay with stagger animation
+   - Active page detection via pathname
    ───────────────────────────────────────────────── */
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
@@ -153,10 +157,10 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-[72px]">
 
             {/* ─── Logo ─── */}
-            <a href="#hero" className="flex-shrink-0 relative z-10" aria-label="Washr home">
+            <Link href="/" className="flex-shrink-0 relative z-10" aria-label="Spinny home">
               <Image
-                src="/logoLogin.png"
-                alt="Washr"
+                src="/Logo.png"
+                alt="Spinny"
                 width={120}
                 height={36}
                 priority
@@ -165,16 +169,16 @@ export default function Navbar() {
                   filter: scrolled || mobileOpen ? 'none' : 'brightness(0) invert(1)',
                 }}
               />
-            </a>
+            </Link>
 
             {/* ─── Desktop Links ─── */}
             <div className="hidden md:flex items-center gap-1">
               {NAV_LINKS.map((link) => {
-                const isActive = activeSection === link.section;
+                const isActive = pathname === link.href;
                 const textColor = scrolled ? 'var(--washr-blue)' : 'var(--washr-white)';
 
                 return (
-                  <a
+                  <Link
                     key={link.label}
                     href={link.href}
                     className="relative px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-200 group cursor-pointer overflow-hidden"
@@ -203,15 +207,15 @@ export default function Navbar() {
                       style={{ backgroundColor: 'var(--washr-orange)' }}
                       aria-hidden="true"
                     />
-                  </a>
+                  </Link>
                 );
               })}
             </div>
 
             {/* ─── Desktop CTA ─── */}
             <div className="hidden md:flex items-center gap-3">
-              <a
-                href="#"
+              <Link
+                href="/help-center"
                 className="text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer"
                 style={{ color: scrolled ? 'var(--washr-blue)' : 'var(--washr-white)' }}
                 onMouseEnter={(e) => {
@@ -223,8 +227,8 @@ export default function Navbar() {
                   e.currentTarget.style.backgroundColor = 'transparent';
                 }}
               >
-                Log In
-              </a>
+                Help Center
+              </Link>
 
               {/* Magnetic CTA */}
               <div
@@ -232,9 +236,9 @@ export default function Navbar() {
                 onMouseMove={handleCtaMouseMove}
                 onMouseLeave={handleCtaMouseLeave}
               >
-                <a
+                <Link
                   ref={ctaBtnRef}
-                  href="#"
+                  href="https://washr.org/login"
                   id="nav-cta"
                   className="block text-sm font-bold px-5 py-2.5 rounded-full text-white transition-all duration-200 hover:shadow-[0_4px_20px_rgba(242,140,40,0.45)] active:scale-[0.96] cursor-pointer"
                   style={{
@@ -243,8 +247,8 @@ export default function Navbar() {
                     willChange: 'transform',
                   }}
                 >
-                  Schedule Pickup
-                </a>
+                  Login
+                </Link>
               </div>
             </div>
 
@@ -316,7 +320,7 @@ export default function Navbar() {
             {/* Links */}
             <div className="flex flex-col gap-2 flex-1">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={handleLinkClick}
@@ -334,14 +338,14 @@ export default function Navbar() {
                   }}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 
             {/* Mobile CTAs */}
             <div className="mobile-cta-group flex flex-col gap-3 pt-6 border-t" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
-              <a
-                href="#"
+              <Link
+                href="https://washr.org/login"
                 onClick={handleLinkClick}
                 className="mobile-link w-full py-4 rounded-full text-white font-bold text-center text-base transition-all duration-300 active:scale-[0.98]"
                 style={{
@@ -349,10 +353,10 @@ export default function Navbar() {
                   boxShadow: '0 4px 24px rgba(242, 140, 40, 0.4)',
                 }}
               >
-                Schedule Pickup
-              </a>
-              <a
-                href="#"
+                Login
+              </Link>
+              <Link
+                href="/help-center"
                 onClick={handleLinkClick}
                 className="mobile-link w-full py-4 rounded-full font-semibold text-center text-base transition-all duration-300"
                 style={{
@@ -360,8 +364,8 @@ export default function Navbar() {
                   border: '1.5px solid rgba(255,255,255,0.15)',
                 }}
               >
-                Log In
-              </a>
+                Help Center
+              </Link>
             </div>
           </div>
         </div>

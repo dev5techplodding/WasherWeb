@@ -1,8 +1,8 @@
-# Washr — Project Context & Brand Brief
+# Spinny — Project Context & Brand Brief
 
-## What is Washr?
+## What is Spinny?
 
-**Washr** is a Canada-based, on-demand laundry and dry cleaning service platform. It connects customers who need laundry done with professional laundry vendors and independent drivers — creating a seamless pickup → clean → deliver experience through a single app.
+**Spinny** is a Canada-based, on-demand laundry and dry cleaning service platform. It connects customers who need laundry done with professional laundry vendors and independent drivers — creating a seamless pickup → clean → deliver experience through a single app.
 
 > **One-liner:** *The first laundry app that doesn't lock you into monthly subscriptions. Pay only for what you use.*
 

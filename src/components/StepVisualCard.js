@@ -119,7 +119,7 @@ function CollectMockup({ isActive }) {
             <h4 className="text-xs font-bold text-[var(--washr-blue)] truncate">Carlos Rodriguez</h4>
             <span className="text-[10px] font-black text-[var(--washr-orange)]">4.9 ★</span>
           </div>
-          <p className="text-[10px] text-slate-500">Washr Premium Courier</p>
+          <p className="text-[10px] text-slate-500">Spinny Premium Courier</p>
           <span className="inline-block mt-1 text-[8px] bg-emerald-500/10 text-emerald-700 px-1.5 py-0.5 rounded font-black uppercase">
             ⚡ Clean EV Van
           </span>
