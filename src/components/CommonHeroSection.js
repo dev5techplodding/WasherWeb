@@ -88,7 +88,7 @@ export default function CommonHeroSection({ content = {} }) {
         />
 
         {/* Background Overlay Image (if specified) */}
-        {backgroundImage && (
+        {/* {backgroundImage && (
           <Image
             src={backgroundImage}
             alt=""
@@ -97,13 +97,13 @@ export default function CommonHeroSection({ content = {} }) {
             sizes="100vw"
             className="object-cover opacity-15 mix-blend-screen"
           />
-        )}
+        )} */}
       </div>
 
       {/* ─── Main Hero Grid Container ─── */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          
+
           {/* ─── Left Side Content ─── */}
           <div ref={contentRef} className="max-w-2xl">
             {/* Eyebrow Badge */}
@@ -180,7 +180,7 @@ export default function CommonHeroSection({ content = {} }) {
           {/* ─── Right Side Glass Visual / Stats ─── */}
           <div ref={visualRef} className="relative">
             {rightImage ? (
-              <div className="relative rounded-[32px] border border-white/15 bg-white/5 p-3.5 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.4)] overflow-hidden">
+              <div className="relative rounded-[32px] overflow-hidden">
                 <div className="relative rounded-[24px] overflow-hidden min-h-[340px] md:min-h-[420px]">
                   <Image
                     src={rightImage.src}
@@ -196,7 +196,7 @@ export default function CommonHeroSection({ content = {} }) {
                   />
 
                   {/* Floating Glass Badge Chip */}
-                  {rightImage.badge && (
+                  {/* {rightImage.badge && (
                     <div className="absolute left-5 bottom-5 rounded-2xl bg-[#0B1726]/85 px-5 py-3.5 shadow-2xl backdrop-blur-md border border-white/15">
                       <p className="text-[10px] font-bold uppercase tracking-wider text-[#F7941D]">
                         {rightImage.badge.label}
@@ -205,7 +205,7 @@ export default function CommonHeroSection({ content = {} }) {
                         {rightImage.badge.value}
                       </p>
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             ) : Array.isArray(stats) && stats.length > 0 ? (

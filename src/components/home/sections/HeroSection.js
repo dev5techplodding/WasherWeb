@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { gsap } from 'gsap';
 
 /* ─────────────────────────────────────────────────
    NEW HERO SECTION (Inspired by Rinse style)
    ───────────────────────────────────────────────── */
 export default function HeroSection() {
+  const router = useRouter();
   const contentRef = useRef(null);
   const formRef = useRef(null);
   const logoBarRef = useRef(null);
@@ -42,7 +44,7 @@ export default function HeroSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Starting booking for address: ${address || 'Not specified'}`);
+    router.push('/procedure');
   };
 
   return (
@@ -162,16 +164,16 @@ export default function HeroSection() {
           {/* Rating Badge block */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* App Icons */}
-            <div className="flex items-center gap-1">
+            {/* <div className="flex items-center gap-1">
               <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 border border-white/20 text-white text-xs sm:text-sm" aria-hidden="true"></span>
               <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-bold" aria-hidden="true">G</span>
               <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 border border-white/20 text-white text-[10px] sm:text-xs" aria-hidden="true">★</span>
-            </div>
+            </div> */}
             {/* Stars & review counts */}
-            <div className="flex items-center gap-1.5">
+            {/* <div className="flex items-center gap-1.5">
               <div className="star-rating text-[10px] sm:text-xs" aria-label="5 stars">★★★★★</div>
               <span className="text-[10px] sm:text-[11px] font-semibold text-slate-300">6,000+ reviews</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

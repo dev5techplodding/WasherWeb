@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import AppStoreButtons from '@/components/AppStoreButtons';
 
 const STEPS = [
   {
@@ -266,6 +267,11 @@ export default function CustomerJourneySection() {
                   </div>
                 );
               })}
+            </div>
+
+            {/* App Download Buttons aligned right below the steps timeline */}
+            <div className="mt-6 sm:mt-8 pl-12 sm:pl-16">
+              <AppStoreButtons className="justify-start" />
             </div>
           </div>
         </div>

@@ -72,9 +72,9 @@ export const PROCEDURE_HERO_CONTENT = {
 
 export const SERVICES_HERO_CONTENT = {
   eyebrow: 'Our Services',
-  heading: 'Garment care solutions tailored to your life.',
+  heading: 'Laundry care solutions for every lifestyle.',
   description:
-    'From everyday laundry to delicate fabrics, expert handling for every load.',
+    'Professional cleaning, folding, and packaging for everyday wear and delicates.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-031.jpg',

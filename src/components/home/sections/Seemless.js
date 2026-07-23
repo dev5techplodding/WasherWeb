@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -71,7 +72,7 @@ export default function Seemless() {
             border: '1px solid rgba(242, 140, 40, 0.15)',
           }}
         >
-          Tactile Interaction
+          Seamless Laundry Experience
         </span>
 
         {/* Headline */}
@@ -81,16 +82,16 @@ export default function Seemless() {
         >
           Sensing is Believing.
           <br />
-          <span style={{ color: 'var(--washr-orange)' }}>Interact & Feel the Difference.</span>
+          <span style={{ color: 'var(--washr-orange)' }}>Effortless Laundry, Delivered Seamlessly.</span>
         </h2>
         <p className="text-sm md:text-base text-slate-500 max-w-xl mx-auto mb-10 leading-relaxed">
-          Explore our live dashboard. Customize fabric formulas and see real-time dispatch routing.
+          Schedule pickups, select custom garment care preferences, track your order in real-time, and reclaim your time.
         </p>
 
         {/* CTA Buttons */}
         <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="#how-it-works-trigger"
+          <Link
+            href="/procedure"
             className="group relative px-10 py-5 rounded-full text-white font-bold text-sm tracking-wide overflow-hidden transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] text-center cursor-pointer"
             style={{
               backgroundColor: 'var(--washr-orange)',
@@ -103,15 +104,15 @@ export default function Seemless() {
                 <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
-          </a>
+          </Link>
 
-          <a
-            href="#about"
+          <Link
+            href="/services"
             className="px-10 py-5 rounded-full font-bold text-sm tracking-wide transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] text-center border-2 bg-transparent hover:bg-slate-50 cursor-pointer"
             style={{ color: 'var(--washr-blue)', borderColor: 'var(--washr-gray-mid)' }}
           >
             Explore Services
-          </a>
+          </Link>
         </div>
       </div>
 

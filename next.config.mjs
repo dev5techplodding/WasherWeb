@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.pexels.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'washr.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'spinnylaundry.com',
+      },
     ],
   },
 };
