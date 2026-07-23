@@ -25,7 +25,7 @@ const TRUST_ITEMS = [
     ),
   },
   {
-    label: 'Free first pickup',
+    label: 'Priority launch access',
     icon: (
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -176,7 +176,7 @@ export default function CTASection() {
                 border: '1px solid rgba(255, 255, 255, 0.35)',
               }}
             >
-              Your First Pickup is Free
+              Now Accepting New Customers
             </span>
 
             <h2
@@ -191,7 +191,7 @@ export default function CTASection() {
               className="text-base md:text-lg leading-relaxed mb-8"
               style={{ color: 'rgba(255, 255, 255, 0.85)' }}
             >
-              Join thousands of busy Canadians who outsourced their laundry to experts. Subscribe to unlock instant free pick-up and drop-off loops.
+              Join thousands of busy Canadians who outsourced their laundry to experts. Leave your email and we&apos;ll notify you as soon as booking opens in your area.
             </p>
 
             {/* Email Form */}
@@ -257,7 +257,7 @@ export default function CTASection() {
                     border: '1px solid rgba(34,197,94,0.2)',
                   }}
                 >
-                  Check your inbox! Your free pickup code has been sent.
+                  Check your inbox! We&apos;ll email you as soon as booking opens in your area.
                 </div>
               </div>
             )}

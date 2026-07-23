@@ -292,7 +292,7 @@ export default function AboutSection() {
           {[
             { label: 'No Credit Card Required', icon: '🔒' },
             { label: 'Cancel Anytime', icon: '✓' },
-            { label: 'Free First Pickup', icon: '⚡' },
+            { label: 'Fast Turnaround', icon: '⚡' },
           ].map((item) => (
             <div key={item.label} className="flex items-center gap-2.5">
               <span

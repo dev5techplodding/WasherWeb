@@ -12,7 +12,7 @@ export default function MarqueeTicker({
     'Seamless Garment Care',
     'Reclaim Your Time',
     'Vetted Commercial Partners',
-    'Free First Pickup',
+    'Real-Time Order Tracking',
     'Eco-Conscious Cleaning',
     '100% Satisfaction Guaranteed',
   ],

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import Image from 'next/image';
 
 export default function Preloader() {
   const containerRef = useRef(null);
@@ -17,6 +18,7 @@ export default function Preloader() {
     }
 
     const container = containerRef.current;
+    const logo = logoRef.current;
     const text = textRef.current;
     if (!container) return;
 
@@ -30,18 +32,35 @@ export default function Preloader() {
       },
     });
 
-    // Drawing trace + text fade in
-    tl.to(text, {
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power2.out',
-    })
-    .to(container, {
-      yPercent: -100,
-      duration: 1.0,
-      ease: 'power4.inOut',
-      delay: 0.8,
-    });
+    // Favicon logo fade/scale & tagline text animation
+    tl.fromTo(
+      logo,
+      { opacity: 0, scale: 0.85, y: 12 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+      }
+    )
+      .fromTo(
+        text,
+        { opacity: 0, y: 10 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: 'power2.out',
+        },
+        '-=0.4'
+      )
+      .to(container, {
+        yPercent: -100,
+        duration: 1.0,
+        ease: 'power4.inOut',
+        delay: 0.8,
+      });
 
     return () => {
       document.body.style.overflow = '';
@@ -56,53 +75,30 @@ export default function Preloader() {
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#122840]"
       style={{ willChange: 'transform' }}
     >
-      <div className="flex flex-col items-center gap-6">
-        {/* Animated Drawing SVG Logo */}
-        <svg
+      <div className="flex flex-col items-center gap-5">
+        {/* Favicon Logo */}
+        <div
           ref={logoRef}
-          width="160"
-          height="160"
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
+          style={{ opacity: 0 }}
+          className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 drop-shadow-[0_10px_25px_rgba(0,0,0,0.35)]"
         >
-          {/* Outermost circular swoosh */}
-          <path
-            className="draw-path-animated"
-            d="M 50 10 A 40 40 0 1 1 20 28"
-            stroke="var(--washr-orange)"
-            strokeWidth="4"
-            strokeLinecap="round"
+          <Image
+            src="/favicon.png"
+            alt="Spinny Logo"
+            width={128}
+            height={128}
+            priority
+            className="w-full h-full object-contain filter drop-shadow-md"
           />
-          {/* Inner brush-like W shape */}
-          <path
-            className="draw-path-animated"
-            style={{ animationDelay: '0.4s' }}
-            d="M 30 45 C 33 55 38 65 42 65 C 46 65 48 50 50 48 C 52 46 54 62 58 62 C 62 62 68 42 72 45"
-            stroke="#FFFFFF"
-            strokeWidth="5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          {/* Dot above W (similar to logoLogin.png) */}
-          <circle
-            cx="46"
-            cy="36"
-            r="5"
-            fill="var(--washr-orange)"
-            className="draw-path-animated"
-            style={{ animationDelay: '1s', animationDuration: '0.6s' }}
-          />
-        </svg>
+        </div>
 
         {/* Text tagline */}
         <div
           ref={textRef}
           style={{ opacity: 0 }}
-          className="text-white text-xs font-bold tracking-[0.25em] uppercase text-center mt-2"
+          className="text-white text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-center mt-1"
         >
-          Seamless Garment Care
+          Laundry Done. Life On.
         </div>
       </div>
     </div>

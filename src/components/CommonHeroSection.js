@@ -1,4 +1,8 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { gsap } from 'gsap';
 
 export default function CommonHeroSection({ content = {} }) {
   const {
@@ -9,127 +13,243 @@ export default function CommonHeroSection({ content = {} }) {
     rightImage,
     buttons = [],
     accentText,
+    stats = [],
   } = content;
 
-  const darkHeroStyle = {
-    background:
-      'linear-gradient(135deg, rgba(18,40,64,0.98) 0%, rgba(27,58,92,0.96) 45%, rgba(18,40,64,1) 100%)',
-  };
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+  const visualRef = useRef(null);
+  const orb1Ref = useRef(null);
+  const orb2Ref = useRef(null);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced || !sectionRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Staggered entrance for content elements
+      if (contentRef.current) {
+        gsap.fromTo(
+          contentRef.current.children,
+          { opacity: 0, y: 28 },
+          { opacity: 1, y: 0, duration: 0.75, stagger: 0.1, ease: 'power3.out' }
+        );
+      }
+
+      // Visual / Right side card entrance
+      if (visualRef.current) {
+        gsap.fromTo(
+          visualRef.current,
+          { opacity: 0, scale: 0.94, y: 30 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.85, ease: 'power3.out', delay: 0.2 }
+        );
+      }
+
+      // Ambient background drifting orbs
+      [
+        { ref: orb1Ref, x: 35, y: -25, dur: 9 },
+        { ref: orb2Ref, x: -30, y: 30, dur: 11 },
+      ].forEach(({ ref, x, y, dur }) => {
+        if (!ref.current) return;
+        gsap.to(ref.current, {
+          x,
+          y,
+          duration: dur,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+        });
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-20" style={darkHeroStyle}>
-      {backgroundImage ? (
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden pt-32 pb-24 md:pt-36 md:pb-28 bg-[#0B1726] text-white"
+    >
+      {/* ─── Background Ambient Glows & Grids ─── */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+
+        {/* Drifting Orange Glow Orb */}
+        <div
+          ref={orb1Ref}
+          className="absolute -top-24 right-10 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(247,148,29,0.22)_0%,transparent_70%)] blur-3xl"
+        />
+
+        {/* Drifting Cyan/Blue Glow Orb */}
+        <div
+          ref={orb2Ref}
+          className="absolute -bottom-20 -left-10 w-[30rem] h-[30rem] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.14)_0%,transparent_70%)] blur-3xl"
+        />
+
+        {/* Background Overlay Image (if specified) */}
+        {backgroundImage && (
           <Image
             src={backgroundImage}
             alt=""
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-20 mix-blend-screen"
+            className="object-cover opacity-15 mix-blend-screen"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,40,64,0.32),rgba(18,40,64,0.78))]" />
-        </div>
-      ) : null}
-
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(242,140,40,0.18),transparent_70%)] blur-2xl" />
-        <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.10),transparent_70%)] blur-2xl" />
+        )}
       </div>
 
+      {/* ─── Main Hero Grid Container ─── */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
-          <div className="max-w-3xl">
-            {eyebrow ? (
-              <p className="pill-badge mb-4" style={{ backgroundColor: 'rgba(242,140,40,0.18)', color: '#fff' }}>
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
+          
+          {/* ─── Left Side Content ─── */}
+          <div ref={contentRef} className="max-w-2xl">
+            {/* Eyebrow Badge */}
+            {eyebrow && (
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-[#F7941D] text-xs font-bold tracking-wider uppercase mb-5 backdrop-blur-md shadow-[0_2px_12px_rgba(247,148,29,0.15)]">
+                <span className="w-2 h-2 rounded-full bg-[#F7941D] animate-pulse" />
                 {eyebrow}
-              </p>
-            ) : null}
+              </div>
+            )}
 
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[0.95]">
+            {/* Main Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.08]">
               {heading}
             </h1>
 
-            <p className="mt-5 text-base md:text-lg text-white/78 max-w-2xl leading-8">
-              {description}
-            </p>
+            {/* Description */}
+            {description && (
+              <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+                {description}
+              </p>
+            )}
 
-            {accentText ? (
-              <p className="mt-4 text-sm font-medium text-white/86 max-w-xl">
+            {/* Accent Text */}
+            {accentText && (
+              <p className="mt-3 text-sm font-medium text-slate-400 border-l-2 border-[#F7941D] pl-3.5 py-0.5">
                 {accentText}
               </p>
-            ) : null}
+            )}
 
-            {buttons.length > 0 ? (
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            {/* CTA Buttons */}
+            {buttons.length > 0 && (
+              <div className="mt-8 flex flex-wrap gap-4">
                 {buttons.map((button) => {
                   const isPrimary = button.variant !== 'secondary';
-
                   return (
                     <a
                       key={`${button.label}-${button.url}`}
                       href={button.url}
-                      className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-bold transition-all duration-200 active:scale-[0.98]"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-bold transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
                       style={{
-                        backgroundColor: isPrimary ? 'var(--washr-orange)' : 'rgba(255,255,255,0.10)',
-                        color: isPrimary ? '#ffffff' : '#ffffff',
+                        backgroundColor: isPrimary ? 'var(--washr-orange)' : 'rgba(255,255,255,0.08)',
+                        color: '#ffffff',
                         border: isPrimary ? '1px solid transparent' : '1px solid rgba(255,255,255,0.18)',
-                        boxShadow: isPrimary ? '0 8px 24px rgba(242,140,40,0.32)' : 'none',
+                        boxShadow: isPrimary
+                          ? '0 10px 30px rgba(247,148,29,0.35)'
+                          : '0 4px 20px rgba(0,0,0,0.15)',
+                        backdropFilter: isPrimary ? 'none' : 'blur(12px)',
                       }}
                     >
-                      {button.label}
+                      <span>{button.label}</span>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        className="transition-transform duration-200 group-hover:translate-x-1"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M3 8H13M13 8L9 4M13 8L9 12"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
                     </a>
                   );
                 })}
               </div>
-            ) : null}
+            )}
           </div>
 
-          <div className="relative">
+          {/* ─── Right Side Glass Visual / Stats ─── */}
+          <div ref={visualRef} className="relative">
             {rightImage ? (
-              <div className="relative overflow-hidden rounded-[32px] border border-white/12 bg-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.28)] min-h-[320px] md:min-h-[420px] backdrop-blur-xl">
-                <Image
-                  src={rightImage.src}
-                  alt={rightImage.alt}
-                  fill
-                  priority={rightImage.priority}
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  className={rightImage.className || 'object-cover'}
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(180deg, rgba(18,40,64,0.05) 0%, rgba(18,40,64,0.56) 100%)',
-                  }}
-                  aria-hidden="true"
-                />
-                {rightImage.badge ? (
-                  <div className="absolute left-5 bottom-5 rounded-2xl bg-[rgba(18,40,64,0.78)] px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.18)] backdrop-blur-sm border border-white/12">
-                    <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/60">
-                      {rightImage.badge.label}
+              <div className="relative rounded-[32px] border border-white/15 bg-white/5 p-3.5 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.4)] overflow-hidden">
+                <div className="relative rounded-[24px] overflow-hidden min-h-[340px] md:min-h-[420px]">
+                  <Image
+                    src={rightImage.src}
+                    alt={rightImage.alt || 'Spinny Service Visual'}
+                    fill
+                    priority={rightImage.priority ?? true}
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className={rightImage.className || 'object-cover'}
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-[#0B1726]/80 via-transparent to-transparent pointer-events-none"
+                    aria-hidden="true"
+                  />
+
+                  {/* Floating Glass Badge Chip */}
+                  {rightImage.badge && (
+                    <div className="absolute left-5 bottom-5 rounded-2xl bg-[#0B1726]/85 px-5 py-3.5 shadow-2xl backdrop-blur-md border border-white/15">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#F7941D]">
+                        {rightImage.badge.label}
+                      </p>
+                      <p className="mt-0.5 text-sm font-bold text-white tracking-tight">
+                        {rightImage.badge.value}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ) : Array.isArray(stats) && stats.length > 0 ? (
+              /* Glassmorphic Stats Grid */
+              <div className="grid gap-4 sm:grid-cols-2">
+                {stats.map((stat, idx) => (
+                  <div
+                    key={stat.label || idx}
+                    className="group rounded-2xl bg-white/[0.06] border border-white/12 p-6 backdrop-blur-xl hover:bg-white/[0.12] hover:border-orange-500/40 transition-all duration-300 shadow-xl"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center text-[#F7941D] font-bold mb-3 group-hover:scale-110 transition-transform">
+                      ✦
+                    </div>
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      {stat.label}
                     </p>
-                    <p className="mt-1 text-sm font-semibold text-white">
-                      {rightImage.badge.value}
+                    <p className="mt-1.5 text-base sm:text-lg font-bold text-white leading-snug">
+                      {stat.value}
                     </p>
                   </div>
-                ) : null}
+                ))}
               </div>
             ) : (
-              <div className="rounded-[32px] border border-white/12 bg-white/8 p-6 md:p-8 shadow-[0_20px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {Array.isArray(content.stats) && content.stats.length > 0
-                    ? content.stats.map((stat) => (
-                        <article key={stat.label} className="rounded-2xl bg-white/8 p-4 border border-white/12">
-                          <p className="text-xs font-bold uppercase tracking-[0.14em] text-white/58">{stat.label}</p>
-                          <p className="mt-2 text-sm font-semibold text-white leading-relaxed">{stat.value}</p>
-                        </article>
-                      ))
-                    : null}
+              /* Fallback Glass Card */
+              <div className="relative rounded-[32px] border border-white/15 bg-white/[0.06] p-8 md:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.3)] backdrop-blur-2xl min-h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#F7941D] to-[#F28C28] flex items-center justify-center text-3xl font-black text-white shadow-lg mb-4">
+                  S
                 </div>
+                <h3 className="text-xl font-bold text-white mb-2">Spinny Premium</h3>
+                <p className="text-sm font-medium text-slate-300 max-w-[240px] leading-relaxed">
+                  Commercial-grade laundry and garment care, delivered to your doorstep.
+                </p>
               </div>
             )}
           </div>
+
         </div>
+      </div>
+
+      {/* ─── Bottom Curve Divider ─── */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[36px] md:h-[56px]" fill="white">
+          <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,40 L1200,120 L0,120 Z" />
+        </svg>
       </div>
     </section>
   );

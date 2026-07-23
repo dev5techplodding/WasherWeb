@@ -5,10 +5,10 @@ export const ABOUT_HERO_CONTENT = {
   eyebrow: 'About Spinny',
   heading: 'Garment care built around modern routines.',
   description:
-    'Spinny brings together scheduling, quality control, and trusted fulfillment so customers can hand off laundry and dry cleaning with confidence. Our goal is simple: make premium care feel easy, predictable, and worth coming back to.',
+    'Scheduling, quality control, and trusted fulfillment — built to make premium garment care easy and predictable.',
   backgroundImage: '/frames/ezgif-frame-008.jpg',
   rightImage: {
-    src: '/frames/ezgif-frame-031.jpg',
+    // src: '/frames/ezgif-frame-031.jpg',
     alt: 'Spinny service preview with fresh garments and delivery presentation',
     priority: true,
     badge: {
@@ -21,14 +21,14 @@ export const ABOUT_HERO_CONTENT = {
     { label: 'See procedure', url: '/procedure', variant: 'secondary' },
   ],
   accentText:
-    'Built for households and commercial teams that want premium care without the friction of old-school laundry routines.',
+    'For households and commercial teams who want premium care without the old-school hassle.',
 };
 
 export const CONTACT_HERO_CONTENT = {
   eyebrow: 'Contact Spinny',
   heading: 'Reach the right team without the usual back-and-forth.',
   description:
-    'Use the form below for service questions, order updates, vendor requests, or general feedback. For urgent pickup issues, call the support line and we’ll help you sort it out quickly.',
+    'Questions about orders, vendors, or service? Send a message and our team will get back to you fast.',
   backgroundImage: '/frames/ezgif-frame-014.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-056.jpg',
@@ -44,14 +44,14 @@ export const CONTACT_HERO_CONTENT = {
     { label: 'View procedure', url: '/procedure', variant: 'secondary' },
   ],
   accentText:
-    'Average response time stays under one business day, and urgent pickup changes are routed to support before your window closes.',
+    'Most replies land within one business day.',
 };
 
 export const PROCEDURE_HERO_CONTENT = {
   eyebrow: 'Procedure',
   heading: 'Registration explained in three simple journeys.',
   description:
-    'Spinny has a different onboarding path for each user type, but the structure stays consistent: create the profile, verify the essentials, and complete approval before work begins. The sample details below use fictional data to show how the process feels in practice.',
+    'A simple path for every role: create a profile, verify the essentials, and get approved.',
   backgroundImage: '/frames/ezgif-frame-020.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-088.jpg',
@@ -67,14 +67,14 @@ export const PROCEDURE_HERO_CONTENT = {
     { label: 'About us', url: '/about', variant: 'secondary' },
   ],
   accentText:
-    'Clear sign-up flow, dummy data for demonstration, and requirements listed before submission for each role.',
+    'Sample data shown below is for illustration only.',
 };
 
 export const SERVICES_HERO_CONTENT = {
   eyebrow: 'Our Services',
   heading: 'Garment care solutions tailored to your life.',
   description:
-    'From everyday laundry to delicate fabrics and bulk items, Spinny delivers expert handling and convenience. Select a service type below to learn more or schedule your first pickup.',
+    'From everyday laundry to delicate fabrics, expert handling for every load.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-031.jpg',
@@ -90,14 +90,14 @@ export const SERVICES_HERO_CONTENT = {
     { label: 'View procedure', url: '/procedure', variant: 'secondary' },
   ],
   accentText:
-    'All items processed in commercial-grade facilities by trained garment care specialists.',
+    'Processed in commercial-grade facilities by trained specialists.',
 };
 
 export const HELP_CENTER_HERO_CONTENT = {
   eyebrow: 'Help Center',
   heading: 'Support that is easy to find and simple to use.',
   description:
-    'Browse common questions, send feedback, or start with the most important service topics. We keep the help experience direct so customers can get back to their day quickly.',
+    'Quick answers to common questions, plus a direct line to our team.',
   backgroundImage: '/frames/ezgif-frame-105.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-144.jpg',
@@ -113,14 +113,14 @@ export const HELP_CENTER_HERO_CONTENT = {
     { label: 'Read FAQs', url: '#faq', variant: 'secondary' },
   ],
   accentText:
-    'Need a quicker answer? Start with the FAQ section below, then use the feedback form if your issue needs more context.',
+    'Start with the FAQ below, or send feedback for anything more specific.',
 };
 
 export const PRIVACY_HERO_CONTENT = {
   eyebrow: 'Privacy Policy',
   heading: 'A plain-language look at how Spinny handles your information.',
   description:
-    'This page explains what data we collect, why we collect it, and how we protect it. The goal is transparency, not legal jargon.',
+    'What we collect, why we collect it, and how we protect it — in plain language.',
   backgroundImage: '/frames/ezgif-frame-160.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-185.jpg',
@@ -136,7 +136,7 @@ export const PRIVACY_HERO_CONTENT = {
     { label: 'Back to help', url: '/help-center', variant: 'secondary' },
   ],
   accentText:
-    'If you have a privacy concern or request, reach out and we will direct it to the right person.',
+    'Have a privacy concern? Reach out and we’ll route it to the right person.',
 };
 
 // --- FAQ & Topics ---
@@ -303,7 +303,7 @@ export const HOME_MARQUEE_1 = [
   'Seamless Garment Care',
   'Reclaim Your Time',
   'Vetted Commercial Partners',
-  'Free Pickups',
+  'Real-Time Order Tracking',
   '100% Satisfaction Guaranteed',
 ];
 
@@ -313,4 +313,197 @@ export const HOME_MARQUEE_2 = [
   'Custom Fabric Preferences',
   'Certified Commercial Facilities',
   '24h Speed Turnaround',
+];
+
+// --- App Page ---
+export const APP_HERO_CONTENT = {
+  eyebrow: 'Spinny Mobile',
+  heading: 'Spinny. In your pocket.',
+  description:
+    'Book a pickup, track your driver, and manage every order — all from one app.',
+  backgroundImage: '/frames/ezgif-frame-031.jpg',
+  rightImage: {
+    src: '/F1.jpg',
+    alt: 'Spinny app preview on a mobile phone',
+    priority: true,
+    badge: {
+      label: 'Rated 5 stars',
+      value: '6,000+ customer reviews',
+    },
+  },
+  accentText: 'Available soon for iOS and Android.',
+};
+
+export const APP_FEATURES = [
+  {
+    title: '30-second booking',
+    desc: 'Add your address, pick a window, and you’re done. No forms, no phone calls.',
+    image: '/F1.jpg',
+  },
+  {
+    title: 'Live driver tracking',
+    desc: 'Watch your pickup and delivery move in real time, from door to door.',
+    image: '/F2.jpg',
+  },
+  {
+    title: 'In-app messaging',
+    desc: 'Message your driver directly for buzzer codes, gate access, or special instructions.',
+    image: '/F1.jpg',
+  },
+  {
+    title: 'Order history, one tap away',
+    desc: 'Reorder your last pickup, revisit past invoices, and manage preferences instantly.',
+    image: '/F2.jpg',
+  },
+];
+
+// --- Pricing Page ---
+export const PRICING_HERO_CONTENT = {
+  eyebrow: 'Pricing',
+  heading: 'Pay for what you use. Nothing more.',
+  description:
+    'No monthly passes, no minimum spend — pay only for the pickups you book.',
+  backgroundImage: '/frames/ezgif-frame-105.jpg',
+  buttons: [
+    { label: 'Schedule a pickup', url: '/contact' },
+    { label: 'See how it works', url: '/procedure', variant: 'secondary' },
+  ],
+  accentText: 'Final pricing is confirmed at checkout based on service type and bag count.',
+};
+
+export const PRICING_TIERS = [
+  {
+    title: 'Wash & Fold',
+    desc: 'Everyday laundry, cleaned, dried, and neatly folded per bag.',
+  },
+  {
+    title: 'Dry Clean Press',
+    desc: 'Delicate fabrics and formalwear, professionally pressed and packaged.',
+  },
+  {
+    title: 'Wash & Iron Press',
+    desc: 'Crisp, pressed finishing for shirts and everyday wear.',
+  },
+];
+
+// --- Careers Page ---
+export const CAREERS_HERO_CONTENT = {
+  eyebrow: 'Careers',
+  heading: 'Help us give people their time back.',
+  description:
+    'We’re growing across Canada and always open to hearing from great people.',
+  backgroundImage: '/frames/ezgif-frame-144.jpg',
+  buttons: [
+    { label: 'Get in touch', url: '/contact' },
+  ],
+  accentText: 'Send us a note through the contact page and tell us how you’d like to help.',
+};
+
+// --- Terms of Service Page ---
+export const TERMS_HERO_CONTENT = {
+  eyebrow: 'Terms of Service',
+  heading: 'The plain-language terms behind every Spinny order.',
+  description:
+    'How bookings, payments, vendors, and drivers work together on Spinny.',
+  backgroundImage: '/frames/ezgif-frame-008.jpg',
+};
+
+export const TERMS_SECTIONS = [
+  {
+    title: 'Booking & scheduling',
+    body: 'When you schedule a pickup through Spinny, you’re reserving a time window with a driver and a laundry vendor partner. Please have your items ready at the scheduled window; repeated missed pickups may affect your ability to book future orders.',
+  },
+  {
+    title: 'Pricing & payment',
+    body: 'Spinny is pay-per-use — there are no subscriptions or recurring charges. Pricing is shown before you confirm an order and is charged to your saved payment method once service is complete.',
+  },
+  {
+    title: 'Vendor & driver relationship',
+    body: 'Laundry vendors and delivery drivers on Spinny are independent partners, vetted and onboarded through our partner program. Spinny coordinates the order but the physical cleaning is performed by the vendor you’re matched with.',
+  },
+  {
+    title: 'Damaged or lost items',
+    body: 'Every order is inspected on pickup and before delivery. If something is damaged or missing, contact us within 48 hours of delivery through the Help Center so we can investigate with the vendor.',
+  },
+  {
+    title: 'Account & cancellations',
+    body: 'You can cancel or reschedule a pickup from your account before a driver is dispatched. Once a driver has been assigned, cancellation may be subject to a service fee.',
+  },
+  {
+    title: 'Changes to these terms',
+    body: 'We may update these terms as Spinny grows. Material changes will be communicated by email or in-app notice before they take effect.',
+  },
+];
+
+// --- Cookie Policy Page ---
+export const COOKIE_HERO_CONTENT = {
+  eyebrow: 'Cookie Policy',
+  heading: 'How Spinny uses cookies.',
+  description:
+    'How cookies help us remember your preferences and improve the site.',
+  backgroundImage: '/frames/ezgif-frame-031.jpg',
+};
+
+export const COOKIE_CATEGORIES = [
+  {
+    title: 'Essential',
+    desc: 'Required for the site to function — keeping you signed in and remembering items in an active booking. These cannot be turned off.',
+  },
+  {
+    title: 'Performance',
+    desc: 'Help us understand how the site is used so we can find and fix issues, anonymized wherever possible.',
+  },
+  {
+    title: 'Preference',
+    desc: 'Remember choices like your service area or saved address so you don’t have to re-enter them.',
+  },
+];
+
+// --- Accessibility Page ---
+export const ACCESSIBILITY_HERO_CONTENT = {
+  eyebrow: 'Accessibility',
+  heading: 'Built to work for everyone.',
+  description:
+    'We aim to meet WCAG 2.1 AA across our website and app — and welcome feedback.',
+  backgroundImage: '/frames/ezgif-frame-105.jpg',
+  buttons: [
+    { label: 'Report an issue', url: '/contact' },
+  ],
+};
+
+// --- Service Areas Page ---
+export const SERVICE_AREAS_HERO_CONTENT = {
+  eyebrow: 'Service Areas',
+  heading: 'Where Spinny operates today.',
+  description:
+    'Live in major Canadian metro areas and expanding.',
+  backgroundImage: '/frames/ezgif-frame-144.jpg',
+  buttons: [
+    { label: 'Schedule a pickup', url: '/contact' },
+  ],
+};
+
+export const SERVICE_AREAS = [
+  { city: 'Toronto', region: 'Ontario' },
+  { city: 'Vancouver', region: 'British Columbia' },
+  { city: 'Montreal', region: 'Quebec' },
+  { city: 'Calgary', region: 'Alberta' },
+  { city: 'Ottawa', region: 'Ontario' },
+  { city: 'Edmonton', region: 'Alberta' },
+];
+
+// --- Status Page ---
+export const STATUS_HERO_CONTENT = {
+  eyebrow: 'System Status',
+  heading: 'All systems operational.',
+  description: 'This page reflects the current status of Spinny booking, tracking, and payment systems.',
+  backgroundImage: '/frames/ezgif-frame-008.jpg',
+};
+
+export const STATUS_SYSTEMS = [
+  'Booking & scheduling',
+  'Driver dispatch & tracking',
+  'Payments & checkout',
+  'Vendor partner portal',
+  'Notifications (email & SMS)',
 ];

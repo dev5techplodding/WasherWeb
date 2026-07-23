@@ -58,6 +58,7 @@ export default function HeroSection() {
           loop
           muted
           playsInline
+          poster="/frame1.avif"
           className="absolute inset-0 w-full h-full object-cover"
           src="/hero21.mp4"
         />
@@ -79,7 +80,7 @@ export default function HeroSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-[1.08] mb-1 font-sans text-white"
             style={{ fontFamily: 'AvenirNext, var(--font-sans)' }}
           >
-            WE&apos;LL TAKE THE LAUNDRY.
+            LAUNDRY DONE.
           </h1>
           <h1
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-[1.08] mb-5 font-sans"
@@ -88,12 +89,13 @@ export default function HeroSection() {
               fontFamily: 'AvenirNext, var(--font-sans)',
             }}
           >
-            YOU TAKE THE TIME.
+            LIFE ON.
           </h1>
 
           {/* Subheading */}
           <p className="text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-6 sm:mb-8 max-w-md text-slate-300">
-            Spinny picks up, cleans, and delivers your laundry and dry cleaning.
+            We don&apos;t just clean clothes — we give you back the evening you almost lost to laundry.
+            Pickup, care, and delivery, handled end to end.
           </p>
 
           {/* Interactive Search / Address Input Form */}
@@ -105,7 +107,7 @@ export default function HeroSection() {
             {/* Pickup tomorrow read-only */}
             <div className="flex-1 flex flex-col justify-center px-3 sm:px-5 py-1.5 border-r border-slate-100 text-left">
               <span className="text-[8px] sm:text-[9px] font-black uppercase tracking-wider text-slate-400">Pickup</span>
-              <span className="text-[11px] sm:text-xs font-bold text-slate-800">Tomorrow</span>
+              <span className="text-[11px] sm:text-xs font-bold text-slate-800">Today</span>
             </div>
 
             {/* Address input */}
@@ -139,6 +141,23 @@ export default function HeroSection() {
               </svg>
             </button>
           </form>
+
+          {/* CTA microcopy + secondary link */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6 -mt-2">
+            <span className="text-xs sm:text-sm font-semibold text-slate-300">
+              Book your first pickup in 30 seconds.
+            </span>
+            <a
+              href="/procedure"
+              className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold transition-colors duration-200"
+              style={{ color: 'var(--washr-orange)' }}
+            >
+              See how it works
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
+                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
 
           {/* Rating Badge block */}
           <div className="flex items-center gap-2 sm:gap-3">

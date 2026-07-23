@@ -11,11 +11,10 @@ const FOOTER_LINKS = {
   services: {
     title: 'Services',
     links: [
-      { label: 'Wash & Fold', href: '#' },
-      { label: 'Dry Cleaning', href: '#' },
-      { label: 'Bulky Items', href: '#' },
-      { label: 'Alterations', href: '#' },
-      { label: 'Commercial Accounts', href: '#' },
+      { label: 'Wash & Fold', href: '/services#wash-fold' },
+      { label: 'Dry Cleaning', href: '/services#dry-cleaning' },
+      { label: 'Bulky Items', href: '/services#bulky-items' },
+      { label: 'Alterations', href: '/services#alterations' },
     ],
   },
   company: {
@@ -23,9 +22,8 @@ const FOOTER_LINKS = {
     links: [
       { label: 'About Spinny', href: '/about' },
       { label: 'How It Works', href: '/#how-it-works-trigger' },
-      { label: 'Pricing', href: '#' },
       { label: 'Vendor Partners', href: '/procedure' },
-      { label: 'Careers', href: '#' },
+      { label: 'Get the App', href: '/app' },
     ],
   },
   support: {
@@ -34,17 +32,14 @@ const FOOTER_LINKS = {
       { label: 'Help Center', href: '/help-center' },
       { label: 'Contact Us', href: '/contact' },
       { label: 'FAQs', href: '/help-center#faq' },
-      { label: 'Service Areas', href: '#' },
-      { label: 'Status Page', href: '#' },
+      { label: 'Service Areas', href: '/service-areas' },
     ],
   },
   legal: {
     title: 'Legal',
     links: [
       { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-      { label: 'Accessibility', href: '#' },
+      { label: 'Terms of Service', href: '/terms-of-service' },
     ],
   },
 };
@@ -339,16 +334,19 @@ export default function Footer() {
               {' '}All rights reserved. Premium garment care, delivered across Canada.
             </p>
             <div className="flex items-center gap-6">
-              {['Privacy', 'Terms', 'Cookies'].map((item) => (
+              {[
+                { label: 'Privacy', href: '/privacy-policy' },
+                { label: 'Terms', href: '/terms-of-service' },
+              ].map((item) => (
                 <a
-                  key={item}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
                   className="text-xs transition-colors duration-200 group relative"
                   style={{ color: 'rgba(255, 255, 255, 0.3)' }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'; }}
                   onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255, 255, 255, 0.3)'; }}
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
             </div>

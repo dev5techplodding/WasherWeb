@@ -1,5 +1,7 @@
 'use client';
 
+import AppStoreButtons from '@/components/AppStoreButtons';
+
 export default function ProcedureCTA() {
   const handleScrollTo = (id) => {
     const el = document.getElementById(id);
@@ -55,6 +57,13 @@ export default function ProcedureCTA() {
               >
                 Become a Delivery Partner
               </button>
+            </div>
+
+            <div className="mt-10 pt-10 border-t border-white/10 flex flex-col items-center gap-4">
+              <p className="text-sm font-semibold text-slate-300">
+                Or manage everything from the Spinny app.
+              </p>
+              <AppStoreButtons />
             </div>
           </div>
         </div>

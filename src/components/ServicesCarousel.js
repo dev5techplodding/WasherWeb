@@ -32,6 +32,12 @@ const SERVICES = [
     category: 'Bespoke Service',
     image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
   },
+  {
+    id: 'commercial-accounts',
+    title: 'Commercial Linen Accounts',
+    category: 'Business & Hospitality',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
+  },
 ];
 
 export default function ServicesCarousel() {
@@ -144,7 +150,8 @@ export default function ServicesCarousel() {
           {SERVICES.map((service) => (
             <div
               key={service.id}
-              className="service-card group relative rounded-2xl overflow-hidden cursor-pointer"
+              id={service.id}
+              className="service-card group relative rounded-2xl overflow-hidden cursor-pointer scroll-mt-28"
               style={{
                 backgroundColor: 'var(--washr-gray)',
                 transition: 'box-shadow 0.3s, transform 0.3s',

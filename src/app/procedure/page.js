@@ -4,6 +4,7 @@ import CustomerJourneySection from '@/components/procedure/CustomerJourneySectio
 import VendorJourneySection from '@/components/procedure/VendorJourneySection';
 import DriverJourneySection from '@/components/procedure/DriverJourneySection';
 import ComparisonSection from '@/components/procedure/ComparisonSection';
+import AppDownloadBanner from '@/components/procedure/AppDownloadBanner';
 import ProcedureFAQ from '@/components/procedure/ProcedureFAQ';
 import ProcedureCTA from '@/components/procedure/ProcedureCTA';
 
@@ -41,10 +42,13 @@ export default function ProcedurePage() {
       {/* 6. COMPARISON SECTION (Horizontal Spec Table) */}
       <ComparisonSection />
 
-      {/* 7. FREQUENTLY ASKED QUESTIONS (Glass Accordion) */}
+      {/* 7. APP DOWNLOAD BANNER */}
+      <AppDownloadBanner />
+
+      {/* 8. FREQUENTLY ASKED QUESTIONS (Glass Accordion) */}
       <ProcedureFAQ />
 
-      {/* 8. CALL TO ACTION (Final CTA) */}
+      {/* 9. CALL TO ACTION (Final CTA) */}
       <ProcedureCTA />
     </main>
   );
