@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AppStoreButtons from '@/components/AppStoreButtons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -191,81 +192,18 @@ export default function CTASection() {
               className="text-base md:text-lg leading-relaxed mb-8"
               style={{ color: 'rgba(255, 255, 255, 0.85)' }}
             >
-              Join thousands of busy Canadians who outsourced their laundry to experts. Leave your email and we&apos;ll notify you as soon as booking opens in your area.
+              Download the Spinny app today and experience effortless, commercial-grade garment care right from your phone. Schedule pickups, track orders, and manage preferences seamlessly.
             </p>
 
-            {/* Email Form */}
-            {!submitted ? (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-lg mb-6">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  onFocus={() => setFocused(true)}
-                  onBlur={() => setFocused(false)}
-                  className="w-full px-6 py-4 rounded-full placeholder-white/50 focus:outline-none transition-all text-sm h-14"
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.25)',
-                    color: 'white',
-                    border: `1.5px solid ${focused ? 'rgba(255,255,255,0.8)' : 'rgba(255, 255, 255, 0.4)'}`,
-                    boxShadow: focused ? '0 0 0 4px rgba(255,255,255,0.15)' : 'none',
-                    transition: 'border-color 0.2s, box-shadow 0.2s, background-color 0.2s',
-                  }}
-                />
-                <button
-                  type="submit"
-                  id="submit-btn"
-                  className="w-full sm:w-auto px-8 h-14 rounded-full font-bold text-sm tracking-wider uppercase flex-shrink-0 transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                  style={{
-                    backgroundColor: 'var(--washr-orange)',
-                    color: 'white',
-                    boxShadow: '0 4px 20px rgba(242, 140, 40, 0.4)',
-                    minWidth: 140,
-                  }}
-                >
-                  Join Spinny
-                </button>
-              </form>
-            ) : (
-              <div className="flex flex-col items-center lg:items-start gap-4 mb-6">
-                {/* Animated checkmark */}
-                <svg
-                  ref={checkmarkRef}
-                  width="56" height="56" viewBox="0 0 56 56"
-                  fill="none"
-                  style={{ opacity: 0 }}
-                  aria-label="Success"
-                >
-                  <circle cx="28" cy="28" r="26" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" strokeWidth="1.5" />
-                  <path
-                    d="M18 28l7 7 13-14"
-                    stroke="#22c55e"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeDasharray="80"
-                    strokeDashoffset="80"
-                  />
-                </svg>
-                <div
-                  className="px-6 py-4 rounded-2xl text-sm font-semibold"
-                  style={{
-                    backgroundColor: 'rgba(34,197,94,0.1)',
-                    color: '#86efac',
-                    border: '1px solid rgba(34,197,94,0.2)',
-                  }}
-                >
-                  Check your inbox! We&apos;ll email you as soon as booking opens in your area.
-                </div>
-              </div>
-            )}
+            {/* App Download Buttons */}
+            <div className="mb-8 flex justify-center lg:justify-start">
+              <AppStoreButtons className="!justify-start" />
+            </div>
 
             {/* Social proof ticker */}
             <div className="mb-6">
-              <span className="text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                <span style={{ color: 'var(--washr-orange)' }}>⚡</span> 847 people joined this week
+              <span className="text-xs font-semibold text-white/90">
+                <span style={{ color: 'var(--washr-orange)' }}>⚡</span> 10,000+ app downloads this month
               </span>
             </div>
 

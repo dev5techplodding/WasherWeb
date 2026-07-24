@@ -17,7 +17,7 @@ const JOURNEYS = [
     id: 'vendor-journey',
     role: 'Vendor',
     time: '5 Mins',
-    title: 'Commercial Partner',
+    title: 'Laundry Partner',
     description:
       'Connect your commercial facility, receive optimized order batches, streamline capacity, and grow revenue predictably.',
     image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=800&auto=format&fit=crop',

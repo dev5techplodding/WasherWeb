@@ -171,11 +171,10 @@ export default function VendorJourneySection() {
                     {/* Step Card */}
                     <div
                       onClick={() => setActiveVendorStep(step.id)}
-                      className={`relative cursor-pointer rounded-2xl transition-all duration-300 overflow-hidden ${
-                        isActive
+                      className={`relative cursor-pointer rounded-2xl transition-all duration-300 overflow-hidden ${isActive
                           ? 'bg-white border-2 border-indigo-400/80 ring-4 ring-indigo-500/10 p-5 sm:p-6 shadow-lg'
                           : 'bg-white border border-indigo-100/90 hover:border-indigo-200 hover:shadow px-5 py-4 shadow-sm'
-                      }`}
+                        }`}
                     >
                       {/* Active Top Progress Line */}
                       {isActive && (
@@ -259,7 +258,7 @@ export default function VendorJourneySection() {
             </div>
 
             {/* Partner Portal Options Box */}
-            <div className="w-full max-w-[290px] sm:max-w-[300px] rounded-2xl p-4 bg-white border border-slate-200/90 shadow-md">
+            {/* <div className="w-full max-w-[290px] sm:max-w-[300px] rounded-2xl p-4 bg-white border border-slate-200/90 shadow-md">
               <div className="flex items-center justify-between mb-2.5">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#0E3A66]">
                   Partner Portal Options
@@ -278,7 +277,7 @@ export default function VendorJourneySection() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
