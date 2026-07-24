@@ -2,20 +2,20 @@
 
 // --- Hero Contents ---
 export const ABOUT_HERO_CONTENT = {
-  eyebrow: 'About Spinny',
-  heading: 'Garment care built around modern routines.',
+  eyebrow: 'About Us',
+  heading: 'Professional Laundry Service',
   description:
-    'Scheduling, quality control, and trusted fulfillment — built to make premium garment care easy and predictable.',
+    'Spinny offers high-quality garment care with convenient pickup and delivery, combining quality, reliability, and customer-focused service.',
   backgroundImage: '/frames/ezgif-frame-008.jpg',
-  rightImage: {
-    // src: '/frames/ezgif-frame-031.jpg',
-    alt: 'Spinny service preview with fresh garments and delivery presentation',
-    priority: true,
-    badge: {
-      label: 'Service model',
-      value: 'Pickup, processing, and delivery in one flow',
-    },
-  },
+  // rightImage: {
+  //   src: '/frames/ezgif-frame-031.jpg',
+  //   alt: 'Spinny service preview with fresh garments and delivery presentation',
+  //   priority: true,
+  //   badge: {
+  //     label: 'Service model',
+  //     value: 'Pickup, processing, and delivery in one flow',
+  // },
+  // },
   buttons: [
     { label: 'Contact us', url: '/contact' },
     { label: 'See procedure', url: '/procedure', variant: 'secondary' },
@@ -30,15 +30,15 @@ export const CONTACT_HERO_CONTENT = {
   description:
     'Questions about orders, vendors, or service? Send a message and our team will get back to you fast.',
   backgroundImage: '/frames/ezgif-frame-014.jpg',
-  rightImage: {
-    src: '/frames/ezgif-frame-056.jpg',
-    alt: 'Spinny support and delivery experience shown as a clean service visual',
-    priority: true,
-    badge: {
-      label: 'Support hours',
-      value: 'Mon to Fri, 8:00 AM to 8:00 PM EST',
-    },
-  },
+  // rightImage: {
+  //   src: '/frames/ezgif-frame-056.jpg',
+  //   alt: 'Spinny support and delivery experience shown as a clean service visual',
+  //   priority: true,
+  //   badge: {
+  //     label: 'Support hours',
+  //     value: 'Mon to Fri, 8:00 AM to 8:00 PM EST',
+  //   },
+  // },
   buttons: [
     { label: 'Email support', url: 'mailto:hello@spinny.example' },
     { label: 'View procedure', url: '/procedure', variant: 'secondary' },
@@ -53,15 +53,15 @@ export const PROCEDURE_HERO_CONTENT = {
   description:
     'A simple path for every role: create a profile, verify the essentials, and get approved.',
   backgroundImage: '/frames/ezgif-frame-020.jpg',
-  rightImage: {
-    src: '/frames/ezgif-frame-088.jpg',
-    alt: 'Operational workflow visual for the Spinny registration process',
-    priority: true,
-    badge: {
-      label: 'Example status',
-      value: 'Documents received. Review expected within 24 hours.',
-    },
-  },
+  // rightImage: {
+  //   src: '/frames/ezgif-frame-088.jpg',
+  //   alt: 'Operational workflow visual for the Spinny registration process',
+  //   priority: true,
+  //   badge: {
+  //     label: 'Example status',
+  //     value: 'Documents received. Review expected within 24 hours.',
+  //   },
+  // },
   buttons: [
     { label: 'Contact support', url: '/contact' },
     { label: 'About us', url: '/about', variant: 'secondary' },
@@ -76,17 +76,17 @@ export const SERVICES_HERO_CONTENT = {
   description:
     'Professional cleaning, folding, and packaging for everyday wear and delicates.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
-  rightImage: {
-    src: '/frames/ezgif-frame-031.jpg',
-    alt: 'Premium laundry service presentation with neat folds',
-    priority: true,
-    badge: {
-      label: 'Eco friendly',
-      value: '100% biodegradable and hypoallergenic detergents',
-    },
-  },
+  // rightImage: {
+  //   src: '/frames/ezgif-frame-031.jpg',
+  //   alt: 'Premium laundry service presentation with neat folds',
+  //   priority: true,
+  //   badge: {
+  //     label: 'Eco friendly',
+  //     value: '100% biodegradable and hypoallergenic detergents',
+  //   },
+  // },
   buttons: [
-    { label: 'Schedule pickup', url: '/contact' },
+    { label: 'Get the app', url: '/app' },
     { label: 'View procedure', url: '/procedure', variant: 'secondary' },
   ],
   accentText:
@@ -322,15 +322,15 @@ export const APP_HERO_CONTENT = {
   description:
     'Book a pickup, track your driver, and manage every order — all from one app.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
-  rightImage: {
-    src: '/F1.jpg',
-    alt: 'Spinny app preview on a mobile phone',
-    priority: true,
-    badge: {
-      label: 'Rated 5 stars',
-      value: '6,000+ customer reviews',
-    },
-  },
+  // rightImage: {
+  //   src: '/frames/ezgif-frame-032.jpg',
+  //   alt: 'Spinny app preview on a mobile phone',
+  //   priority: true,
+  // badge: {
+  //   label: 'Rated 5 stars',
+  //   value: '6,000+ customer reviews',
+  // },
+  // },
   accentText: 'Available soon for iOS and Android.',
 };
 

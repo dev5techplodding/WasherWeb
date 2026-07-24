@@ -99,7 +99,7 @@ export default function Seemless() {
             }}
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
-              Schedule Your First Pickup
+              Get the app
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
                 <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

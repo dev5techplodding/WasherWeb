@@ -17,20 +17,19 @@ export default function SmoothScroller({ children }) {
     ).matches;
 
     if (prefersReduced) {
-      // Still register ScrollTrigger but skip smooth scrolling
       ScrollTrigger.defaults({ toggleActions: 'play none none reverse' });
       return;
     }
 
-    // Initialize Lenis for buttery-smooth scrolling
+    // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 1.9,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.7,
-      touchMultiplier: 1.2,
+      wheelMultiplier: 0.8,
+      touchMultiplier: 1.5,
     });
 
     lenisRef.current = lenis;
@@ -38,16 +37,29 @@ export default function SmoothScroller({ children }) {
     // Sync Lenis scroll position with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
 
-    // Use GSAP ticker instead of rAF for better sync
-    gsap.ticker.add((time) => {
+    // Use GSAP ticker for frame updates
+    const updateLenis = (time) => {
       lenis.raf(time * 1000);
-    });
+    };
+
+    gsap.ticker.add(updateLenis);
     gsap.ticker.lagSmoothing(0);
 
+    // ResizeObserver to continuously track document height changes (e.g. async API loads)
+    const resizeObserver = new ResizeObserver(() => {
+      lenis.resize();
+      ScrollTrigger.refresh();
+    });
+
+    if (document.body) {
+      resizeObserver.observe(document.body);
+    }
+
     return () => {
+      resizeObserver.disconnect();
       lenis.destroy();
       lenisRef.current = null;
-      gsap.ticker.remove(lenis.raf);
+      gsap.ticker.remove(updateLenis);
     };
   }, []);
 

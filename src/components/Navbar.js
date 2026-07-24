@@ -254,7 +254,7 @@ export default function Navbar() {
               >
                 <Link
                   ref={ctaBtnRef}
-                  href="https://washr.org/login"
+                  href="https://spinnylaundry.com/login"
                   id="nav-cta"
                   className="block text-sm font-bold px-5 py-2.5 rounded-full text-white transition-all duration-200 hover:shadow-[0_4px_20px_rgba(242,140,40,0.45)] active:scale-[0.96] cursor-pointer"
                   style={{

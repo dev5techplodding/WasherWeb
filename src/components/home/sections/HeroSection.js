@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { gsap } from 'gsap';
+import Link from 'next/link';
 
 /* ─────────────────────────────────────────────────
    NEW HERO SECTION (Inspired by Rinse style)
@@ -101,19 +102,19 @@ export default function HeroSection() {
           </p>
 
           {/* Interactive Search / Address Input Form */}
-          <form
+          {/* <form
             ref={formRef}
             onSubmit={handleSubmit}
             className="flex flex-row items-stretch bg-white p-1.5 rounded-full w-full max-w-sm shadow-2xl mb-6 gap-0"
-          >
-            {/* Pickup tomorrow read-only */}
-            <div className="flex-1 flex flex-col justify-center px-3 sm:px-5 py-1.5 border-r border-slate-100 text-left">
+          > */}
+          {/* Pickup tomorrow read-only */}
+          {/* <div className="flex-1 flex flex-col justify-center px-3 sm:px-5 py-1.5 border-r border-slate-100 text-left">
               <span className="text-[8px] sm:text-[9px] font-black uppercase tracking-wider text-slate-400">Pickup</span>
               <span className="text-[11px] sm:text-xs font-bold text-slate-800">Today</span>
-            </div>
+            </div> */}
 
-            {/* Address input */}
-            <div className="flex-[2] flex flex-col justify-center px-3 sm:px-5 py-1.5 text-left min-w-0">
+          {/* Address input */}
+          {/* <div className="flex-[2] flex flex-col justify-center px-3 sm:px-5 py-1.5 text-left min-w-0">
               <label htmlFor="hero-address-input" className="text-[8px] sm:text-[9px] font-black uppercase tracking-wider text-slate-400">
                 Where
               </label>
@@ -126,55 +127,77 @@ export default function HeroSection() {
                 onChange={(e) => setAddress(e.target.value)}
                 className="text-[11px] sm:text-xs font-bold text-slate-800 bg-transparent placeholder-slate-400 focus:outline-none w-full"
               />
-            </div>
+            </div> */}
 
-            {/* Submit arrow button */}
-            <button
+          {/* Submit arrow button */}
+          {/* <button
               type="submit"
               aria-label="Start your order"
               className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white self-center transition-all duration-300 hover:scale-105 active:scale-95 shrink-0 ml-1"
               style={{
                 backgroundColor: 'var(--washr-orange)',
                 boxShadow: '0 4px 14px rgba(242, 140, 40, 0.35)',
+              }} */}
+          {/* > */}
+          {/*  */}
+          {/*  */}
+          {/* <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg> */}
+          {/* </button> */}
+          {/* </form> */}
+          {/* CTA buttons */}
+          <div className="relative flex flex-col sm:flex-row gap-4 sm:gap-5 justify-start items-stretch sm:items-center w-full sm:w-auto mb-6">
+            <Link
+              href="/procedure"
+              className="group relative px-8 py-4 sm:px-9 sm:py-4 rounded-full text-white font-bold text-sm sm:text-base tracking-wide overflow-hidden transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center cursor-pointer shadow-lg"
+              style={{
+                backgroundColor: 'var(--washr-orange)',
+                boxShadow: '0 8px 25px rgba(242, 140, 40, 0.45)',
               }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          </form>
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Save your Time
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
+                  <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </Link>
+
+            <Link
+              href="/services"
+              className="px-8 py-4 sm:px-9 sm:py-4 rounded-full font-bold text-sm sm:text-base tracking-wide text-white border-2 border-white/30 bg-white/10 hover:bg-white hover:text-slate-950 hover:border-white backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center cursor-pointer shadow-md"
+            >
+              Explore Services
+            </Link>
+          </div>
 
           {/* CTA microcopy + secondary link */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6 -mt-2">
-            <span className="text-xs sm:text-sm font-semibold text-slate-300">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
+            <span className="text-xs sm:text-sm font-medium text-slate-300">
               Book your first pickup in 30 seconds.
             </span>
-            <a
+            <Link
               href="/procedure"
-              className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold transition-colors duration-200"
+              className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold transition-colors duration-200 hover:underline"
               style={{ color: 'var(--washr-orange)' }}
             >
               See how it works
               <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
                 <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Rating Badge block */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* App Icons */}
-            {/* <div className="flex items-center gap-1">
-              <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 border border-white/20 text-white text-xs sm:text-sm" aria-hidden="true"></span>
-              <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-bold" aria-hidden="true">G</span>
-              <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center bg-white/10 border border-white/20 text-white text-[10px] sm:text-xs" aria-hidden="true">★</span>
-            </div> */}
-            {/* Stars & review counts */}
-            {/* <div className="flex items-center gap-1.5">
-              <div className="star-rating text-[10px] sm:text-xs" aria-label="5 stars">★★★★★</div>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-slate-300">6,000+ reviews</span>
-            </div> */}
-          </div>
+          {/* <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-4 py-2 w-fit backdrop-blur-sm">
+            <div className="flex items-center gap-1 text-amber-400 text-sm" aria-label="5 stars">
+              ★★★★★
+            </div>
+            <span className="text-xs font-medium text-slate-300">
+              <strong className="text-white font-semibold">4.9/5</strong> from 6,000+ reviews
+            </span>
+          </div> */}
         </div>
       </div>
 

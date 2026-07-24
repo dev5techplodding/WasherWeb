@@ -7,40 +7,25 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DEFAULT_SERVICES = [
-  {
-    id: 'wash-fold',
-    title: 'Premium Wash & Fold',
-    category: 'Everyday Laundry',
-    image: 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 'dry-cleaning',
-    title: 'Eco-Friendly Dry Clean',
-    category: 'Delicate Care',
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 'bulky-items',
-    title: 'Bulky Linens & Duvets',
-    category: 'Heavy Load',
-    image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    id: 'alterations',
-    title: 'Tailoring & Alterations',
-    category: 'Bespoke Service',
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
-  },
+// ─── Image Sequence Object for API Services ───
+export const SERVICE_IMAGES = [
+  '/steamiron.png',
+  '/ironing.jpg',
+  '/dryclean.png',
+  '/wash.jpg',
+
 ];
 
-// Helper to sanitize image URLs from API
-const resolveImageUrl = (rawUrl, index) => {
-  const fallback = DEFAULT_SERVICES[index % DEFAULT_SERVICES.length].image;
-  if (!rawUrl || typeof rawUrl !== 'string') return fallback;
+// Helper to resolve an image for an API service purely in sequence order
+const resolveImageUrl = (item, index) => {
+  if (item?.media && Array.isArray(item.media) && item.media.length > 0 && item.media[0]?.url) {
+    const rawUrl = item.media[0].url;
+    if (typeof rawUrl === 'string' && rawUrl.trim()) {
+      return rawUrl.replace('washr.org', 'spinnylaundry.com');
+    }
+  }
 
-  // Replace unresolvable washr.org domain with spinnylaundry.com if needed
-  return rawUrl.replace('washr.org', 'spinnylaundry.com');
+  return SERVICE_IMAGES[index % SERVICE_IMAGES.length];
 };
 
 // Sub-component that handles dynamic image rendering with automatic onError fallback
@@ -53,7 +38,7 @@ function ServiceCardImage({ src, fallbackSrc, alt }) {
 
   return (
     <Image
-      src={imgSrc}
+      src={fallbackSrc}
       alt={alt || 'Service Image'}
       fill
       sizes="(max-width: 640px) 100vw, 50vw"
@@ -69,9 +54,9 @@ function ServiceCardImage({ src, fallbackSrc, alt }) {
 
 // Helper to map API response items into UI card model
 const mapApiService = (item, index) => {
-  const fallbackImage = DEFAULT_SERVICES[index % DEFAULT_SERVICES.length].image;
-  const rawImage = item.media && item.media.length > 0 && item.media[0]?.url ? item.media[0].url : null;
-  const imageUrl = resolveImageUrl(rawImage, index);
+  const title = item.serviceName || item.title || 'Garment Care Service';
+  const imageUrl = resolveImageUrl(item, index);
+  const fallbackImage = SERVICE_IMAGES[index % SERVICE_IMAGES.length];
 
   const categoryText = item.basePrice
     ? `From $${item.basePrice}`
@@ -79,7 +64,7 @@ const mapApiService = (item, index) => {
 
   return {
     id: item._id || item.id || `service-${index}`,
-    title: item.serviceName || item.title || 'Garment Care Service',
+    title: title,
     category: categoryText,
     price: item.basePrice ? `$${item.basePrice}` : null,
     image: imageUrl,
@@ -89,7 +74,7 @@ const mapApiService = (item, index) => {
 
 export default function ServicesCarousel() {
   const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
@@ -139,46 +124,50 @@ export default function ServicesCarousel() {
     getServices();
   }, []);
 
-  const displayServices = services.length > 0 ? services : DEFAULT_SERVICES;
-
   // ─── GSAP Entrance Animations ───
   useEffect(() => {
+    if (services.length === 0) return;
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        headerRef.current,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: headerRef.current,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-
-      const cards = gridRef.current?.querySelectorAll('.service-card');
-      if (cards && cards.length > 0) {
+      if (!prefersReduced) {
         gsap.fromTo(
-          cards,
-          { opacity: 0, y: 40 },
+          headerRef.current,
+          { opacity: 0, y: 30 },
           {
-            opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.1,
+            opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
             scrollTrigger: {
-              trigger: gridRef.current,
+              trigger: headerRef.current,
               start: 'top 85%',
               toggleActions: 'play none none none',
             },
           }
         );
+
+        const cards = gridRef.current?.querySelectorAll('.service-card');
+        if (cards && cards.length > 0) {
+          gsap.fromTo(
+            cards,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.1,
+              scrollTrigger: {
+                trigger: gridRef.current,
+                start: 'top 85%',
+                toggleActions: 'play none none none',
+              },
+            }
+          );
+        }
       }
+
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 150);
     }, sectionRef);
 
     return () => ctx.revert();
-  }, [displayServices]);
+  }, [services]);
 
   return (
     <section
@@ -240,16 +229,20 @@ export default function ServicesCarousel() {
         </div>
 
         {/* Loading Indicator or Service Grid */}
-        {loading && services.length === 0 ? (
+        {loading ? (
           <div className="flex justify-center items-center py-16">
             <div className="w-8 h-8 border-4 border-[#F7941D] border-t-transparent rounded-full animate-spin" />
+          </div>
+        ) : services.length === 0 ? (
+          <div className="text-center py-12 text-slate-400 font-medium">
+            No services available at the moment.
           </div>
         ) : (
           <div
             ref={gridRef}
             className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6"
           >
-            {displayServices.map((service, idx) => (
+            {services.map((service, idx) => (
               <div
                 key={service.id}
                 id={service.id}
@@ -272,7 +265,7 @@ export default function ServicesCarousel() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                     <ServiceCardImage
                       src={service.image}
-                      fallbackSrc={service.fallbackImage || DEFAULT_SERVICES[idx % DEFAULT_SERVICES.length].image}
+                      fallbackSrc={service.fallbackImage || SERVICE_IMAGES[idx % SERVICE_IMAGES.length]}
                       alt={service.title}
                     />
                   </div>

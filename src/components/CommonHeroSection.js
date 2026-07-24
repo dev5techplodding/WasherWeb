@@ -230,15 +230,7 @@ export default function CommonHeroSection({ content = {} }) {
               </div>
             ) : (
               /* Fallback Glass Card */
-              <div className="relative rounded-[32px] border border-white/15 bg-white/[0.06] p-8 md:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.3)] backdrop-blur-2xl min-h-[300px] flex flex-col items-center justify-center text-center overflow-hidden">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-[#F7941D] to-[#F28C28] flex items-center justify-center text-3xl font-black text-white shadow-lg mb-4">
-                  S
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Spinny Premium</h3>
-                <p className="text-sm font-medium text-slate-300 max-w-[240px] leading-relaxed">
-                  Commercial-grade laundry and garment care, delivered to your doorstep.
-                </p>
-              </div>
+              <></>
             )}
           </div>
 
