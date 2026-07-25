@@ -3,42 +3,24 @@
 // --- Hero Contents ---
 export const ABOUT_HERO_CONTENT = {
   eyebrow: 'About Us',
-  heading: 'Professional Laundry Service',
+  heading: 'Not a Laundry Company. A Time-Buyback Service.',
   description:
-    'Spinny offers high-quality garment care with convenient pickup and delivery, combining quality, reliability, and customer-focused service.',
+    'Spinny takes care of your entire wardrobe and home — from suits and sneakers to duvets and diaper bags — so the hours it used to cost are yours again.',
   backgroundImage: '/frames/ezgif-frame-008.jpg',
-  // rightImage: {
-  //   src: '/frames/ezgif-frame-031.jpg',
-  //   alt: 'Spinny service preview with fresh garments and delivery presentation',
-  //   priority: true,
-  //   badge: {
-  //     label: 'Service model',
-  //     value: 'Pickup, processing, and delivery in one flow',
-  // },
-  // },
   buttons: [
     { label: 'Contact us', url: '/contact' },
     { label: 'See procedure', url: '/procedure', variant: 'secondary' },
   ],
   accentText:
-    'For households and commercial teams who want premium care without the old-school hassle.',
+    'For households and commercial teams who want their weekends back, not just clean clothes.',
 };
 
 export const CONTACT_HERO_CONTENT = {
   eyebrow: 'Contact Spinny',
-  heading: 'Reach the right team without the usual back-and-forth.',
+  heading: 'Reach the right team without losing an afternoon to it.',
   description:
-    'Questions about orders, vendors, or service? Send a message and our team will get back to you fast.',
+    'Questions about orders, vendors, or service — for anything from garments to footwear and home textiles? Send a message and our team will get back to you fast.',
   backgroundImage: '/frames/ezgif-frame-014.jpg',
-  // rightImage: {
-  //   src: '/frames/ezgif-frame-056.jpg',
-  //   alt: 'Spinny support and delivery experience shown as a clean service visual',
-  //   priority: true,
-  //   badge: {
-  //     label: 'Support hours',
-  //     value: 'Mon to Fri, 8:00 AM to 8:00 PM EST',
-  //   },
-  // },
   buttons: [
     { label: 'Email support', url: 'mailto:hello@spinny.example' },
     { label: 'View procedure', url: '/procedure', variant: 'secondary' },
@@ -49,19 +31,10 @@ export const CONTACT_HERO_CONTENT = {
 
 export const PROCEDURE_HERO_CONTENT = {
   eyebrow: 'Procedure',
-  heading: 'Registration explained in three simple journeys.',
+  heading: 'Getting your time back, in three simple journeys.',
   description:
     'A simple path for every role: create a profile, verify the essentials, and get approved.',
   backgroundImage: '/frames/ezgif-frame-020.jpg',
-  // rightImage: {
-  //   src: '/frames/ezgif-frame-088.jpg',
-  //   alt: 'Operational workflow visual for the Spinny registration process',
-  //   priority: true,
-  //   badge: {
-  //     label: 'Example status',
-  //     value: 'Documents received. Review expected within 24 hours.',
-  //   },
-  // },
   buttons: [
     { label: 'Contact support', url: '/contact' },
     { label: 'About us', url: '/about', variant: 'secondary' },
@@ -72,32 +45,23 @@ export const PROCEDURE_HERO_CONTENT = {
 
 export const SERVICES_HERO_CONTENT = {
   eyebrow: 'Our Services',
-  heading: 'Laundry care solutions for every lifestyle.',
+  heading: 'Your whole wardrobe and home, cared for — not just your laundry.',
   description:
-    'Professional cleaning, folding, and packaging for everyday wear and delicates.',
+    'From everyday shirts to sneakers, leather bags, duvets, and rugs — one pickup covers what used to take five different errands.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
-  // rightImage: {
-  //   src: '/frames/ezgif-frame-031.jpg',
-  //   alt: 'Premium laundry service presentation with neat folds',
-  //   priority: true,
-  //   badge: {
-  //     label: 'Eco friendly',
-  //     value: '100% biodegradable and hypoallergenic detergents',
-  //   },
-  // },
   buttons: [
     { label: 'Get the app', url: '/app' },
     { label: 'View procedure', url: '/procedure', variant: 'secondary' },
   ],
   accentText:
-    'Processed in commercial-grade facilities by trained specialists.',
+    'Handled by trained specialists across commercial-grade facilities, matched to each material.',
 };
 
 export const HELP_CENTER_HERO_CONTENT = {
   eyebrow: 'Help Center',
   heading: 'Support that is easy to find and simple to use.',
   description:
-    'Quick answers to common questions, plus a direct line to our team.',
+    'Quick answers to common questions — on orders, garments, footwear, or home items — plus a direct line to our team.',
   backgroundImage: '/frames/ezgif-frame-105.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-144.jpg',
@@ -201,36 +165,41 @@ export const PRIVACY_CONTACT = [
   { label: 'Mailing address', value: '1840 King Street West, Suite 402, Toronto, ON M5V 1X6' },
 ];
 
-// --- About Page Data ---
+// --- About Page Data ("Why Spinny" pillars) ---
 export const CORE_VALUES = [
   {
-    title: 'Reliability first',
+    title: 'Reclaim 5+ Hours a Week',
     description:
-      'We keep pickup windows, status updates, and delivery promises simple, visible, and dependable so customers know exactly what to expect.',
+      'Wardrobe laundry, shoe care, ironing, and home-textile upkeep quietly eat a weekend a month. Spinny hands that time back — permanently, not just this once.',
   },
   {
-    title: 'Quality at every step',
+    title: 'One Service, Entire Living Space',
     description:
-      'Every garment is handled by trained partners who follow garment-specific care checks, finish standards, and quality control before it leaves the facility.',
+      'Suits and sneakers. Duvets and diaper bags. Curtains and cashmere. Spinny is the single point of contact for every fabric, leather, and textile surface in your home.',
   },
   {
-    title: 'Respect for time',
+    title: 'Zero-Effort Concierge Logistics',
     description:
-      'Spinny is built for busy households and teams that want premium garment care without losing a morning, a lunch break, or an evening to errands.',
+      'Door-to-door pickup and delivery, closet-ready hanging, drawer-ready folding. Nothing to drop off, nothing to carry further than your own front door.',
+  },
+  {
+    title: 'Investment-Grade Care',
+    description:
+      'Your favourite sneakers and your grandmother’s duvet don’t belong in a machine built for gym socks. Every item goes to a specialist trained for its specific material.',
   },
 ];
 
 export const DIFFERENTIATORS = [
-  'Centralized pickup scheduling with clear service windows and live-ready updates.',
-  'A vetted partner network that combines local convenience with commercial-grade handling.',
-  'Fabric-aware workflows that protect delicate items, uniforms, and everyday essentials alike.',
-  'Support that feels human, with straightforward answers instead of scripted runaround.',
+  'Centralized pickup scheduling that gets an entire household’s laundry, footwear, and home textiles off the calendar in under 30 seconds.',
+  'A vetted specialist network — not just laundromats — covering leather, suede, rugs, curtains, and delicate fabrics alike.',
+  'Material-aware workflows that protect what you’ve invested in, from sneakers to a wedding dress.',
+  'Support that feels human and answers fast, because your time matters after the pickup too.',
 ];
 
 export const MILESTONES = [
-  { year: '2019', label: 'Spinny launched with a simple promise: premium laundry should be easy to book and easier to trust.' },
-  { year: '2022', label: 'Service coverage expanded across major urban neighborhoods with tighter pickup and delivery windows.' },
-  { year: '2026', label: 'The platform now supports households, offices, and partner fleets with a more coordinated service experience.' },
+  { year: '2019', label: 'Spinny launched with a simple promise: buy people back the time laundry was quietly taking from them.' },
+  { year: '2022', label: 'Coverage expanded past garments into footwear, leather goods, and home textiles — because a household’s time gets eaten by more than just laundry.' },
+  { year: '2026', label: 'The platform now supports households, offices, and partner fleets across a full wardrobe-and-home ecosystem — bought-back hours, at scale.' },
 ];
 
 // --- Procedure Page Data ---
@@ -242,7 +211,7 @@ export const USER_GROUPS = [
     steps: [
       'Create an account with name, mobile number, and email address.',
       'Add your pickup address, preferred service window, and delivery notes such as buzzer code or concierge desk instructions.',
-      'Choose your first service type, for example wash & fold, dry cleaning, or a mixed bag order.',
+      'Choose your first service type — wash & fold, dry cleaning, footwear revival, or a home-textile pickup.',
       'Confirm the order details, review the summary, and receive status notifications by email or text.',
     ],
     requirements: [
@@ -293,51 +262,104 @@ export const PROCESS_PILLS = [
 
 // --- Help Center Stats ---
 export const HELP_STATS = [
-  { label: 'Average response', value: 'Most support requests are reviewed within one business day.' },
+  { label: 'Average response', value: 'Most support requests are reviewed within one business day, whatever the item.' },
   { label: 'Self-service', value: 'Use the FAQ below for the fastest answers to common questions.' },
   { label: 'Direct help', value: 'Send feedback when your issue needs more detail or follow-up.' },
 ];
 
 // --- Home Page Marquees ---
 export const HOME_MARQUEE_1 = [
-  'Seamless Garment Care',
-  'Reclaim Your Time',
-  'Vetted Commercial Partners',
+  'Buy Back Your Time',
+  'Wardrobe, Footwear & Home',
+  'Vetted Specialist Network',
   'Real-Time Order Tracking',
   '100% Satisfaction Guaranteed',
 ];
 
 export const HOME_MARQUEE_2 = [
-  'Eco-Conscious Cleaning',
-  'Hypoallergenic Detergents',
-  'Custom Fabric Preferences',
+  '5+ Hours Reclaimed Weekly',
+  'Leather, Suede & Home Textiles',
+  'Set-and-Forget Membership',
   'Certified Commercial Facilities',
   '24h Speed Turnaround',
 ];
 
+// --- Service Ecosystem (lifestyle categories, not just laundry) ---
+export const SERVICE_ECOSYSTEM = [
+  {
+    id: 'wardrobe',
+    title: 'Wardrobe & Workwear Care',
+    tagline: 'Everything that hangs in your closet, pressed and returned exactly how you like it.',
+    items: ['Everyday shirts & separates', 'Suits & formalwear', 'Dresses & delicates', 'Workwear & uniforms'],
+    timeBack: 'No more Sunday-night ironing marathons.',
+  },
+  {
+    id: 'footwear',
+    title: 'Footwear & Accessory Revival',
+    tagline: 'Restoration-grade care for the pieces that took the longest to save up for.',
+    items: ['Sneakers & trainers', 'Leather & suede boots', 'Handbags & leather goods', 'Hats & belts'],
+    timeBack: 'Skip the cobbler queue entirely.',
+  },
+  {
+    id: 'home',
+    title: 'Home & Sanctuary Care',
+    tagline: 'The bulky textiles that turn a Saturday into a chore — picked up, never carried.',
+    items: ['Duvets & comforters', 'Curtains & drapes', 'Area rugs', 'Cushions & throws'],
+    timeBack: 'No trunk full of rugs, no ladder for the curtain rail.',
+  },
+  {
+    id: 'special-care',
+    title: 'Special Care & Tailoring',
+    tagline: 'For the items that matter too much to trust to a standard cycle.',
+    items: ['Baby & nursery textiles', 'Pet beds & blankets', 'Wedding dress preservation', 'On-demand alterations'],
+    timeBack: 'Expert care, without the research.',
+  },
+];
+
+// --- Hours Ledger (DIY vs. Spinny contrast table) ---
+export const HOURS_LEDGER_ROWS = [
+  { task: 'Wash, dry & fold wardrobe', diy: '7 hrs / mo', spinny: '2 min (schedule)' },
+  { task: 'Dry cleaner drop-off & pickup', diy: '2 hrs / mo', spinny: '0 min — at your door' },
+  { task: 'Shoe & leather care', diy: '2 hrs / mo', spinny: '0 min' },
+  { task: 'Ironing & pressing', diy: '4 hrs / mo', spinny: '0 min' },
+  { task: 'Home textiles — rugs, curtains, duvets', diy: '4 hrs / mo', spinny: '0 min' },
+  { task: 'Ad-hoc runs — alterations, baby & pet gear', diy: '1.5 hrs / mo', spinny: '0 min' },
+];
+
+export const HOURS_LEDGER_TOTAL = { task: 'Total monthly load', diy: '~20.5 hrs', spinny: '~2 min' };
+
+export const HOURS_LEDGER_FOOTNOTE =
+  'Estimates reflect a typical household’s combined maintenance load, including transit time. Your mileage — literally — will vary.';
+
+// --- Membership / Footer Hook ---
+export const MEMBERSHIP_CONTENT = {
+  eyebrow: 'Spinny Membership',
+  heading: 'A Set-and-Forget Time Investment.',
+  description:
+    'Membership puts your entire wardrobe and home on autopilot. Recurring pickups on your schedule, priority concierge turnaround, and member rates across every category — garments, footwear, and home — billed as one predictable line, not five separate errands.',
+  perks: [
+    'Recurring pickups: weekly, bi-weekly, or monthly',
+    'Priority turnaround across all categories',
+    'Member pricing on footwear, leather & home textiles',
+    'One flat plan instead of five disconnected errands',
+  ],
+  cta: { label: 'Become a Member', url: '/contact' },
+};
+
 // --- App Page ---
 export const APP_HERO_CONTENT = {
   eyebrow: 'Spinny Mobile',
-  heading: 'Spinny. In your pocket.',
+  heading: 'Your time, in your pocket.',
   description:
-    'Book a pickup, track your driver, and manage every order — all from one app.',
+    'Book a pickup for anything — garments, sneakers, or a duvet — track your driver, and manage every order from one app.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
-  // rightImage: {
-  //   src: '/frames/ezgif-frame-032.jpg',
-  //   alt: 'Spinny app preview on a mobile phone',
-  //   priority: true,
-  // badge: {
-  //   label: 'Rated 5 stars',
-  //   value: '6,000+ customer reviews',
-  // },
-  // },
   accentText: 'Available soon for iOS and Android.',
 };
 
 export const APP_FEATURES = [
   {
     title: '30-second booking',
-    desc: 'Add your address, pick a window, and you’re done. No forms, no phone calls.',
+    desc: 'Add your address, pick a window, and you’re done. Thirty seconds of your day, not thirty minutes.',
     image: '/F1.jpg',
   },
   {
@@ -360,15 +382,15 @@ export const APP_FEATURES = [
 // --- Pricing Page ---
 export const PRICING_HERO_CONTENT = {
   eyebrow: 'Pricing',
-  heading: 'Pay for what you use. Nothing more.',
+  heading: 'Pay for time bought back. Nothing more.',
   description:
-    'No monthly passes, no minimum spend — pay only for the pickups you book.',
+    'No monthly passes, no minimum spend — pay only for the pickups you book, or set it once with membership.',
   backgroundImage: '/frames/ezgif-frame-105.jpg',
   buttons: [
     { label: 'Schedule a pickup', url: '/contact' },
     { label: 'See how it works', url: '/procedure', variant: 'secondary' },
   ],
-  accentText: 'Final pricing is confirmed at checkout based on service type and bag count.',
+  accentText: 'Final pricing is confirmed at checkout based on service type and item count.',
 };
 
 export const PRICING_TIERS = [
@@ -384,6 +406,10 @@ export const PRICING_TIERS = [
     title: 'Wash & Iron Press',
     desc: 'Crisp, pressed finishing for shirts and everyday wear.',
   },
+  {
+    title: 'Footwear & Home Textiles',
+    desc: 'Sneakers, leather goods, rugs, curtains, and duvets — restored and returned, picked up at your door.',
+  },
 ];
 
 // --- Careers Page ---
@@ -391,7 +417,7 @@ export const CAREERS_HERO_CONTENT = {
   eyebrow: 'Careers',
   heading: 'Help us give people their time back.',
   description:
-    'We’re growing across Canada and always open to hearing from great people.',
+    'We’re growing across Canada — across garment care, footwear revival, and home textiles — and always open to hearing from great people.',
   backgroundImage: '/frames/ezgif-frame-144.jpg',
   buttons: [
     { label: 'Get in touch', url: '/contact' },
@@ -411,15 +437,15 @@ export const TERMS_HERO_CONTENT = {
 export const TERMS_SECTIONS = [
   {
     title: 'Booking & scheduling',
-    body: 'When you schedule a pickup through Spinny, you’re reserving a time window with a driver and a laundry vendor partner. Please have your items ready at the scheduled window; repeated missed pickups may affect your ability to book future orders.',
+    body: 'When you schedule a pickup through Spinny, you’re reserving a time window with a driver and a service vendor partner. Please have your items ready at the scheduled window; repeated missed pickups may affect your ability to book future orders.',
   },
   {
     title: 'Pricing & payment',
-    body: 'Spinny is pay-per-use — there are no subscriptions or recurring charges. Pricing is shown before you confirm an order and is charged to your saved payment method once service is complete.',
+    body: 'Spinny is pay-per-use — there are no required subscriptions or recurring charges outside of membership plans. Pricing is shown before you confirm an order and is charged to your saved payment method once service is complete.',
   },
   {
     title: 'Vendor & driver relationship',
-    body: 'Laundry vendors and delivery drivers on Spinny are independent partners, vetted and onboarded through our partner program. Spinny coordinates the order but the physical cleaning is performed by the vendor you’re matched with.',
+    body: 'Service vendors and delivery drivers on Spinny are independent partners, vetted and onboarded through our partner program. Spinny coordinates the order but the physical care is performed by the vendor you’re matched with.',
   },
   {
     title: 'Damaged or lost items',

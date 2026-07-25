@@ -12,14 +12,14 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Spinny — Premium On-Demand Laundry | Expert Garment Care',
+  title: 'Spinny — Buy Back Your Time | Wardrobe, Footwear & Home Care',
   description:
-    'Spinny delivers seamless, expert garment care to your doorstep. Schedule a pickup, and we handle the rest — commercial-grade processing by vetted professionals.',
-  keywords: 'laundry, dry cleaning, garment care, pickup, delivery, premium, on-demand',
+    'Spinny is a time-buyback service for your entire wardrobe and home — garments, footwear, leather, and home textiles, picked up and delivered by vetted specialists.',
+  keywords: 'time-buyback service, wardrobe care, footwear care, home textile care, pickup and delivery, laundry, dry cleaning, garment care, on-demand',
   openGraph: {
-    title: 'Spinny — Premium On-Demand Laundry',
+    title: 'Spinny — Buy Back Your Time',
     description:
-      'Reclaim your time with Spinny. Expert commercial-grade garment care, delivered seamlessly.',
+      'Reclaim your evenings and weekends. Spinny handles pickup, care, and delivery for your whole wardrobe and home — you handle everything else.',
     type: 'website',
     url: 'https://spinny.ca',
   },

@@ -174,22 +174,22 @@ export default function ScienceSection() {
                 border: '1px solid rgba(242, 140, 40, 0.25)',
               }}
             >
-              Scientific Precision
+              Precision That Buys You Time
             </span>
             {/* Bold claim */}
             <h2
               id="science-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1] mb-5 text-white"
             >
-              The Science Behind <br />
-              <span style={{ color: 'var(--washr-orange)' }}>Perfect Freshness.</span>
+              The Process Behind <br />
+              <span style={{ color: 'var(--washr-orange)' }}>Never Doing This Again.</span>
             </h2>
             {/* Supporting detail */}
             <p className="text-base leading-relaxed mb-4 text-slate-300">
-              We do not believe in standard laundry cycles. Our partner commercial facilities utilize customized fabric-specific algorithms — optimal temperature mapping, mineral-controlled purified water, and active enzymatic suspensions.
+              We do not believe in standard cycles for every material. Our partner facilities match fabric, leather, and textile-specific algorithms to each item — optimal temperature mapping, mineral-controlled purified water, and active enzymatic suspensions.
             </p>
             <p className="text-sm leading-relaxed mb-8 text-slate-400">
-              Balanced fiber care protects clothes from shrinking, pilling, or fading. Your garments are returned feeling softer and cleaner than the day you bought them.
+              Balanced fiber care protects clothes, footwear, and home textiles from shrinking, pilling, or fading — so you never lose a weekend replacing what we could have gotten right the first time.
             </p>
 
             {/* Technique bullet list */}

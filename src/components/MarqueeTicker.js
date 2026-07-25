@@ -9,11 +9,11 @@ import { useRef } from 'react';
    ───────────────────────────────────────────────── */
 export default function MarqueeTicker({
   items = [
-    'Seamless Garment Care',
-    'Reclaim Your Time',
-    'Vetted Commercial Partners',
+    'Buy Back Your Time',
+    'Wardrobe, Footwear & Home',
+    'Vetted Specialist Network',
     'Real-Time Order Tracking',
-    'Eco-Conscious Cleaning',
+    'Set-and-Forget Membership',
     '100% Satisfaction Guaranteed',
   ],
   bg = 'var(--washr-orange)',

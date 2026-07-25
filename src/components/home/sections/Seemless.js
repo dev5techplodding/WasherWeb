@@ -72,7 +72,7 @@ export default function Seemless() {
             border: '1px solid rgba(242, 140, 40, 0.15)',
           }}
         >
-          Seamless Laundry Experience
+          Zero-Effort, Start to Finish
         </span>
 
         {/* Headline */}
@@ -80,12 +80,12 @@ export default function Seemless() {
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4"
           style={{ color: 'var(--washr-blue)' }}
         >
-          Sensing is Believing.
+          Set It. Forget It.
           <br />
-          <span style={{ color: 'var(--washr-orange)' }}>Effortless Laundry, Delivered Seamlessly.</span>
+          <span style={{ color: 'var(--washr-orange)' }}>Get Your Time Back.</span>
         </h2>
         <p className="text-sm md:text-base text-slate-500 max-w-xl mx-auto mb-10 leading-relaxed">
-          Schedule pickups, select custom garment care preferences, track your order in real-time, and reclaim your time.
+          Schedule pickups for your wardrobe, footwear, or home textiles, set your care preferences once, track your order in real time, and reclaim hours every single week.
         </p>
 
         {/* CTA Buttons */}

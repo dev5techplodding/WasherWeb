@@ -10,10 +10,10 @@ const SCROLL_SPEED_MULTIPLIER = 500; // Total scroll height is 500vh
 
 // Large futuristic text phrases that scroll upwards over the video
 const LARGE_PARALLAX_TEXTS = [
-  "C Y C L O N E",
-  "P U R I T Y",
+  "R E C L A I M",
+  "U N B U R D E N",
   "R E S T O R E",
-  "P E R F E C T I O N",
+  "F R E E D O M",
   "D E L I V E R E D"
 ];
 

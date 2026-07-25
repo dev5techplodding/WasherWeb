@@ -5,10 +5,13 @@ import HeroSection from '@/components/home/sections/HeroSection';
 import Seemless from '@/components/home/sections/Seemless';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import AboutSection from '@/components/home/sections/AboutSection';
+import ServiceEcosystem from '@/components/home/sections/ServiceEcosystem';
 import FrameScrollSection from '@/components/home/sections/FrameScrollSection';
 import ServicesCarousel from '@/components/ServicesCarousel';
+import HoursLedger from '@/components/home/sections/HoursLedger';
 import ScienceSection from '@/components/home/sections/ScienceSection';
 import TestimonialsSection from '@/components/home/sections/TestimonialsSection';
+import MembershipSection from '@/components/home/sections/MembershipSection';
 import CTASection from '@/components/home/sections/CTASection';
 import { HOME_MARQUEE_1, HOME_MARQUEE_2 } from '@/components/data';
 
@@ -35,8 +38,11 @@ export default function Home() {
         textColor="#FFFFFF"
       />
 
-      {/* ─── About: Features polaroid tilt cards ─── */}
+      {/* ─── About: Why Spinny pillars, polaroid tilt cards ─── */}
       <AboutSection />
+
+      {/* ─── Service Ecosystem: Wardrobe, footwear, home & special care ─── */}
+      <ServiceEcosystem />
 
       {/* ─── Cinematic Scroll: CDN-based GSAP scroll sequence ─── */}
       <FrameScrollSection />
@@ -52,11 +58,17 @@ export default function Home() {
         reverse={true}
       />
 
+      {/* ─── Hours Ledger: DIY vs. Spinny time contrast table ─── */}
+      <HoursLedger />
+
       {/* ─── Science Section: Detailed precision algorithms + polaroids ─── */}
       <ScienceSection />
 
       {/* ─── Testimonials: Social Proof masonry grid ─── */}
       <TestimonialsSection />
+
+      {/* ─── Membership: Set-and-forget time investment hook ─── */}
+      <MembershipSection />
 
       {/* ─── CTA: Conversion wavy section with signup forms ─── */}
       <CTASection />

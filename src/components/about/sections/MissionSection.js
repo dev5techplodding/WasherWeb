@@ -8,10 +8,10 @@ export default function MissionSection() {
           Mission
         </p>
         <h2 className="text-2xl md:text-3xl font-bold leading-tight">
-          To make expert garment care feel as convenient as every other modern service.
+          To buy back the hours a household loses to wardrobe, footwear, and home upkeep.
         </h2>
         <p className="mt-5 text-sm md:text-base leading-7 text-white/75">
-          That means fewer unknowns, cleaner communication, and service standards that hold up in real life. We design the experience so customers know who is handling their items, when pickup will happen, and when they should expect delivery.
+          That means fewer unknowns, cleaner communication, and service standards that hold up in real life — whether it&rsquo;s a suit, a pair of sneakers, or a duvet. We design the experience so customers know who is handling their items, when pickup will happen, and when they should expect delivery.
         </p>
       </div>
 

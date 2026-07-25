@@ -201,10 +201,10 @@ export default function ServicesCarousel() {
               className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold tracking-tight leading-[1.15]"
               style={{ color: 'var(--washr-blue-deep)' }}
             >
-              Explore Our{' '}
-              <span style={{ color: 'var(--washr-orange)' }}>Premium</span>
+              Every Service Built{' '}
+              <span style={{ color: 'var(--washr-orange)' }}>Around</span>
               <br className="hidden sm:block" />
-              Garment Care Services
+              Buying Back Your Time
             </h2>
           </div>
 

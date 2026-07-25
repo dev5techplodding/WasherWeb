@@ -8,94 +8,54 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FEATURES = [
   {
-    id: 'commercial-grade',
-    title: 'Commercial-Grade Processing',
+    id: 'time-reclaimed',
+    title: 'Reclaim 5+ Hours a Week',
     description:
-      'Every garment treated by certified commercial facilities — industrial precision, personal attention. Never residential machines.',
-    accent: '#2A5580',
-    span: 'lg:col-span-2',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <rect x="6" y="10" width="36" height="32" rx="4" stroke="currentColor" strokeWidth="2" />
-        <circle cx="24" cy="30" r="10" stroke="currentColor" strokeWidth="2" />
-        <circle cx="24" cy="30" r="5" stroke="currentColor" strokeWidth="1.5" opacity="0.4" />
-        <rect x="10" y="14" width="28" height="8" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        <circle cx="16" cy="18" r="2" fill="currentColor" opacity="0.4" />
-        <circle cx="22" cy="18" r="2" fill="currentColor" opacity="0.4" />
-      </svg>
-    ),
-  },
-  {
-    id: 'eco-friendly',
-    title: 'Eco-Conscious Cleaning',
-    description: 'Hypoallergenic detergents and low-water commercial systems. Premium care for your garments and the planet.',
-    accent: '#34a06e',
-    span: 'lg:col-span-1',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <path d="M24 6C24 6 10 18 10 30C10 38 16 44 24 44C32 44 38 38 38 30C38 18 24 6 24 6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        <path d="M18 32C18 32 20 28 24 28C28 28 30 32 30 32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
-        <path d="M24 20L24 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-      </svg>
-    ),
-  },
-  {
-    id: 'transparent-pricing',
-    title: 'No Subscriptions. Ever.',
-    description: 'Pay only for what you use. No monthly passes, no lock-in. Crystal-clear per-pound pricing, always.',
+      'Wardrobe laundry, shoe care, ironing, and home-textile upkeep quietly eat a weekend a month. Spinny hands that time back — permanently, not just this once.',
     accent: '#F28C28',
-    span: 'lg:col-span-1',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <rect x="6" y="12" width="36" height="28" rx="4" stroke="currentColor" strokeWidth="2" />
-        <line x1="6" y1="22" x2="42" y2="22" stroke="currentColor" strokeWidth="1.5" />
-        <rect x="10" y="26" width="12" height="3" rx="1.5" fill="currentColor" opacity="0.3" />
-        <circle cx="36" cy="30" r="5" stroke="currentColor" strokeWidth="1.5" />
-        <text x="36" y="33" textAnchor="middle" fontSize="8" fill="currentColor" fontWeight="700">$</text>
-      </svg>
-    ),
-  },
-  {
-    id: 'doorstep',
-    title: 'Doorstep Convenience',
-    description: 'Schedule pickups around your life. Our vetted drivers handle everything — you never leave home.',
-    accent: '#3A7BC8',
-    span: 'lg:col-span-1',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <path d="M8 44V18L24 6L40 18V44" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        <rect x="18" y="28" width="12" height="16" rx="2" stroke="currentColor" strokeWidth="2" />
-        <circle cx="26" cy="36" r="1.5" fill="currentColor" opacity="0.5" />
-      </svg>
-    ),
-  },
-  {
-    id: 'quality-guarantee',
-    title: '100% Quality Guarantee',
-    description: "Every order inspected before delivery. If anything isn't perfect, we'll re-process it at zero cost.",
-    accent: '#F28C28',
-    span: 'lg:col-span-1',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
         <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2" />
-        <path d="M16 24L22 30L32 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="1" opacity="0.2" />
+        <path d="M24 14V24L31 29" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
-    id: 'real-time-tracking',
-    title: 'Real-Time Order Tracking',
-    description: 'Follow your garments from pickup to processing to delivery. Live status updates at every step.',
+    id: 'entire-living-space',
+    title: 'One Service, Entire Living Space',
+    description: 'Suits and sneakers. Duvets and diaper bags. Curtains and cashmere. Spinny is the single point of contact for every fabric, leather, and textile surface in your home.',
     accent: '#2A5580',
-    span: 'lg:col-span-2',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <rect x="14" y="4" width="20" height="40" rx="4" stroke="currentColor" strokeWidth="2" />
-        <rect x="18" y="10" width="12" height="24" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-        <circle cx="24" cy="18" r="4" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M24 22V28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <circle cx="24" cy="30" r="2" fill="currentColor" opacity="0.4" />
+        <path d="M8 44V18L24 6L40 18V44" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <rect x="16" y="24" width="8" height="20" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="26" y="28" width="8" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+    ),
+  },
+  {
+    id: 'zero-effort-concierge',
+    title: 'Zero-Effort Concierge Logistics',
+    description: 'Door-to-door pickup and delivery, closet-ready hanging, drawer-ready folding. Nothing to drop off, nothing to carry further than your own front door.',
+    accent: '#3A7BC8',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+        <rect x="10" y="18" width="22" height="18" rx="3" stroke="currentColor" strokeWidth="2" />
+        <path d="M32 24H38L42 29V36H32V24Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <circle cx="17" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="35" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+    ),
+  },
+  {
+    id: 'investment-grade-care',
+    title: 'Investment-Grade Care',
+    description: "Your favourite sneakers and your grandmother's duvet don't belong in a machine built for gym socks. Every item goes to a specialist trained for its specific material.",
+    accent: '#34a06e',
+    icon: (
+      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
+        <path d="M24 5L38 11V22C38 32 32 39 24 43C16 39 10 32 10 22V11L24 5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M17 24L22 29L31 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -180,12 +140,12 @@ export default function AboutSection() {
             className="animate-in text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] mb-6"
             style={{ color: 'var(--washr-blue-deep)' }}
           >
-            Built for People Who{' '}
+            Four Reasons This Is Not{' '}
             <span
               className="relative"
               style={{ color: 'var(--washr-orange)' }}
             >
-              Value Their Time
+              a Laundry Service
             </span>
           </h2>
 
@@ -193,8 +153,8 @@ export default function AboutSection() {
             className="animate-in text-base md:text-lg leading-relaxed max-w-xl"
             style={{ color: 'var(--washr-text-secondary)' }}
           >
-            Spinny connects you with vetted, commercial-grade laundry facilities — not residential gig workers.
-            The result: consistently exceptional garment care, every single time.
+            Spinny connects you with vetted specialists across garments, footwear, and home textiles — not residential gig workers.
+            The result: your time back, every single time, without a drop in quality.
           </p>
         </div>
 
@@ -231,12 +191,12 @@ export default function AboutSection() {
         {/* ── Bento Feature Grid ── */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5"
         >
           {FEATURES.map((feature) => (
             <div
               key={feature.id}
-              className={`feature-card group relative rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-all duration-300 cursor-default border ${feature.span}`}
+              className="feature-card group relative rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-all duration-300 cursor-default border"
               style={{
                 backgroundColor: 'var(--washr-gray)',
                 borderColor: 'var(--washr-gray-mid)',
@@ -292,7 +252,7 @@ export default function AboutSection() {
           {[
             { label: 'No Credit Card Required', icon: '🔒' },
             { label: 'Cancel Anytime', icon: '✓' },
-            { label: 'Fast Turnaround', icon: '⚡' },
+            { label: 'Time Back, Fast', icon: '⚡' },
           ].map((item) => (
             <div key={item.label} className="flex items-center gap-2.5">
               <span

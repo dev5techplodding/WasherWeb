@@ -11,10 +11,10 @@ const FOOTER_LINKS = {
   services: {
     title: 'Services',
     links: [
-      { label: 'Wash & Fold', href: '/services#wash-fold' },
-      { label: 'Dry Cleaning', href: '/services#dry-cleaning' },
-      { label: 'Bulky Items', href: '/services#bulky-items' },
-      { label: 'Alterations', href: '/services#alterations' },
+      { label: 'Wardrobe & Workwear', href: '/services#ecosystem' },
+      { label: 'Footwear & Leather', href: '/services#ecosystem' },
+      { label: 'Home & Sanctuary', href: '/services#ecosystem' },
+      { label: 'Special Care & Tailoring', href: '/services#ecosystem' },
     ],
   },
   company: {
@@ -246,9 +246,9 @@ export default function Footer() {
                 className="text-sm leading-relaxed mb-6 max-w-xs"
                 style={{ color: 'rgba(255, 255, 255, 0.5)' }}
               >
-                Premium on-demand laundry and garment care.
-                Commercial-grade quality from vetted professionals,
-                delivered seamlessly to your doorstep.
+                A time-buyback service for your whole wardrobe and home.
+                Garments, footwear, and home textiles, cared for by vetted
+                specialists and delivered seamlessly to your doorstep.
               </p>
 
               {/* Social icons with spring bounce */}
@@ -331,7 +331,7 @@ export default function Footer() {
               >
                 Spinny Inc.
               </span>
-              {' '}All rights reserved. Premium garment care, delivered across Canada.
+              {' '}All rights reserved. Buying back time, one pickup at a time, across Canada.
             </p>
             <div className="flex items-center gap-6">
               {[

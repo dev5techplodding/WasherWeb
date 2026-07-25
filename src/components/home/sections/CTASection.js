@@ -192,7 +192,7 @@ export default function CTASection() {
               className="text-base md:text-lg leading-relaxed mb-8"
               style={{ color: 'rgba(255, 255, 255, 0.85)' }}
             >
-              Download the Spinny app today and experience effortless, commercial-grade garment care right from your phone. Schedule pickups, track orders, and manage preferences seamlessly.
+              Download the Spinny app and start buying back your time today. Schedule pickups for your wardrobe, footwear, or home textiles, track orders, and manage preferences — all without lifting a finger.
             </p>
 
             {/* App Download Buttons */}

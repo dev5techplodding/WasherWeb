@@ -37,7 +37,7 @@ const TESTIMONIALS = [
     role: 'Marketing Director',
     location: 'Toronto, ON',
     rating: 5,
-    quote: 'I\'ve tried every laundry service in the city. Spinny is the only one that actually delivers commercial-grade quality. My dry cleaning comes back flawless — every single time.',
+    quote: 'I\'ve tried every laundry service in the city. Spinny is the only one that actually gives me my evenings back — my dry cleaning comes back flawless, and I never think about it in between.',
     avatarColor: '#1B3A5C',
     featured: true,
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80',
@@ -60,7 +60,7 @@ const TESTIMONIALS = [
     role: 'Pediatric Nurse',
     location: 'Calgary, AB',
     rating: 5,
-    quote: 'The hypoallergenic detergent option is a game-changer for my family. My daughter has sensitive skin and Spinny is the first service that actually accommodates that without upcharging.',
+    quote: 'Between two kids and night shifts, I don\'t have an hour to spare on laundry. Spinny\'s hypoallergenic option means I don\'t have to choose between my daughter\'s sensitive skin and getting my evening back.',
     avatarColor: '#F28C28',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -71,7 +71,7 @@ const TESTIMONIALS = [
     role: 'Restaurant Owner',
     location: 'Montreal, QC',
     rating: 5,
-    quote: 'We use Spinny for all our restaurant linens and staff uniforms. The quality is consistently perfect and the turnaround time is unmatched. It\'s become essential to our operation.',
+    quote: 'We use Spinny for all our restaurant linens and staff uniforms. It\'s freed up hours every week that used to go to managing an in-house laundry run — it\'s become essential to how we operate.',
     avatarColor: '#1B3A5C',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -82,7 +82,7 @@ const TESTIMONIALS = [
     role: 'Real Estate Agent',
     location: 'Ottawa, ON',
     rating: 5,
-    quote: 'First impressions matter in my line of work. Spinny keeps my wardrobe looking impeccable. Transparent pricing means no surprises — just expert care at a fair price.',
+    quote: 'First impressions matter in my line of work, but so does my calendar. Spinny keeps my wardrobe and my handbags impeccable without costing me a single showing\'s worth of time.',
     avatarColor: '#2A5580',
     image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -93,7 +93,7 @@ const TESTIMONIALS = [
     role: 'University Professor',
     location: 'Edmonton, AB',
     rating: 5,
-    quote: 'The real-time tracking is brilliant. I can see exactly where my garments are in the process. It\'s the kind of transparency you\'d expect from a premium service — and Spinny delivers.',
+    quote: 'The real-time tracking means I never have to build "wait for laundry" into my day anymore. I can see exactly where my order is — garments, rugs, whatever it is that week — and just get on with my time.',
     avatarColor: '#F28C28',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -378,7 +378,7 @@ export default function TestimonialsSection() {
             className="text-base md:text-lg max-w-xl mx-auto leading-relaxed"
             style={{ color: 'var(--washr-text-secondary)' }}
           >
-            Real experiences from real people who made the switch to expert-level garment care.
+            Real experiences from real people who bought back their time.
           </p>
         </div>
 
