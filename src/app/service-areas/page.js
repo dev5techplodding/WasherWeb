@@ -1,5 +1,5 @@
-import CommonHeroSection from '@/components/CommonHeroSection';
-import { SERVICE_AREAS_HERO_CONTENT, SERVICE_AREAS } from '@/components/data';
+import ServiceAreasHero from '@/components/service-areas/sections/ServiceAreasHero';
+import { SERVICE_AREAS } from '@/components/data';
 
 export const metadata = {
   title: 'Service Areas | Spinny',
@@ -9,7 +9,7 @@ export const metadata = {
 export default function ServiceAreasPage() {
   return (
     <main className="min-h-screen bg-white pb-20">
-      <CommonHeroSection content={SERVICE_AREAS_HERO_CONTENT} />
+      <ServiceAreasHero />
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-20">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6">

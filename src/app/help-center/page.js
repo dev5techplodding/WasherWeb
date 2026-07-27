@@ -1,5 +1,5 @@
-import CommonHeroSection from '@/components/CommonHeroSection';
-import { HELP_CENTER_HERO_CONTENT, HELP_FAQ_ITEMS, FEEDBACK_TOPICS } from '@/components/data';
+import HelpCenterHero from '@/components/help-center/sections/HelpCenterHero';
+import { HELP_FAQ_ITEMS, FEEDBACK_TOPICS } from '@/components/data';
 import FaqAccordion from '@/components/FaqAccordion';
 import FeedbackSection from '@/components/FeedbackSection';
 import PageCTA from '@/components/PageCTA';
@@ -14,7 +14,7 @@ export const metadata = {
 export default function HelpCenterPage() {
   return (
     <main className="min-h-screen bg-white pb-20">
-      <CommonHeroSection content={HELP_CENTER_HERO_CONTENT} />
+      <HelpCenterHero />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <HelpStats />

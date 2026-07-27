@@ -49,22 +49,22 @@ export default function ServicesHero() {
 
       {/* ─── Main Content Area (Anchored to Viewport Far-Left Edge) ─── */}
       <div className="relative z-10 w-full px-6 sm:px-10 md:px-16 lg:px-20 text-left">
-        <div ref={contentRef} className="flex flex-col items-start text-left max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md">
+        <div ref={contentRef} className="flex flex-col items-start text-left max-w-2xl lg:max-w-3xl">
 
           {/* Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-[#F7941D] text-xs sm:text-sm font-bold tracking-wider uppercase mb-5 backdrop-blur-md shadow-[0_2px_12px_rgba(247,148,29,0.15)]">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-[#F7941D] text-xs sm:text-sm font-bold tracking-wider uppercase mb-6 backdrop-blur-md shadow-[0_2px_12px_rgba(247,148,29,0.15)]">
             <span className="w-2 h-2 rounded-full bg-[#F7941D] animate-pulse" />
             <span>OUR SERVICES</span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-[1.1] text-left">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] text-left">
             One Pickup.{' '}
             <span className="text-[#F7941D] block sm:inline">Everything Handled.</span>
           </h1>
 
           {/* Subheading */}
-          <p className="mt-5 text-sm sm:text-base text-slate-200 leading-relaxed font-normal max-w-sm sm:max-w-md text-left drop-shadow-sm">
+          <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed font-normal max-w-2xl text-left drop-shadow-sm">
             Shirts, suits, sneakers, duvets, and bags — all cleaned and cared for by specialists, then returned ready to use.
           </p>
 

@@ -1,5 +1,4 @@
-import CommonHeroSection from '@/components/CommonHeroSection';
-import { APP_HERO_CONTENT } from '@/components/data';
+import AppHero from '@/components/app/sections/AppHero';
 import AppFeatures from '@/components/app/sections/AppFeatures';
 import AppScreens from '@/components/app/sections/AppScreens';
 import AppDownloadBanner from '@/components/procedure/AppDownloadBanner';
@@ -13,7 +12,7 @@ export const metadata = {
 export default function AppPage() {
   return (
     <main className="min-h-screen bg-white pb-20">
-      <CommonHeroSection content={APP_HERO_CONTENT} />
+      <AppHero />
       <AppFeatures />
       <AppScreens />
       <AppDownloadBanner />

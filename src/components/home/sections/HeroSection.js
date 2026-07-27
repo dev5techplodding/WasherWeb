@@ -77,16 +77,16 @@ export default function HeroSection() {
 
       {/* ─── Main Content Area ─── */}
       <div className="relative z-10 flex-1 flex flex-col justify-center max-w-2xl w-full">
-        <div ref={contentRef} className="flex flex-col items-start text-left gap-0">
+        <div ref={contentRef} className="flex flex-col items-start text-left gap-0 max-w-2xl">
           {/* Main big headlines */}
           <h1
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-[1.08] mb-1 font-sans text-white"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[1.05] mb-1 font-sans text-white"
             style={{ fontFamily: 'AvenirNext, var(--font-sans)' }}
           >
             LESS LAUNDRY.
           </h1>
           <h1
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-[1.08] mb-5 font-sans"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[1.05] mb-5 font-sans"
             style={{
               color: 'var(--washr-orange)',
               fontFamily: 'AvenirNext, var(--font-sans)',
@@ -96,7 +96,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-6 sm:mb-8 max-w-md text-slate-300">
+          <p className="text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-6 sm:mb-8 max-w-xl text-slate-300">
             Spinny isn&apos;t a laundry company — it&apos;s a time-buyback service for your whole wardrobe and home.
             Suits, sneakers, duvets, and rugs, all picked up, cared for, and delivered back.
           </p>

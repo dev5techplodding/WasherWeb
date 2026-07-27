@@ -1,5 +1,5 @@
-import CommonHeroSection from '@/components/CommonHeroSection';
-import { TERMS_HERO_CONTENT, TERMS_SECTIONS } from '@/components/data';
+import TermsHero from '@/components/terms-of-service/sections/TermsHero';
+import { TERMS_SECTIONS } from '@/components/data';
 
 export const metadata = {
   title: 'Terms of Service | Spinny',
@@ -9,7 +9,7 @@ export const metadata = {
 export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-white pb-20">
-      <CommonHeroSection content={TERMS_HERO_CONTENT} />
+      <TermsHero />
 
       <div className="max-w-3xl mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-20 space-y-10">
         {TERMS_SECTIONS.map((section) => (

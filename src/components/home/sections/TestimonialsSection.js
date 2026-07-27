@@ -198,7 +198,7 @@ function TestimonialCard({ review, index, isFeatured, cardRef }) {
     >
       <div
         ref={innerRef}
-        className="glass-card p-7 transition-shadow duration-300 hover:shadow-xl group will-change-transform"
+        className="glass-card p-7 group will-change-transform"
         style={{
           border: isFeatured
             ? '1px solid rgba(242, 140, 40, 0.25)'

@@ -159,13 +159,12 @@ export default function Navbar() {
             {/* ─── Logo ─── */}
             <Link href="/" className="flex-shrink-0 relative z-10" aria-label="Spinny home">
               <Image
-                src="/Logo.png"
+                src={scrolled && !mobileOpen ? '/Logo.png' : '/darklogo.png'}
                 alt="Spinny"
                 width={120}
                 height={36}
                 priority
                 className="h-9 w-auto transition-all duration-300"
-
               />
             </Link>
 

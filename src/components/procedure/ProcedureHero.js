@@ -40,7 +40,7 @@ export default function ProcedureHero({ onExploreClick, onStartClick }) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12] text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-white mb-6">
               Spinny is the{' '}
               <span className="text-[#F7941D] font-black">
                 freedom to care for your entire closet, on your schedule.

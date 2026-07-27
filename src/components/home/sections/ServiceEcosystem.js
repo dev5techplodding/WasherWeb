@@ -7,27 +7,51 @@ import { SERVICE_ECOSYSTEM } from '@/components/data';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CATEGORY_ICONS = {
-  wardrobe: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5a2.5 2.5 0 00-2.5 2.5c0 .7.29 1.33.76 1.78L3.5 13.5A1.5 1.5 0 004.5 16h15a1.5 1.5 0 001-2.5l-6.76-4.72c.47-.45.76-1.08.76-1.78A2.5 2.5 0 0012 4.5zM12 16v5" />
-    </svg>
-  ),
-  footwear: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-    </svg>
-  ),
-  home: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-    </svg>
-  ),
-  'special-care': (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 0A3 3 0 104.879 4.879a3 3 0 004.242 4.242zm0 0L12 12m-7.121 7.121a3 3 0 104.242-4.242 3 3 0 00-4.242 4.242z" />
-    </svg>
-  ),
+const CATEGORY_META = {
+  wardrobe: {
+    accent: '#F28C28',
+    glowRgb: '242, 140, 40',
+    badge: 'WARDROBE CARE',
+    stat: '⚡ No Sunday Ironing',
+    icon: (
+      <svg className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5a2.5 2.5 0 00-2.5 2.5c0 .7.29 1.33.76 1.78L3.5 13.5A1.5 1.5 0 004.5 16h15a1.5 1.5 0 001-2.5l-6.76-4.72c.47-.45.76-1.08.76-1.78A2.5 2.5 0 0012 4.5zM12 16v5" />
+      </svg>
+    ),
+  },
+  footwear: {
+    accent: '#F28C28',
+    glowRgb: '242, 140, 40',
+    badge: 'FOOTWEAR REVIVAL',
+    stat: '⚡ Skip Cobbler Queue',
+    icon: (
+      <svg className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    ),
+  },
+  home: {
+    accent: '#F28C28',
+    glowRgb: '242, 140, 40',
+    badge: 'HOME SANCTUARY',
+    stat: '⚡ Zero Heavy Carrying',
+    icon: (
+      <svg className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+  },
+  'special-care': {
+    accent: '#F28C28',
+    glowRgb: '242, 140, 40',
+    badge: 'SPECIAL CARE',
+    stat: '⚡ Material Specialist',
+    icon: (
+      <svg className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 0A3 3 0 104.879 4.879a3 3 0 004.242 4.242zm0 0L12 12m-7.121 7.121a3 3 0 104.242-4.242 3 3 0 00-4.242 4.242z" />
+      </svg>
+    ),
+  },
 };
 
 export default function ServiceEcosystem() {
@@ -66,8 +90,7 @@ export default function ServiceEcosystem() {
     <section
       ref={sectionRef}
       id="ecosystem"
-      className="py-24 md:py-32 relative"
-      style={{ backgroundColor: 'var(--washr-gray)' }}
+      className="py-24 md:py-32 relative bg-slate-50/50"
       aria-labelledby="ecosystem-heading"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
@@ -104,72 +127,102 @@ export default function ServiceEcosystem() {
 
         {/* ── Category Grid ── */}
         <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          {SERVICE_ECOSYSTEM.map((category) => (
-            <article
-              key={category.id}
-              className="eco-card glass-card group relative overflow-hidden p-7 md:p-8 flex flex-col justify-between gap-6 hover:border-amber-300/80"
-            >
-              {/* Top Accent Gradient Line on Hover */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {SERVICE_ECOSYSTEM.map((category) => {
+            const meta = CATEGORY_META[category.id] || CATEGORY_META.wardrobe;
+            return (
+              <article
+                key={category.id}
+                className="eco-card group relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-500 cursor-default border border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(27,58,92,0.14)] hover:-translate-y-1.5 overflow-hidden"
+              >
+                {/* Top Accent Gradient Line on Hover */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                  style={{
+                    background: `linear-gradient(90deg, transparent, ${meta.accent}, transparent)`,
+                  }}
+                />
 
-              <div className="flex flex-col gap-4">
-                {/* Header Row: Icon & Tag Count */}
-                <div className="flex items-center justify-between">
-                  <span
-                    className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 bg-amber-500/10 border border-amber-500/20 text-amber-600 group-hover:bg-gradient-to-br group-hover:from-amber-500 group-hover:to-orange-500 group-hover:text-white group-hover:border-transparent group-hover:shadow-md group-hover:shadow-orange-500/20 transition-all duration-300"
+                {/* Ambient Radial Glow Blob */}
+                <div
+                  className="absolute -top-12 -right-12 w-48 h-48 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
+                  style={{ backgroundColor: meta.accent }}
+                />
+
+                {/* Card Main Top Section */}
+                <div>
+                  {/* Header Row: Icon Left & Badge + Stat Right */}
+                  <div className="flex items-start justify-between gap-4 mb-6">
+                    {/* Icon Box */}
+                    <div
+                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-sm border border-slate-100"
+                      style={{
+                        backgroundColor: `rgba(${meta.glowRgb}, 0.1)`,
+                        color: meta.accent,
+                        borderColor: `rgba(${meta.glowRgb}, 0.2)`,
+                      }}
+                    >
+                      {meta.icon}
+                    </div>
+
+                    {/* Badge & Stat */}
+                    <div className="flex flex-col items-end gap-1.5">
+                      <span
+                        className="px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full border shadow-2xs"
+                        style={{
+                          color: meta.accent,
+                          backgroundColor: `rgba(${meta.glowRgb}, 0.08)`,
+                          borderColor: `rgba(${meta.glowRgb}, 0.2)`,
+                        }}
+                      >
+                        {meta.badge}
+                      </span>
+                      <span className="text-xs font-semibold text-slate-500">
+                        {meta.stat}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Title & Tagline */}
+                  <div className="flex flex-col gap-2.5">
+                    <h3 className="text-lg sm:text-xl font-extrabold text-[#122840] tracking-tight group-hover:text-[#1B3A5C] transition-colors leading-snug">
+                      {category.title}
+                    </h3>
+                    <p className="text-sm sm:text-[15px] leading-relaxed text-slate-600 font-normal">
+                      {category.tagline}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card Footer: Sub-item Pills & Dark Arrow Circle Button */}
+                <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
+                  {/* Item Badges */}
+                  <div className="flex flex-wrap gap-1.5 max-w-[80%]">
+                    {category.items.map((item) => (
+                      <span
+                        key={item}
+                        className="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100/80 text-slate-600 group-hover:bg-slate-100 transition-colors"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Dark Circular Arrow Button */}
+                  <div
+                    className="w-10 h-10 rounded-full bg-[#0E243A] text-white flex items-center justify-center shrink-0 shadow-md group-hover:bg-[#122840] group-hover:translate-x-1 transition-all duration-300"
                     aria-hidden="true"
                   >
-                    {CATEGORY_ICONS[category.id] || (
-                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-                    )}
-                  </span>
-
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-amber-600 transition-colors">
-                    {category.items.length} Specialties
-                  </span>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
                 </div>
-
-                {/* Title & Tagline */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold leading-snug text-slate-900 group-hover:text-amber-600 transition-colors duration-200">
-                    {category.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                    {category.tagline}
-                  </p>
-                </div>
-
-                {/* Item Badges */}
-                <div className="flex flex-wrap gap-2 pt-1">
-                  {category.items.map((item) => (
-                    <span
-                      key={item}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-100/90 text-slate-700 border border-slate-200/80 hover:bg-amber-50 hover:text-amber-900 hover:border-amber-300 transition-all duration-200 cursor-default"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500/70" />
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Time Back Callout Footer */}
-              <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
-                <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-amber-500/10 text-amber-600 shrink-0 border border-amber-500/20">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="9" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
-                </span>
-                <p className="text-xs sm:text-sm text-slate-700 font-medium leading-tight">
-                  <span className="font-bold text-amber-600 mr-1.5 uppercase tracking-wide text-[11px]">Time back:</span>
-                  {category.timeBack}
-                </p>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+

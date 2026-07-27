@@ -206,11 +206,11 @@ export default function Footer() {
             <div ref={brandRef} className="lg:col-span-4 flex flex-col items-start text-left">
               <div className="mb-5">
                 <Image
-                  src="/Logo.png"
+                  src="/darklogo.png"
                   alt="Spinny"
                   width={130}
                   height={40}
-                  className="h-9 w-auto brightness-0 invert opacity-95"
+                  className="h-9 w-auto"
                 />
               </div>
               <p className="text-sm leading-relaxed mb-6 max-w-sm text-slate-300 font-normal">

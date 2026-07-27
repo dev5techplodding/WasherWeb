@@ -241,7 +241,7 @@ export default function CTASection() {
 
               {/* Floating stat card with ticker animation */}
               <div
-                className="absolute -bottom-5 -left-5 md:-left-8 glass-card px-5 py-4 z-10"
+                className="absolute -bottom-5 -left-5 md:-left-8 rounded-3xl bg-white border border-washr-gray-mid px-5 py-4 z-10"
                 style={{ boxShadow: 'var(--washr-shadow-lg)' }}
               >
                 <div className="flex items-center gap-3">

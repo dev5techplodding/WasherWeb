@@ -1,7 +1,6 @@
-import CommonHeroSection from '@/components/CommonHeroSection';
+import ContactHero from '@/components/contact/sections/ContactHero';
 import ContactForm from '@/components/contact/sections/ContactForm';
 import ContactInfo from '@/components/contact/sections/ContactInfo';
-import { CONTACT_HERO_CONTENT } from '@/components/data';
 
 export const metadata = {
   title: 'Contact Us | Spinny',
@@ -12,7 +11,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white pb-20">
-      <CommonHeroSection content={CONTACT_HERO_CONTENT} />
+      <ContactHero />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <ContactForm />

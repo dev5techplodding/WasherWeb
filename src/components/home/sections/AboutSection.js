@@ -10,52 +10,71 @@ const FEATURES = [
   {
     id: 'time-reclaimed',
     title: 'Reclaim 5+ Hours a Week',
+    badge: 'Time Buyback',
+    stat: '⚡ ~5 hrs saved/wk',
     description:
       'Wardrobe laundry, shoe care, ironing, and home-textile upkeep quietly eat a weekend a month. Spinny hands that time back — permanently, not just this once.',
+    tags: ['No Weekend Chores', 'Autopilot Care'],
     accent: '#F28C28',
+    glowRgb: '242, 140, 40',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2" />
-        <path d="M24 14V24L31 29" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
+        <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.5" />
+        <path d="M24 13V24L31 29" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
     id: 'entire-living-space',
     title: 'One Service, Entire Living Space',
-    description: 'Suits and sneakers. Duvets and diaper bags. Curtains and cashmere. Spinny is the single point of contact for every fabric, leather, and textile surface in your home.',
-    accent: '#2A5580',
+    badge: 'Unified Care',
+    stat: '🏠 100% Home Textiles',
+    description:
+      'Suits and sneakers. Duvets and diaper bags. Curtains and cashmere. Spinny is the single point of contact for every fabric, leather, and textile surface in your home.',
+    tags: ['Garments', 'Footwear', 'Textiles'],
+    accent: '#F28C28',
+    glowRgb: '242, 140, 40',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <path d="M8 44V18L24 6L40 18V44" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        <rect x="16" y="24" width="8" height="20" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
-        <rect x="26" y="28" width="8" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
+        <path d="M8 44V18L24 6L40 18V44" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+        <rect x="16" y="24" width="8" height="20" rx="1.5" stroke="currentColor" strokeWidth="2" />
+        <rect x="26" y="28" width="8" height="16" rx="1.5" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
   },
   {
     id: 'zero-effort-concierge',
     title: 'Zero-Effort Concierge Logistics',
-    description: 'Door-to-door pickup and delivery, closet-ready hanging, drawer-ready folding. Nothing to drop off, nothing to carry further than your own front door.',
-    accent: '#3A7BC8',
+    badge: 'Concierge',
+    stat: '🚚 0 Door Drop-offs',
+    description:
+      'Door-to-door pickup and delivery, closet-ready hanging, drawer-ready folding. Nothing to drop off, nothing to carry further than your own front door.',
+    tags: ['Door-to-Door', 'Closet Ready'],
+    accent: '#F28C28',
+    glowRgb: '242, 140, 40',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <rect x="10" y="18" width="22" height="18" rx="3" stroke="currentColor" strokeWidth="2" />
-        <path d="M32 24H38L42 29V36H32V24Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        <circle cx="17" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="35" cy="38" r="3" stroke="currentColor" strokeWidth="1.5" />
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
+        <rect x="8" y="16" width="24" height="20" rx="3" stroke="currentColor" strokeWidth="2.5" />
+        <path d="M32 22H38L43 27V36H32V22Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+        <circle cx="16" cy="38" r="3.5" stroke="currentColor" strokeWidth="2" />
+        <circle cx="36" cy="38" r="3.5" stroke="currentColor" strokeWidth="2" />
       </svg>
     ),
   },
   {
     id: 'investment-grade-care',
     title: 'Investment-Grade Care',
-    description: "Your favourite sneakers and your grandmother's duvet don't belong in a machine built for gym socks. Every item goes to a specialist trained for its specific material.",
-    accent: '#34a06e',
+    badge: 'Garment Specialist',
+    stat: '🛡️ Material-Specific',
+    description:
+      "Your favourite sneakers and your grandmother's duvet don't belong in a machine built for gym socks. Every item goes to a specialist trained for its specific material.",
+    tags: ['Fabric Specific', 'Hand Inspection'],
+    accent: '#F28C28',
+    glowRgb: '242, 140, 40',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
-        <path d="M24 5L38 11V22C38 32 32 39 24 43C16 39 10 32 10 22V11L24 5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-        <path d="M17 24L22 29L31 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
+        <path d="M24 5L38 11V22C38 32 32 39 24 43C16 39 10 32 10 22V11L24 5Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+        <path d="M17 24L22 29L31 18" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -117,7 +136,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="py-24 md:py-32 relative bg-white"
+      className="py-24 md:py-32 relative bg-slate-50/50"
       aria-labelledby="about-heading"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
@@ -161,7 +180,7 @@ export default function AboutSection() {
         {/* ── Stats Bar ── */}
         <div
           ref={statsRef}
-          className="grid grid-cols-2 md:grid-cols-4 gap-px mb-14 md:mb-20 rounded-2xl overflow-hidden border"
+          className="grid grid-cols-2 md:grid-cols-4 gap-px mb-14 md:mb-20 rounded-2xl overflow-hidden border shadow-sm"
           style={{ borderColor: 'var(--washr-gray-mid)', backgroundColor: 'var(--washr-gray-mid)' }}
         >
           {STATS.map((stat) => (
@@ -191,58 +210,96 @@ export default function AboutSection() {
         {/* ── Bento Feature Grid ── */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8"
         >
           {FEATURES.map((feature) => (
             <div
               key={feature.id}
-              className="feature-card group relative rounded-2xl p-7 md:p-8 flex flex-col gap-5 transition-all duration-300 cursor-default border"
-              style={{
-                backgroundColor: 'var(--washr-gray)',
-                borderColor: 'var(--washr-gray-mid)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = `${feature.accent}33`;
-                e.currentTarget.style.boxShadow = `0 0 0 1px ${feature.accent}22, 0 16px 40px ${feature.accent}14`;
-                e.currentTarget.style.backgroundColor = 'white';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'var(--washr-gray-mid)';
-                e.currentTarget.style.boxShadow = 'none';
-                e.currentTarget.style.backgroundColor = 'var(--washr-gray)';
-              }}
+              className="feature-card group relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-500 cursor-default border border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(27,58,92,0.14)] hover:-translate-y-1.5 overflow-hidden"
             >
-              {/* Icon container */}
+              {/* Top accent line on hover */}
               <div
-                className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110"
+                className="absolute top-0 left-0 right-0 h-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                 style={{
-                  backgroundColor: `${feature.accent}12`,
-                  color: feature.accent,
+                  background: `linear-gradient(90deg, transparent, ${feature.accent}, transparent)`,
                 }}
-              >
-                {feature.icon}
-              </div>
+              />
 
-              <div className="flex flex-col gap-2">
-                <h3
-                  className="text-base md:text-lg font-bold leading-snug"
-                  style={{ color: 'var(--washr-blue-deep)' }}
-                >
-                  {feature.title}
-                </h3>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: 'var(--washr-text-secondary)' }}
-                >
-                  {feature.description}
-                </p>
-              </div>
-
-              {/* Subtle accent dot */}
+              {/* Ambient radial glow background blob */}
               <div
-                className="absolute top-6 right-6 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute -top-12 -right-12 w-48 h-48 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
                 style={{ backgroundColor: feature.accent }}
               />
+
+              {/* Card Content Top */}
+              <div>
+                {/* Top Header: Icon + Badges */}
+                <div className="flex items-start justify-between gap-4 mb-6">
+                  {/* Icon Container */}
+                  <div
+                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-sm border border-slate-100"
+                    style={{
+                      backgroundColor: `rgba(${feature.glowRgb}, 0.1)`,
+                      color: feature.accent,
+                      borderColor: `rgba(${feature.glowRgb}, 0.2)`,
+                    }}
+                  >
+                    {feature.icon}
+                  </div>
+
+                  {/* Badge & Stat */}
+                  <div className="flex flex-col items-end gap-1.5">
+                    <span
+                      className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full border shadow-2xs"
+                      style={{
+                        color: feature.accent,
+                        backgroundColor: `rgba(${feature.glowRgb}, 0.08)`,
+                        borderColor: `rgba(${feature.glowRgb}, 0.2)`,
+                      }}
+                    >
+                      {feature.badge}
+                    </span>
+                    <span className="text-xs font-semibold text-slate-500">
+                      {feature.stat}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Title & Description */}
+                <div className="flex flex-col gap-2.5">
+                  <h3 className="text-lg sm:text-xl font-extrabold text-[#122840] tracking-tight group-hover:text-[#1B3A5C] transition-colors leading-snug">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm sm:text-[15px] leading-relaxed text-slate-600 font-normal">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Card Footer: Tags & Arrow indicator */}
+              <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
+                {/* Sub-tags */}
+                <div className="flex flex-wrap gap-1.5">
+                  {feature.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-slate-100/80 text-slate-600 group-hover:bg-slate-100 transition-colors"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Interactive indicator button */}
+                <div
+                  className="w-9 h-9 rounded-full bg-slate-100/90 group-hover:bg-[#122840] text-slate-500 group-hover:text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:shadow-md"
+                  aria-hidden="true"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </div>
             </div>
           ))}
         </div>
