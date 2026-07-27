@@ -211,7 +211,7 @@ export default function Navbar() {
 
             {/* ─── Desktop CTA ─── */}
             <div className="hidden md:flex items-center gap-3">
-              <Link
+              {/* <Link
                 href="/app"
                 className="text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer"
                 style={{ color: scrolled ? 'var(--washr-blue)' : 'var(--washr-white)' }}
@@ -225,7 +225,7 @@ export default function Navbar() {
                 }}
               >
                 Get the App
-              </Link>
+              </Link> */}
 
               <Link
                 href="/help-center"
@@ -368,7 +368,7 @@ export default function Navbar() {
               >
                 Login
               </Link>
-              <Link
+              {/* <Link
                 href="/app"
                 onClick={handleLinkClick}
                 className="mobile-link w-full py-4 rounded-full font-semibold text-center text-base transition-all duration-300"
@@ -378,7 +378,7 @@ export default function Navbar() {
                 }}
               >
                 Get the App
-              </Link>
+              </Link> */}
               <Link
                 href="/help-center"
                 onClick={handleLinkClick}

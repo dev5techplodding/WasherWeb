@@ -43,13 +43,13 @@ export default function ProcedurePage() {
       <ComparisonSection />
 
       {/* 7. APP DOWNLOAD BANNER */}
-      <AppDownloadBanner />
 
       {/* 8. FREQUENTLY ASKED QUESTIONS (Glass Accordion) */}
       <ProcedureFAQ />
 
       {/* 9. CALL TO ACTION (Final CTA) */}
-      <ProcedureCTA />
+      {/* <ProcedureCTA /> */}
+      <AppDownloadBanner />
     </main>
   );
 }

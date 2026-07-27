@@ -89,16 +89,16 @@ export default function ProcedureHero({ onExploreClick, onStartClick }) {
                 {/* Top Left Image */}
                 <div className="relative aspect-[4/4.8] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#F7941D]/40 transition-colors group bg-slate-900">
                   <img
-                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop"
-                    alt="Lifestyle with music headphones"
+                    src="/images/hero_laundry_concierge.png"
+                    alt="Spinny Wardrobe & Home Care Concierge"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 {/* Bottom Left Image */}
                 <div className="relative aspect-[4/4.8] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#F7941D]/40 transition-colors group bg-slate-900">
                   <img
-                    src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop"
-                    alt="Active outdoors stretching"
+                    src="/images/hero_specialist_care.png"
+                    alt="Material Specialist Care & Restoration"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -107,8 +107,8 @@ export default function ProcedureHero({ onExploreClick, onStartClick }) {
               {/* Right Column: Single Tall Image */}
               <div className="relative aspect-[3/5.2] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#F7941D]/40 transition-colors group bg-slate-900 my-auto">
                 <img
-                  src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=800&auto=format&fit=crop"
-                  alt="Family outdoor quality time"
+                  src="/images/hero_delivery_driver.png"
+                  alt="Spinny Door-to-Door Delivery Partner"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>

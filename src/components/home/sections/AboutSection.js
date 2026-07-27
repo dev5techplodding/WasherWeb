@@ -17,12 +17,7 @@ const FEATURES = [
     tags: ['No Weekend Chores', 'Autopilot Care'],
     accent: '#F28C28',
     glowRgb: '242, 140, 40',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
-        <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2.5" />
-        <path d="M24 13V24L31 29" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
+    image: '/icons/time_buyback.png',
   },
   {
     id: 'entire-living-space',
@@ -34,13 +29,7 @@ const FEATURES = [
     tags: ['Garments', 'Footwear', 'Textiles'],
     accent: '#F28C28',
     glowRgb: '242, 140, 40',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
-        <path d="M8 44V18L24 6L40 18V44" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-        <rect x="16" y="24" width="8" height="20" rx="1.5" stroke="currentColor" strokeWidth="2" />
-        <rect x="26" y="28" width="8" height="16" rx="1.5" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
+    image: '/icons/unified_care.png',
   },
   {
     id: 'zero-effort-concierge',
@@ -52,31 +41,19 @@ const FEATURES = [
     tags: ['Door-to-Door', 'Closet Ready'],
     accent: '#F28C28',
     glowRgb: '242, 140, 40',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
-        <rect x="8" y="16" width="24" height="20" rx="3" stroke="currentColor" strokeWidth="2.5" />
-        <path d="M32 22H38L43 27V36H32V22Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-        <circle cx="16" cy="38" r="3.5" stroke="currentColor" strokeWidth="2" />
-        <circle cx="36" cy="38" r="3.5" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
+    image: '/icons/concierge.png',
   },
   {
     id: 'investment-grade-care',
     title: 'Investment-Grade Care',
-    badge: 'Garment Specialist',
+    badge: 'Specialist Care',
     stat: '🛡️ Material-Specific',
     description:
       "Your favourite sneakers and your grandmother's duvet don't belong in a machine built for gym socks. Every item goes to a specialist trained for its specific material.",
     tags: ['Fabric Specific', 'Hand Inspection'],
     accent: '#F28C28',
     glowRgb: '242, 140, 40',
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8 sm:w-9 sm:h-9" aria-hidden="true">
-        <path d="M24 5L38 11V22C38 32 32 39 24 43C16 39 10 32 10 22V11L24 5Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-        <path d="M17 24L22 29L31 18" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
+    image: '/icons/specialist_care.png',
   },
 ];
 
@@ -210,94 +187,52 @@ export default function AboutSection() {
         {/* ── Bento Feature Grid ── */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
         >
           {FEATURES.map((feature) => (
             <div
               key={feature.id}
-              className="feature-card group relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-500 cursor-default border border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(27,58,92,0.14)] hover:-translate-y-1.5 overflow-hidden"
+              className="feature-card group relative rounded-[28px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 cursor-default border border-slate-100 bg-white shadow-[10px_14px_30px_rgba(210,215,228,0.45),-10px_-10px_25px_rgba(255,255,255,0.95)] hover:shadow-[16px_20px_40px_rgba(195,202,218,0.6),-12px_-12px_30px_rgba(255,255,255,1)] hover:-translate-y-1.5"
             >
-              {/* Top accent line on hover */}
-              <div
-                className="absolute top-0 left-0 right-0 h-1 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-                style={{
-                  background: `linear-gradient(90deg, transparent, ${feature.accent}, transparent)`,
-                }}
-              />
-
-              {/* Ambient radial glow background blob */}
-              <div
-                className="absolute -top-12 -right-12 w-48 h-48 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
-                style={{ backgroundColor: feature.accent }}
-              />
-
               {/* Card Content Top */}
               <div>
                 {/* Top Header: Icon + Badges */}
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  {/* Icon Container */}
-                  <div
-                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:rotate-2 shadow-sm border border-slate-100"
-                    style={{
-                      backgroundColor: `rgba(${feature.glowRgb}, 0.1)`,
-                      color: feature.accent,
-                      borderColor: `rgba(${feature.glowRgb}, 0.2)`,
-                    }}
-                  >
-                    {feature.icon}
+                <div className="flex items-center justify-between gap-3 mb-6">
+                  {/* Realistic 3D Icon Container */}
+                  <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-[#F8F9FC] flex items-center justify-center shadow-[inset_1.5px_1.5px_4px_rgba(0,0,0,0.06),inset_-1.5px_-1.5px_4px_rgba(255,255,255,0.9)] p-1.5 border border-slate-100 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                    <img
+                      src={feature.image}
+                      alt={feature.badge}
+                      className="w-full h-full object-contain filter drop-shadow-sm"
+                    />
                   </div>
 
-                  {/* Badge & Stat */}
-                  <div className="flex flex-col items-end gap-1.5">
-                    <span
-                      className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full border shadow-2xs"
-                      style={{
-                        color: feature.accent,
-                        backgroundColor: `rgba(${feature.glowRgb}, 0.08)`,
-                        borderColor: `rgba(${feature.glowRgb}, 0.2)`,
-                      }}
-                    >
-                      {feature.badge}
-                    </span>
-                    <span className="text-xs font-semibold text-slate-500">
-                      {feature.stat}
-                    </span>
-                  </div>
+                  {/* Soft Neumorphic Pill Badge */}
+                  <span className="px-3.5 py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider rounded-full bg-[#FFF0E6] text-[#F28C28] border border-[#FFE0D1]/80 shadow-[inset_1px_1px_2px_rgba(242,140,40,0.08)]">
+                    {feature.badge}
+                  </span>
                 </div>
 
                 {/* Title & Description */}
-                <div className="flex flex-col gap-2.5">
-                  <h3 className="text-lg sm:text-xl font-extrabold text-[#122840] tracking-tight group-hover:text-[#1B3A5C] transition-colors leading-snug">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm sm:text-[15px] leading-relaxed text-slate-600 font-normal">
-                    {feature.description}
-                  </p>
-                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-[#122840] leading-snug tracking-tight mb-3 group-hover:text-[#F28C28] transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-xs sm:text-sm leading-relaxed text-slate-500 font-normal">
+                  {feature.description}
+                </p>
               </div>
 
-              {/* Card Footer: Tags & Arrow indicator */}
-              <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
-                {/* Sub-tags */}
+              {/* Card Footer: Tags */}
+              <div className="mt-8 pt-4 border-t border-slate-100/80 flex items-center justify-between gap-2">
                 <div className="flex flex-wrap gap-1.5">
                   {feature.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-slate-100/80 text-slate-600 group-hover:bg-slate-100 transition-colors"
+                      className="px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-slate-50 text-slate-500 border border-slate-100"
                     >
                       {tag}
                     </span>
                   ))}
-                </div>
-
-                {/* Interactive indicator button */}
-                <div
-                  className="w-9 h-9 rounded-full bg-slate-100/90 group-hover:bg-[#122840] text-slate-500 group-hover:text-white flex items-center justify-center shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:shadow-md"
-                  aria-hidden="true"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
                 </div>
               </div>
             </div>

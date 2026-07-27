@@ -10,7 +10,7 @@ const JOURNEYS = [
     title: 'Customer Onboarding',
     description:
       'Schedule pickups, select custom garment preferences, track order status in real-time, and manage automated deliveries.',
-    image: 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=800&auto=format&fit=crop',
+    image: '/images/journey_customer_onboarding.png',
     tag: 'On-Demand Laundry',
   },
   {
@@ -20,7 +20,7 @@ const JOURNEYS = [
     title: 'Laundry Partner',
     description:
       'Connect your commercial facility, receive optimized order batches, streamline capacity, and grow revenue predictably.',
-    image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?q=80&w=800&auto=format&fit=crop',
+    image: '/images/journey_vendor_partner.png',
     tag: 'Facility SaaS',
   },
   {
@@ -30,7 +30,7 @@ const JOURNEYS = [
     title: 'Delivery Partner',
     description:
       'Drive flexible high-density neighborhood routes with integrated GPS navigation, automated dispatch, and weekly payouts.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop',
+    image: '/images/journey_driver_partner.png',
     tag: 'Route Logistics',
   },
 ];
