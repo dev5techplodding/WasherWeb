@@ -184,22 +184,22 @@ export default function AboutSection() {
           ))}
         </div>
 
-        {/* ── Bento Feature Grid ── */}
+        {/* ── Bento Feature Grid (Compact 2x2 Layout) ── */}
         <div
           ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto"
         >
           {FEATURES.map((feature) => (
             <div
               key={feature.id}
-              className="feature-card group relative rounded-[28px] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 cursor-default border border-slate-100 bg-white shadow-[10px_14px_30px_rgba(210,215,228,0.45),-10px_-10px_25px_rgba(255,255,255,0.95)] hover:shadow-[16px_20px_40px_rgba(195,202,218,0.6),-12px_-12px_30px_rgba(255,255,255,1)] hover:-translate-y-1.5"
+              className="feature-card group relative rounded-[24px] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 cursor-default border border-slate-100 bg-white shadow-[8px_12px_25px_rgba(210,215,228,0.4),-8px_-8px_20px_rgba(255,255,255,0.95)] hover:shadow-[12px_16px_35px_rgba(195,202,218,0.55),-10px_-10px_25px_rgba(255,255,255,1)] hover:-translate-y-1"
             >
               {/* Card Content Top */}
               <div>
                 {/* Top Header: Icon + Badges */}
-                <div className="flex items-center justify-between gap-3 mb-6">
+                <div className="flex items-center justify-between gap-3 mb-4">
                   {/* Realistic 3D Icon Container */}
-                  <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-[#F8F9FC] flex items-center justify-center shadow-[inset_1.5px_1.5px_4px_rgba(0,0,0,0.06),inset_-1.5px_-1.5px_4px_rgba(255,255,255,0.9)] p-1.5 border border-slate-100 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                  <div className="w-12 h-12 rounded-2xl bg-[#F8F9FC] flex items-center justify-center shadow-[inset_1.5px_1.5px_4px_rgba(0,0,0,0.06),inset_-1.5px_-1.5px_4px_rgba(255,255,255,0.9)] p-1.5 border border-slate-100 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
                     <img
                       src={feature.image}
                       alt={feature.badge}
@@ -208,13 +208,13 @@ export default function AboutSection() {
                   </div>
 
                   {/* Soft Neumorphic Pill Badge */}
-                  <span className="px-3.5 py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider rounded-full bg-[#FFF0E6] text-[#F28C28] border border-[#FFE0D1]/80 shadow-[inset_1px_1px_2px_rgba(242,140,40,0.08)]">
+                  <span className="px-3 py-1 text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider rounded-full bg-[#FFF0E6] text-[#F28C28] border border-[#FFE0D1]/80 shadow-[inset_1px_1px_2px_rgba(242,140,40,0.08)]">
                     {feature.badge}
                   </span>
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="text-lg sm:text-xl font-bold text-[#122840] leading-snug tracking-tight mb-3 group-hover:text-[#F28C28] transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-[#122840] leading-snug tracking-tight mb-2 group-hover:text-[#F28C28] transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-xs sm:text-sm leading-relaxed text-slate-500 font-normal">
@@ -223,7 +223,7 @@ export default function AboutSection() {
               </div>
 
               {/* Card Footer: Tags */}
-              <div className="mt-8 pt-4 border-t border-slate-100/80 flex items-center justify-between gap-2">
+              <div className="mt-5 pt-3.5 border-t border-slate-100/80 flex items-center justify-between gap-2">
                 <div className="flex flex-wrap gap-1.5">
                   {feature.tags.map((tag) => (
                     <span

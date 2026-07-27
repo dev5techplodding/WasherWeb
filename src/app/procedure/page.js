@@ -1,5 +1,6 @@
 import ProcedureHero from '@/components/procedure/ProcedureHero';
 import JourneyIntroCards from '@/components/procedure/JourneyIntroCards';
+import SimpleFlowSection from '@/components/procedure/SimpleFlowSection';
 import CustomerJourneySection from '@/components/procedure/CustomerJourneySection';
 import VendorJourneySection from '@/components/procedure/VendorJourneySection';
 import DriverJourneySection from '@/components/procedure/DriverJourneySection';
@@ -29,6 +30,9 @@ export default function ProcedurePage() {
 
       {/* 2. INTRODUCTION SECTION (3 Enormous Floating Cards) */}
       <JourneyIntroCards />
+
+      {/* 2.5 VISUAL FLOW DIAGRAM (Simple 4-Step Process) */}
+      <SimpleFlowSection />
 
       {/* 3. CUSTOMER JOURNEY SECTION (6 Animated Steps) */}
       <CustomerJourneySection />
