@@ -165,9 +165,7 @@ export default function Navbar() {
                 height={36}
                 priority
                 className="h-9 w-auto transition-all duration-300"
-                style={{
-                  filter: scrolled || mobileOpen ? 'none' : 'brightness(0) invert(1)',
-                }}
+
               />
             </Link>
 

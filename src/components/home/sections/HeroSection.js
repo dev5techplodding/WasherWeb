@@ -83,7 +83,7 @@ export default function HeroSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-[1.08] mb-1 font-sans text-white"
             style={{ fontFamily: 'AvenirNext, var(--font-sans)' }}
           >
-            LAUNDRY. HANDLED.
+            LAUNDRY. HANDLED  .
           </h1>
           <h1
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-[1.08] mb-5 font-sans"
@@ -157,7 +157,7 @@ export default function HeroSection() {
               }}
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Buy Back Your Time
+                Get Started
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
                   <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -168,7 +168,7 @@ export default function HeroSection() {
               href="/services"
               className="px-8 py-4 sm:px-9 sm:py-4 rounded-full font-bold text-sm sm:text-base tracking-wide text-white border-2 border-white/30 bg-white/10 hover:bg-white hover:text-slate-950 hover:border-white backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center cursor-pointer shadow-md"
             >
-              See Everything We Care For
+              Our Services
             </Link>
           </div>
 

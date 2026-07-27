@@ -1,5 +1,4 @@
-import CommonHeroSection from '@/components/CommonHeroSection';
-import { PROCEDURE_HERO_CONTENT } from '@/components/data';
+import ProcedureHero from '@/components/procedure/ProcedureHero';
 import JourneyIntroCards from '@/components/procedure/JourneyIntroCards';
 import CustomerJourneySection from '@/components/procedure/CustomerJourneySection';
 import VendorJourneySection from '@/components/procedure/VendorJourneySection';
@@ -26,7 +25,7 @@ export default function ProcedurePage() {
   return (
     <main className="min-h-screen bg-white text-[#0E3A66] selection:bg-[#F7941D] selection:text-white">
       {/* 1. HERO SECTION */}
-      <CommonHeroSection content={PROCEDURE_HERO_CONTENT} />
+      <ProcedureHero />
 
       {/* 2. INTRODUCTION SECTION (3 Enormous Floating Cards) */}
       <JourneyIntroCards />

@@ -1,5 +1,4 @@
-import CommonHeroSection from '@/components/CommonHeroSection';
-import { ABOUT_HERO_CONTENT } from '@/components/data';
+import AboutHero from '@/components/about/sections/AboutHero';
 import CoreValues from '@/components/about/sections/CoreValues';
 import MissionSection from '@/components/about/sections/MissionSection';
 import TimelineSection from '@/components/about/sections/TimelineSection';
@@ -13,7 +12,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white pb-20">
-      <CommonHeroSection content={ABOUT_HERO_CONTENT} />
+      <AboutHero />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <CoreValues />

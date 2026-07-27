@@ -192,78 +192,48 @@ export default function Footer() {
       <footer
         ref={footerRef}
         id="footer"
-        className="relative pt-16 md:pt-24 overflow-hidden"
-        style={{ backgroundColor: 'var(--washr-blue-deep)' }}
+        className="relative pt-16 md:pt-24 overflow-hidden bg-[#0B1726] text-white"
         aria-label="Site footer"
       >
-        {/* ─── WASHR Watermark ─── */}
-        <div
-          className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
-          aria-hidden="true"
-        >
-          <span
-            className="font-extrabold uppercase tracking-[0.3em] whitespace-nowrap"
-            style={{
-              fontSize: 'clamp(80px, 20vw, 260px)',
-              color: 'rgba(255,255,255,0.025)',
-              lineHeight: 1,
-            }}
-          >
-            SPINNY
-          </span>
-        </div>
-
-        {/* ─── Wavy SVG Top ─── */}
-        <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none rotate-180">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[40px] md:h-[60px]" fill="none">
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V120.9C67.81,97.78,144.29,105.39,214.34,86.91Z"
-              fill="rgba(18, 40, 64, 0.4)"
-            />
-            <path
-              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V0H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-              fill="var(--washr-blue-deep)"
-            />
+        {/* ─── Ambient Glow & Top White Curve Transition ─── */}
+        <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-10" aria-hidden="true">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[36px] md:h-[56px]" fill="white">
+            <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,40 L1200,120 L0,120 Z" />
           </svg>
         </div>
 
-        {/* ─── Main footer content ─── */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-16 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+        {/* Ambient Glow Orb */}
+        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(247,148,29,0.12)_0%,transparent_70%)] blur-3xl pointer-events-none" />
 
-            {/* ─── Brand column ─── */}
-            <div ref={brandRef} className="lg:col-span-4">
+        {/* ─── Main Footer Content ─── */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-12 md:py-16 relative z-10 pt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-8 items-start">
+
+            {/* ─── Brand Column ─── */}
+            <div ref={brandRef} className="lg:col-span-4 flex flex-col items-start text-left">
               <div className="mb-5">
                 <Image
                   src="/Logo.png"
                   alt="Spinny"
                   width={130}
                   height={40}
-                  className="h-auto w-auto brightness-0 invert opacity-90"
+                  className="h-9 w-auto brightness-0 invert opacity-95"
                 />
               </div>
-              <p
-                className="text-sm leading-relaxed mb-6 max-w-xs"
-                style={{ color: 'rgba(255, 255, 255, 0.5)' }}
-              >
+              <p className="text-sm leading-relaxed mb-6 max-w-sm text-slate-300 font-normal">
                 A time-buyback service for your whole wardrobe and home.
                 Garments, footwear, and home textiles, cared for by vetted
                 specialists and delivered seamlessly to your doorstep.
               </p>
 
-              {/* Social icons with spring bounce */}
-              <div className="flex gap-3">
+              {/* Social Icons */}
+              <div className="flex items-center gap-3">
                 {SOCIALS.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.5)',
-                      backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                      border: '1px solid rgba(255, 255, 255, 0.08)',
-                    }}
+                    className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 text-slate-300 hover:text-white bg-white/5 hover:bg-[#F7941D] border border-white/10 shadow-sm group"
                     onMouseEnter={handleSocialEnter}
                     onMouseLeave={handleSocialLeave}
                   >
@@ -273,14 +243,11 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* ─── Link columns with sliding underline ─── */}
-            <div ref={linksRef} className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+            {/* ─── Link Columns ─── */}
+            <div ref={linksRef} className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-6 text-left">
               {Object.values(FOOTER_LINKS).map((column) => (
-                <div key={column.title} className="footer-col">
-                  <h3
-                    className="text-xs font-bold tracking-[0.15em] uppercase mb-5"
-                    style={{ color: 'rgba(255, 255, 255, 0.35)' }}
-                  >
+                <div key={column.title} className="footer-col flex flex-col items-start">
+                  <h3 className="text-xs font-bold tracking-[0.15em] uppercase mb-4 text-[#F7941D]">
                     {column.title}
                   </h3>
                   <ul className="space-y-3">
@@ -288,20 +255,11 @@ export default function Footer() {
                       <li key={link.label}>
                         <a
                           href={link.href}
-                          className="footer-link group relative inline-block text-sm transition-colors duration-200"
-                          style={{ color: 'rgba(255, 255, 255, 0.55)' }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.color = 'var(--washr-orange)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.55)';
-                          }}
+                          className="footer-link group relative inline-block text-sm transition-colors duration-200 text-slate-300 hover:text-white font-normal"
                         >
                           {link.label}
-                          {/* Sliding underline */}
                           <span
-                            className="absolute -bottom-0.5 left-0 h-[1px] w-0 group-hover:w-full transition-all duration-300 origin-left"
-                            style={{ backgroundColor: 'var(--washr-orange)' }}
+                            className="absolute -bottom-0.5 left-0 h-[1.5px] w-0 group-hover:w-full transition-all duration-300 origin-left bg-[#F7941D]"
                             aria-hidden="true"
                           />
                         </a>
@@ -311,24 +269,16 @@ export default function Footer() {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
 
-        {/* ─── Bottom bar ─── */}
-        <div
-          className="border-t relative z-10"
-          style={{ borderColor: 'rgba(255, 255, 255, 0.06)' }}
-        >
-          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p
-              className="text-xs text-center md:text-left"
-              style={{ color: 'rgba(255, 255, 255, 0.3)' }}
-            >
+        {/* ─── Bottom Bar ─── */}
+        <div className="border-t relative z-10 border-white/10 bg-black/20">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <p className="text-xs text-slate-400 font-normal">
               © {currentYear}{' '}
-              <span
-                className="font-semibold"
-                style={{ color: 'var(--washr-orange)', opacity: 0.8 }}
-              >
+              <span className="font-semibold text-[#F7941D]">
                 Spinny Inc.
               </span>
               {' '}All rights reserved. Buying back time, one pickup at a time, across Canada.
@@ -341,10 +291,7 @@ export default function Footer() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-xs transition-colors duration-200 group relative"
-                  style={{ color: 'rgba(255, 255, 255, 0.3)' }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255, 255, 255, 0.3)'; }}
+                  className="text-xs transition-colors duration-200 text-slate-400 hover:text-white font-normal"
                 >
                   {item.label}
                 </a>

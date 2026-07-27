@@ -6,11 +6,14 @@ import { gsap } from 'gsap';
 
 export default function CommonHeroSection({ content = {} }) {
   const {
-    eyebrow,
-    heading,
-    description,
+    eyebrow = '',
+    heading = '',
+    highlightText = '',
+    badgeLogo = '',
+    description = '',
     backgroundImage,
     rightImage,
+    gridImages = null,
     buttons = [],
     accentText,
     stats = [],
@@ -106,8 +109,18 @@ export default function CommonHeroSection({ content = {} }) {
 
           {/* ─── Left Side Content ─── */}
           <div ref={contentRef} className="max-w-2xl">
-            {/* Eyebrow Badge */}
-            {eyebrow && (
+            {/* Badge Logo / Icon Chip */}
+            {badgeLogo && (
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 text-slate-950 font-extrabold text-sm tracking-wider uppercase mb-6 shadow-lg shadow-yellow-400/20">
+                <svg className="w-5 h-5 text-slate-950" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+                <span>{badgeLogo}</span>
+              </div>
+            )}
+
+            {/* Eyebrow Badge (if no badgeLogo) */}
+            {!badgeLogo && eyebrow && (
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-[#F7941D] text-xs font-bold tracking-wider uppercase mb-5 backdrop-blur-md shadow-[0_2px_12px_rgba(247,148,29,0.15)]">
                 <span className="w-2 h-2 rounded-full bg-[#F7941D] animate-pulse" />
                 {eyebrow}
@@ -115,8 +128,16 @@ export default function CommonHeroSection({ content = {} }) {
             )}
 
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.08]">
-              {heading}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
+              {highlightText && heading.includes(highlightText) ? (
+                <>
+                  {heading.split(highlightText)[0]}
+                  <span className="text-[#F2C94C] font-black">{highlightText}</span>
+                  {heading.split(highlightText)[1]}
+                </>
+              ) : (
+                heading
+              )}
             </h1>
 
             {/* Description */}
@@ -137,20 +158,23 @@ export default function CommonHeroSection({ content = {} }) {
             {buttons.length > 0 && (
               <div className="mt-8 flex flex-wrap gap-4">
                 {buttons.map((button) => {
+                  const isGold = button.variant === 'gold' || button.variant === 'primary-gold';
                   const isPrimary = button.variant !== 'secondary';
                   return (
                     <a
                       key={`${button.label}-${button.url}`}
                       href={button.url}
-                      className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-bold transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-sm sm:text-base font-bold transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
                       style={{
-                        backgroundColor: isPrimary ? 'var(--washr-orange)' : 'rgba(255,255,255,0.08)',
-                        color: '#ffffff',
-                        border: isPrimary ? '1px solid transparent' : '1px solid rgba(255,255,255,0.18)',
-                        boxShadow: isPrimary
+                        backgroundColor: isGold ? '#F2C94C' : isPrimary ? 'var(--washr-orange)' : 'rgba(255,255,255,0.08)',
+                        color: isGold ? '#0f172a' : '#ffffff',
+                        border: isGold ? '1px solid #F2C94C' : isPrimary ? '1px solid transparent' : '1px solid rgba(255,255,255,0.18)',
+                        boxShadow: isGold
+                          ? '0 10px 25px rgba(242,201,76,0.3)'
+                          : isPrimary
                           ? '0 10px 30px rgba(247,148,29,0.35)'
                           : '0 4px 20px rgba(0,0,0,0.15)',
-                        backdropFilter: isPrimary ? 'none' : 'blur(12px)',
+                        backdropFilter: isPrimary || isGold ? 'none' : 'blur(12px)',
                       }}
                     >
                       <span>{button.label}</span>
@@ -179,7 +203,45 @@ export default function CommonHeroSection({ content = {} }) {
 
           {/* ─── Right Side Glass Visual / Stats ─── */}
           <div ref={visualRef} className="relative">
-            {rightImage ? (
+            {gridImages && gridImages.length >= 3 ? (
+              /* ─── 3-Image Asymmetrical Grid Layout (Rinse Go Style) ─── */
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 items-center max-w-lg mx-auto lg:max-w-none">
+                {/* Left Column: 2 Stacked Images */}
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  {/* Top Left Image */}
+                  <div className="relative aspect-[4/4.8] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 group bg-slate-900">
+                    <Image
+                      src={gridImages[0].src}
+                      alt={gridImages[0].alt || 'Lifestyle'}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  {/* Bottom Left Image */}
+                  <div className="relative aspect-[4/4.8] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 group bg-slate-900">
+                    <Image
+                      src={gridImages[1].src}
+                      alt={gridImages[1].alt || 'Active'}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+
+                {/* Right Column: Single Tall Image */}
+                <div className="relative aspect-[3/5.2] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/10 group bg-slate-900 my-auto">
+                  <Image
+                    src={gridImages[2].src}
+                    alt={gridImages[2].alt || 'Family'}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            ) : rightImage ? (
               <div className="relative rounded-[32px] overflow-hidden">
                 <div className="relative rounded-[24px] overflow-hidden min-h-[340px] md:min-h-[420px]">
                   <Image
@@ -194,18 +256,6 @@ export default function CommonHeroSection({ content = {} }) {
                     className="absolute inset-0 bg-gradient-to-t from-[#0B1726]/80 via-transparent to-transparent pointer-events-none"
                     aria-hidden="true"
                   />
-
-                  {/* Floating Glass Badge Chip */}
-                  {/* {rightImage.badge && (
-                    <div className="absolute left-5 bottom-5 rounded-2xl bg-[#0B1726]/85 px-5 py-3.5 shadow-2xl backdrop-blur-md border border-white/15">
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-[#F7941D]">
-                        {rightImage.badge.label}
-                      </p>
-                      <p className="mt-0.5 text-sm font-bold text-white tracking-tight">
-                        {rightImage.badge.value}
-                      </p>
-                    </div>
-                  )} */}
                 </div>
               </div>
             ) : Array.isArray(stats) && stats.length > 0 ? (

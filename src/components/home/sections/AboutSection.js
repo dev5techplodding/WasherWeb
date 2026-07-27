@@ -145,7 +145,7 @@ export default function AboutSection() {
               className="relative"
               style={{ color: 'var(--washr-orange)' }}
             >
-              a Laundry Service
+              Just a Laundry Service
             </span>
           </h2>
 

@@ -45,9 +45,9 @@ export const PROCEDURE_HERO_CONTENT = {
 
 export const SERVICES_HERO_CONTENT = {
   eyebrow: 'Our Services',
-  heading: 'Your whole wardrobe and home, cared for — not just your laundry.',
+  heading: 'One pickup. Everything handled.',
   description:
-    'From everyday shirts to sneakers, leather bags, duvets, and rugs — one pickup covers what used to take five different errands.',
+    'Shirts, suits, sneakers, duvets, and bags </br>- all cleaned and cared for by specialists, then returned ready to use.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
   buttons: [
     { label: 'Get the app', url: '/app' },
