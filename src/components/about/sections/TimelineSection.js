@@ -13,7 +13,7 @@ export default function TimelineSection() {
       </div>
       <div className="grid gap-4 lg:grid-cols-3">
         {MILESTONES.map((item) => (
-          <article key={item.year} className="rounded-[28px] bg-white p-6 border border-washr-gray-mid shadow-[0_12px_36px_rgba(27,58,92,0.06)]">
+          <article key={item.year} className="glass-card p-6">
             <p className="text-3xl font-black tracking-tight text-washr-orange">{item.year}</p>
             <p className="mt-4 text-sm leading-7 text-washr-text-secondary">{item.label}</p>
           </article>

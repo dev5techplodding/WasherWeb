@@ -76,7 +76,7 @@ export default function ContactForm() {
 
       <form
         onSubmit={handleSubmit}
-        className="glass-card p-6 md:p-8 border border-white/70 space-y-6 shadow-[0_20px_50px_rgba(27,58,92,0.06)] rounded-[32px] bg-white"
+        className="p-6 md:p-8 border border-washr-gray-mid space-y-6 shadow-[0_20px_50px_rgba(27,58,92,0.06)] rounded-[32px] bg-white"
       >
         <div className="grid gap-6 md:grid-cols-2">
           <div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Jane Doe"
-              className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-sm text-washr-blue-deep placeholder:text-washr-text-muted focus:bg-white focus:border-washr-orange outline-none transition-colors duration-200"
+              className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-base sm:text-sm text-washr-blue-deep placeholder:text-washr-text-muted focus:bg-white focus:border-washr-orange outline-none transition-colors duration-200"
             />
           </div>
 
@@ -105,7 +105,7 @@ export default function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="e.g. jane@example.com"
-              className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-sm text-washr-blue-deep placeholder:text-washr-text-muted focus:bg-white focus:border-washr-orange outline-none transition-colors duration-200"
+              className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-base sm:text-sm text-washr-blue-deep placeholder:text-washr-text-muted focus:bg-white focus:border-washr-orange outline-none transition-colors duration-200"
             />
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function ContactForm() {
             id="topic"
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
-            className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-sm text-washr-blue-deep outline-none focus:bg-white focus:border-washr-orange transition-colors duration-200"
+            className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-base sm:text-sm text-washr-blue-deep outline-none focus:bg-white focus:border-washr-orange transition-colors duration-200"
           >
             {TOPICS.map((item) => (
               <option key={item} value={item}>
@@ -139,7 +139,7 @@ export default function ContactForm() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Describe your request in detail..."
-            className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-sm text-washr-blue-deep placeholder:text-washr-text-muted focus:bg-white focus:border-washr-orange outline-none transition-colors duration-200"
+            className="w-full rounded-2xl border border-washr-gray-mid bg-slate-50 px-4 py-3 text-base sm:text-sm text-washr-blue-deep placeholder:text-washr-text-muted focus:bg-white focus:border-washr-orange outline-none transition-colors duration-200"
           />
         </div>
 

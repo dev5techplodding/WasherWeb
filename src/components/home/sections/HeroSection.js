@@ -80,19 +80,19 @@ export default function HeroSection() {
         <div ref={contentRef} className="flex flex-col items-start text-left gap-0">
           {/* Main big headlines */}
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-[1.08] mb-1 font-sans text-white"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-[1.08] mb-1 font-sans text-white"
             style={{ fontFamily: 'AvenirNext, var(--font-sans)' }}
           >
-            LAUNDRY. HANDLED  .
+            LESS LAUNDRY.
           </h1>
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-[1.08] mb-5 font-sans"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-[1.08] mb-5 font-sans"
             style={{
               color: 'var(--washr-orange)',
               fontFamily: 'AvenirNext, var(--font-sans)',
             }}
           >
-            TIME. RECLAIMED.
+            MORE LIFE.
           </h1>
 
           {/* Subheading */}

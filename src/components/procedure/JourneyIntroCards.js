@@ -68,7 +68,7 @@ export default function JourneyIntroCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between"
+              className="group glass-card overflow-hidden flex flex-col justify-between"
             >
               <div>
                 {/* Image Header Container */}

@@ -23,7 +23,7 @@ export default function FaqAccordion({ items = [], title = 'Frequently asked que
           return (
             <article
               key={item.question}
-              className="rounded-[28px] border border-washr-gray-mid bg-white shadow-[0_12px_36px_rgba(27,58,92,0.06)] overflow-hidden"
+              className="glass-card overflow-hidden"
             >
               <button
                 type="button"

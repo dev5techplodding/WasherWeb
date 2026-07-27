@@ -52,7 +52,7 @@ export default function ProcedureFAQ() {
             return (
               <div
                 key={faq.q}
-                className="rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all"
+                className="glass-card overflow-hidden transition-all"
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}

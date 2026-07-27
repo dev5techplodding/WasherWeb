@@ -29,7 +29,7 @@ export default function ServicesHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden w-full min-h-screen h-screen pt-28 pb-16 bg-[#0B1726] text-white flex items-center justify-center"
+      className="relative overflow-hidden w-full min-h-svh pt-28 pb-16 bg-[#0B1726] text-white flex items-center justify-center"
     >
 
       {/* ─── Background Banner Image (/banner2.png) ─── */}

@@ -44,7 +44,7 @@ export default function FeedbackSection({ topics = [], title = 'Send feedback', 
             <select
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              className="mt-2 w-full rounded-2xl border border-white/12 bg-white/10 px-4 py-3 text-sm text-white outline-none"
+              className="mt-2 w-full rounded-2xl border border-white/12 bg-white/10 px-4 py-3 text-base sm:text-sm text-white outline-none"
             >
               {topics.map((item) => (
                 <option key={item} value={item} className="text-washr-blue-deep">
@@ -58,7 +58,7 @@ export default function FeedbackSection({ topics = [], title = 'Send feedback', 
             Your message
             <textarea
               rows="6"
-              className="mt-2 w-full rounded-2xl border border-white/12 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/55 outline-none"
+              className="mt-2 w-full rounded-2xl border border-white/12 bg-white/10 px-4 py-3 text-base sm:text-sm text-white placeholder:text-white/55 outline-none"
               placeholder="Write a short description of what happened or what you want improved."
             />
           </label>

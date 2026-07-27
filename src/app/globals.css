@@ -125,15 +125,27 @@ body {
 }
 
 /* ─────────────────────────────────────────────────
-   Glassmorphism Card
+   Content Card — the one shared card recipe used across
+   the site (service/feature/FAQ/contact/testimonial cards).
+   Consistent radius, border, shadow scale, and hover lift.
    ───────────────────────────────────────────────── */
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: var(--washr-white);
+  border: 1px solid var(--washr-gray-mid);
   border-radius: var(--washr-radius);
-  box-shadow: var(--washr-shadow-card);
+  box-shadow: var(--washr-shadow-sm);
+  transition: box-shadow 0.3s var(--washr-ease), transform 0.3s var(--washr-ease);
+}
+
+.glass-card:hover {
+  box-shadow: var(--washr-shadow-lg);
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-card:hover {
+    transform: none;
+  }
 }
 
 /* ─────────────────────────────────────────────────

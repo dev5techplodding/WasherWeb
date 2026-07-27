@@ -107,7 +107,7 @@ export default function ServiceEcosystem() {
           {SERVICE_ECOSYSTEM.map((category) => (
             <article
               key={category.id}
-              className="eco-card group relative overflow-hidden rounded-2xl p-7 md:p-8 flex flex-col justify-between gap-6 transition-all duration-300 border border-slate-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-300/80 hover:-translate-y-1.5"
+              className="eco-card glass-card group relative overflow-hidden p-7 md:p-8 flex flex-col justify-between gap-6 hover:border-amber-300/80"
             >
               {/* Top Accent Gradient Line on Hover */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

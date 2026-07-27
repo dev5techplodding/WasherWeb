@@ -195,13 +195,6 @@ export default function Footer() {
         className="relative pt-16 md:pt-24 overflow-hidden bg-[#0B1726] text-white"
         aria-label="Site footer"
       >
-        {/* ─── Ambient Glow & Top White Curve Transition ─── */}
-        <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-10" aria-hidden="true">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[36px] md:h-[56px]" fill="white">
-            <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,40 L1200,120 L0,120 Z" />
-          </svg>
-        </div>
-
         {/* Ambient Glow Orb */}
         <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(247,148,29,0.12)_0%,transparent_70%)] blur-3xl pointer-events-none" />
 

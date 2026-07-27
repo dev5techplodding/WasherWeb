@@ -126,7 +126,7 @@ export default function CustomerJourneySection() {
         {/* 2-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start max-w-5xl mx-auto">
           {/* Left Column: Fixed Phone Frame Mockup */}
-          <div className="lg:col-span-5 sticky top-28 space-y-5 flex flex-col items-center">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-5 flex flex-col items-center">
             {/* Phone Frame Div */}
             <div className="relative w-full max-w-[290px] sm:max-w-[300px] aspect-[9/19] rounded-[42px] shadow-2xl p-2 flex items-center justify-center overflow-hidden">
               <div className="relative w-full h-full rounded-[40px] overflow-hidden bg-slate-950 flex items-center justify-center">

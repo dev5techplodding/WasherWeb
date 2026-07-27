@@ -116,19 +116,19 @@ export default function VendorJourneySection() {
 
         {/* Top Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div className="glass-card p-6">
             <h4 className="text-base font-bold text-[#0E3A66] mb-2">Automated Batch Routing</h4>
             <p className="text-sm text-slate-600 font-normal leading-relaxed">
               Receive organized neighborhood order batches dispatched directly to your facility schedule.
             </p>
           </div>
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div className="glass-card p-6">
             <h4 className="text-base font-bold text-[#0E3A66] mb-2">SaaS Capacity Dashboard</h4>
             <p className="text-sm text-slate-600 font-normal leading-relaxed">
               Track daily volume, monitor turnaround SLAs, and manage staff processing queues effortlessly.
             </p>
           </div>
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div className="glass-card p-6">
             <h4 className="text-base font-bold text-[#0E3A66] mb-2">Predictable Settlement</h4>
             <p className="text-sm text-slate-600 font-normal leading-relaxed">
               Transparent per-pound and per-garment revenue accounting deposited directly to your business account.
@@ -230,7 +230,7 @@ export default function VendorJourneySection() {
           </div>
 
           {/* Right Column: Fixed Phone Frame Mockup & Screenshot Swapper */}
-          <div className="lg:col-span-5 sticky top-28 space-y-5 flex flex-col items-center order-1 lg:order-2">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-5 flex flex-col items-center order-1 lg:order-2">
             {/* Phone Frame Div */}
             <div className="relative w-full max-w-[290px] sm:max-w-[300px] aspect-[9/19] rounded-[42px] shadow-2xl p-2 flex items-center justify-center overflow-hidden">
               {/* Inner Screen Container for Screenshots */}

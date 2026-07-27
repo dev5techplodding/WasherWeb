@@ -39,7 +39,7 @@ export default function ContactInfo() {
         {INFOS.map((item) => (
           <article
             key={item.label}
-            className="rounded-[28px] bg-white p-6 border border-washr-gray-mid shadow-[0_12px_36px_rgba(27,58,92,0.04)] flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_18px_48px_rgba(27,58,92,0.08)] hover:-translate-y-1"
+            className="glass-card p-6 flex flex-col items-center text-center"
           >
             <div className="h-12 w-12 rounded-2xl bg-washr-blue-deep/5 text-washr-blue-deep flex items-center justify-center mb-4">
               {item.icon}

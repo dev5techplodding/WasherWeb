@@ -1,5 +1,4 @@
 import Preloader from '@/components/Preloader';
-import CursorGlow from '@/components/CursorGlow';
 import PageProgress from '@/components/PageProgress';
 import HeroSection from '@/components/home/sections/HeroSection';
 import Seemless from '@/components/home/sections/Seemless';
@@ -18,8 +17,7 @@ import { HOME_MARQUEE_1, HOME_MARQUEE_2 } from '@/components/data';
 export default function Home() {
   return (
     <>
-      {/* ─── Custom Cursor + Page Progress (global) ─── */}
-      <CursorGlow />
+      {/* ─── Page Progress (global) ─── */}
       <PageProgress />
 
       {/* ─── Preloader: Cursive path drawing + wiping upward reveal ─── */}
