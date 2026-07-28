@@ -7,10 +7,22 @@ import AppStoreButtons from '@/components/AppStoreButtons';
 const DRIVER_STEPS = [
   {
     id: 1,
-    title: 'Profile Setup',
-    badge: 'Instant ID',
-    desc: 'Basic personal details and mobile verification confirmation.',
-    image: '/F1.jpg',
+    title: 'Registration',
+    badge: 'Step 1',
+    desc: 'Sign up as a driver partner with your mobile number and email verification.',
+    image: '/screens/csplash.png',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+      </svg>
+    ),
+  },
+  {
+    id: 2,
+    title: 'Complete Profile',
+    badge: 'Step 2',
+    desc: 'Fill out your personal information, contact address, emergency contacts, and vehicle type.',
+    image: '/screens/cprofile.jpeg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -18,62 +30,74 @@ const DRIVER_STEPS = [
     ),
   },
   {
-    id: 2,
-    title: 'Identity & License',
-    badge: 'License Verified',
-    desc: 'Valid driver’s license & government ID upload for instant verification.',
-    image: '/F2.jpg',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 012-2h2a2 2 0 012 2v1m-6 0h6" />
-      </svg>
-    ),
-  },
-  {
     id: 3,
-    title: 'Vehicle Verification',
-    badge: 'Fleet Inspection',
-    desc: 'Vehicle specs, registration & commercial insurance coverage verification.',
-    image: '/F1.jpg',
+    title: 'Document Upload',
+    badge: 'Step 3',
+    desc: 'Upload your driver license, vehicle registration, and valid vehicle insurance policy.',
+    image: '/screens/vendrorDocumentation.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 17a2 2 0 100 4 2 2 0 000-4zm8 0a2 2 0 100 4 2 2 0 000-4zM3 9l2-4h10l2 4M3 9v8a1 1 0 001 1h16a1 1 0 001-1V9M3 9h18" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
       </svg>
     ),
   },
   {
     id: 4,
-    title: 'Background Review',
-    badge: '24h Check',
-    desc: 'Automated 24-hour background check completion and safety screening.',
-    image: '/F2.jpg',
+    title: 'Waiting for Approval',
+    badge: 'Step 4',
+    desc: 'Our operations team completes a background check and document approval within 24 hours.',
+    image: '/screens/vendorapproval.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
   {
     id: 5,
-    title: 'Payout Setup',
-    badge: 'Direct Deposit',
-    desc: 'Direct deposit setup for weekly automated payouts and instant earnings.',
-    image: '/F1.jpg',
+    title: 'Accept Order',
+    badge: 'Step 5',
+    desc: 'Receive live route notifications on your driver app and accept available order dispatch requests.',
+    image: '/screens/corder.jpeg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
       </svg>
     ),
   },
   {
     id: 6,
-    title: 'Route Activation',
-    badge: 'Live Dispatch',
-    desc: 'App access activated to begin accepting neighborhood route tasks.',
-    image: '/F2.jpg',
+    title: 'Pickup the Order',
+    badge: 'Step 6',
+    desc: 'Arrive at customer doorstep, collect items, scan laundry bag barcodes, and confirm pickup.',
+    image: '/screens/orderDetails.jpeg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+      </svg>
+    ),
+  },
+  {
+    id: 7,
+    title: 'Navigate Through Map',
+    badge: 'Step 7',
+    desc: 'Follow live turn-by-turn GPS navigation maps to facility drop points and delivery locations.',
+    image: '/screens/drivertracking.jpeg',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+      </svg>
+    ),
+  },
+  {
+    id: 8,
+    title: 'Get Delivery Done',
+    badge: 'Step 8',
+    desc: 'Hand over freshly cleaned closet-ready garments, capture customer confirmation, and mark order delivered.',
+    image: '/screens/dashboard.jpeg',
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },

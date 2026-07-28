@@ -86,7 +86,7 @@ export default function PrivacyContact() {
             <svg className="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
-            <span>Compliant with Canadian PIPEDA and applicable provincial privacy legislation.</span>
+            <span>Compliant with applicable Canadian federal and provincial privacy legislation.</span>
           </div>
         </article>
 
@@ -133,7 +133,7 @@ export default function PrivacyContact() {
 
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 pt-6 border-t border-white/10">
             <a
-              href="mailto:privacy@spinny.example?subject=Privacy%20Data%20Request"
+              href="mailto:privacy@spinny.app?subject=Privacy%20Data%20Request"
               className="w-full inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-sm font-bold text-white bg-gradient-to-r from-[#F28C28] to-[#E07B17] hover:from-[#E07B17] hover:to-[#C66708] shadow-lg shadow-orange-500/20 transition-all active:scale-[0.98]"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

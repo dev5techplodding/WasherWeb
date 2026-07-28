@@ -7,10 +7,10 @@ import AppStoreButtons from '@/components/AppStoreButtons';
 const VENDOR_STEPS = [
   {
     id: 1,
-    title: 'Facility & Business Profile',
-    badge: 'Business ID',
-    desc: 'Submit legal business details, corporate registration, tax identification, and plant facility address.',
-    image: '/F1.jpg',
+    title: 'Registration',
+    badge: 'Step 1',
+    desc: 'Create your vendor account with basic business and facility registration details.',
+    image: '/screens/basicInfo.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0V7m0 4h4m-4 0H7" />
@@ -19,62 +19,49 @@ const VENDOR_STEPS = [
   },
   {
     id: 2,
-    title: 'Compliance & Insurance Review',
-    badge: 'SLA Audit',
-    desc: 'Upload commercial general liability documentation, environment compliance certificates, and operating licenses.',
-    image: '/F2.jpg',
+    title: 'Upload Document',
+    badge: 'Step 2',
+    desc: 'Upload legal business licenses, tax certificates, and commercial insurance coverage documentation.',
+    image: '/screens/vendrorDocumentation.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
   },
   {
     id: 3,
-    title: 'Service & Capacity Mapping',
-    badge: 'Capacity Map',
-    desc: 'Configure processing specialties (Dry Cleaning, Commercial Wash & Fold, Bedding) and daily bag capacity.',
-    image: '/F1.jpg',
+    title: 'Service Listing',
+    badge: 'Step 3',
+    desc: 'List your available laundry services, treatment specialties, pricing, and daily processing capacity.',
+    image: '/screens/vendroservices.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
       </svg>
     ),
   },
   {
     id: 4,
-    title: 'Partner Orientation',
-    badge: 'SLA Standard',
-    desc: 'Review Spinny garment care standards, turnaround SLA windows, and barcode tracking procedures.',
-    image: '/F2.jpg',
+    title: 'Wait for Approval',
+    badge: 'Step 4',
+    desc: 'Our operations team reviews your facility credentials and uploaded documents for approval within 24 hours.',
+    image: '/screens/vendorapproval.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
   {
     id: 5,
-    title: 'SaaS Hub Credentialing',
-    badge: 'Tablet Access',
-    desc: 'Unlock facility tablet app access, batch dispatch software, and automated revenue accounting.',
-    image: '/F1.jpg',
+    title: 'Start Accepting Order',
+    badge: 'Step 5',
+    desc: 'Once approved, unlock your facility dashboard and start accepting incoming customer order dispatches.',
+    image: '/screens/dashboard.jpeg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-  },
-  {
-    id: 6,
-    title: 'First Batch Activation',
-    badge: 'Live Dispatch',
-    desc: 'Receive initial neighborhood batch assignments and start commercial order processing.',
-    image: '/F2.jpg',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },

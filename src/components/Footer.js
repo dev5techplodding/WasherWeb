@@ -214,9 +214,8 @@ export default function Footer() {
                 />
               </div>
               <p className="text-sm leading-relaxed mb-6 max-w-sm text-slate-300 font-normal">
-                A time-buyback service for your whole wardrobe and home.
-                Garments, footwear, and home textiles, cared for by vetted
-                specialists and delivered seamlessly to your doorstep.
+                <strong className="text-white font-semibold block mb-1">Laundry Done, Life On.</strong>
+                The easiest chore you&apos;ll never do again — complete wardrobe, footwear, and home care delivered seamlessly to your doorstep.
               </p>
 
               {/* Social Icons */}

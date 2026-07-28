@@ -92,13 +92,18 @@ export default function Preloader() {
           />
         </div>
 
-        {/* Text tagline */}
+        {/* Text tagline & slogan */}
         <div
           ref={textRef}
           style={{ opacity: 0 }}
-          className="text-white text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-center mt-1"
+          className="flex flex-col items-center gap-1.5 text-center px-4 mt-1"
         >
-          Laundry Done. Life On.
+          <div className="text-white text-sm sm:text-md font-black tracking-[0.25em] uppercase">
+            Laundry Done, Life On.
+          </div>
+          <div className="text-[#F28C28]  sm:text-md font-semibold tracking-wide">
+            The easiest chore you&apos;ll never do again.
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AppStoreButtons from '@/components/AppStoreButtons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,23 +39,17 @@ const POLAROIDS = [
   },
 ];
 
-const DATA_CHIPS = [
-  { label: '30°C Optimal', sub: 'Fabric-safe temperature', icon: '🌡️' },
-  { label: '800 RPM', sub: 'Anti-stretch spin cycle', icon: '🔄' },
-  { label: '0 Grain Water', sub: 'Ultra-pure soft water', icon: '💧' },
-];
-
 const TECHNIQUES = [
-  { label: 'Fabric-specific temperature mapping' },
+  { label: 'Fabric-specific temperature & cycle mapping' },
   { label: 'Mineral-controlled purified soft water' },
-  { label: 'Active enzymatic suspension formulas' },
+  { label: 'Hypoallergenic active enzymatic care' },
+  { label: 'Closet-ready hanging & drawer-ready folding' },
 ];
 
 export default function ScienceSection() {
   const containerRef = useRef(null);
   const polaroidRefs = useRef([]);
   const textRef = useRef(null);
-  const chipsRef = useRef(null);
   const [hoveredPolaroid, setHoveredPolaroid] = useState(null);
 
   useEffect(() => {
@@ -69,16 +64,6 @@ export default function ScienceSection() {
         {
           opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
           scrollTrigger: { trigger: textRef.current, start: 'top 85%', toggleActions: 'play none none none' },
-        }
-      );
-
-      /* ─── Data chips entrance ─── */
-      gsap.fromTo(
-        chipsRef.current?.querySelectorAll('.data-chip'),
-        { opacity: 0, y: 30, scale: 0.9 },
-        {
-          opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.5)', stagger: 0.1,
-          scrollTrigger: { trigger: chipsRef.current, start: 'top 88%', toggleActions: 'play none none none' },
         }
       );
 
@@ -174,26 +159,26 @@ export default function ScienceSection() {
                 border: '1px solid rgba(242, 140, 40, 0.25)',
               }}
             >
-              Precision That Buys You Time
+              Laundry Done, Life On • Smart Fabric Care
             </span>
             {/* Bold claim */}
             <h2
               id="science-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1] mb-5 text-white"
             >
-              The Process Behind <br />
-              <span style={{ color: 'var(--washr-orange)' }}>Never Doing This Again.</span>
+              The Easiest Chore <br />
+              <span style={{ color: 'var(--washr-orange)' }}>You’ll Never Do Again.</span>
             </h2>
             {/* Supporting detail */}
-            <p className="text-base leading-relaxed mb-4 text-slate-300">
-              We do not believe in standard cycles for every material. Our partner facilities match fabric, leather, and textile-specific algorithms to each item — optimal temperature mapping, mineral-controlled purified water, and active enzymatic suspensions.
+            <p className="text-base leading-relaxed mb-4 text-slate-300 font-normal">
+              Say goodbye to sorting, washing, drying, and folding. Spinny pairs custom fabric algorithms with eco-friendly cleaning techniques tailored to every material in your household — from everyday wear to luxury garments and delicate home textiles.
             </p>
-            <p className="text-sm leading-relaxed mb-8 text-slate-400">
-              Balanced fiber care protects clothes, footwear, and home textiles from shrinking, pilling, or fading — so you never lose a weekend replacing what we could have gotten right the first time.
+            <p className="text-sm leading-relaxed mb-8 text-slate-400 font-normal">
+              Every item is treated with mineral-softened water and inspected by expert care specialists, protecting your wardrobe from shrinking or fading while giving you back 5+ hours every weekend.
             </p>
 
             {/* Technique bullet list */}
-            <ul className="flex flex-col gap-3 mb-10">
+            <ul className="flex flex-col gap-3">
               {TECHNIQUES.map((t) => (
                 <li key={t.label} className="flex items-center gap-3">
                   <span
@@ -204,30 +189,14 @@ export default function ScienceSection() {
                       <path d="M2 5L4 7L8 3" stroke="var(--washr-orange)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
-                  <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.75)' }}>{t.label}</span>
+                  <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.85)' }}>{t.label}</span>
                 </li>
               ))}
             </ul>
 
-            {/* Data chips */}
-            <div ref={chipsRef} className="flex flex-wrap gap-3">
-              {DATA_CHIPS.map((chip) => (
-                <div
-                  key={chip.label}
-                  className="data-chip px-4 py-3 rounded-xl border flex items-center gap-3"
-                  style={{
-                    backgroundColor: 'rgba(255,255,255,0.04)',
-                    borderColor: 'rgba(255,255,255,0.08)',
-                    backdropFilter: 'blur(8px)',
-                  }}
-                >
-                  <span className="text-lg">{chip.icon}</span>
-                  <div>
-                    <div className="text-sm font-black leading-tight" style={{ color: 'var(--washr-orange)' }}>{chip.label}</div>
-                    <div className="text-[10px]" style={{ color: 'rgba(255,255,255,0.4)' }}>{chip.sub}</div>
-                  </div>
-                </div>
-              ))}
+            {/* App Store Download Buttons */}
+            <div className="mt-8">
+              <AppStoreButtons className="justify-start" />
             </div>
           </div>
 

@@ -17,7 +17,7 @@ export const ABOUT_HERO_CONTENT = {
 
 export const CONTACT_HERO_CONTENT = {
   eyebrow: 'Contact Spinny',
-  heading: 'Reach the right team without losing an afternoon to it.',
+  heading: 'Facing an issue with your order?',
   description:
     'Questions about orders, vendors, or service — for anything from garments to footwear and home textiles? Send a message and our team will get back to you fast.',
   backgroundImage: '/frames/ezgif-frame-014.jpg',
@@ -81,26 +81,26 @@ export const HELP_CENTER_HERO_CONTENT = {
 };
 
 export const PRIVACY_HERO_CONTENT = {
-  eyebrow: 'Privacy Policy',
-  heading: 'A plain-language look at how Spinny handles your information.',
+  eyebrow: 'Spinny • Privacy Suite',
+  heading: 'Spinny Platform Privacy Policy',
   description:
-    'What we collect, why we collect it, and how we protect it — in plain language.',
+    'This Privacy Policy explains how Spinny collects, uses, discloses, stores, and protects personal information through the Spinny Platform.',
   backgroundImage: '/frames/ezgif-frame-160.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-185.jpg',
     alt: 'Privacy and security themed Spinny visual',
     priority: true,
     badge: {
-      label: 'Policy summary',
-      value: 'Collection, use, storage, and contact details in one place',
+      label: 'Official Privacy Policy',
+      value: 'Comprehensive Canadian Privacy Notice',
     },
   },
   buttons: [
-    { label: 'Contact privacy', url: 'mailto:privacy@spinny.example' },
-    { label: 'Back to help', url: '/help-center', variant: 'secondary' },
+    { label: 'Contact Privacy Officer', url: 'mailto:privacy@spinny.app' },
+    { label: 'Help Center', url: '/help-center', variant: 'secondary' },
   ],
   accentText:
-    'Have a privacy concern? Reach out and we’ll route it to the right person.',
+    'Questions about your personal data? Contact our designated Privacy Officer at privacy@spinny.app.',
 };
 
 // --- FAQ & Topics ---
@@ -138,31 +138,164 @@ export const FEEDBACK_TOPICS = [
 // --- Privacy Data ---
 export const PRIVACY_SECTIONS = [
   {
-    title: 'Information we collect',
-    body:
-      'We collect the information needed to create and service accounts, such as name, contact details, pickup and delivery addresses, order notes, and communication history. We may also collect device and usage information to keep the platform reliable.',
+    id: 1,
+    title: '1. Scope',
+    subtitle: 'Applicable Platforms & Users',
+    body: 'This Privacy Policy explains how Spinny collects, uses, discloses, stores, and protects personal information through the Spinny Platform. It applies to customers, prospective customers, website visitors, customer-support contacts, and individuals whose information is submitted in connection with an order. Separate workforce and contractor privacy notices should be provided to Delivery Partners and Laundry Partner personnel.',
   },
   {
-    title: 'How we use it',
-    body:
-      'We use your information to schedule service, process payments, provide support, communicate updates, improve the platform, and comply with legal obligations. We do not sell personal information.',
+    id: 2,
+    title: '2. Accountability',
+    subtitle: 'Privacy Officer Oversight',
+    body: 'Spinny is responsible for personal information under its control and designates a Privacy Officer to oversee compliance. Privacy questions, access requests, corrections, and complaints may be sent to privacy@spinny.app or mailed to our Langley corporate address.',
   },
   {
-    title: 'How we share it',
-    body:
-      'We share only what is necessary with trusted service partners, delivery providers, and vendors who help us fulfill orders and support the platform. Those parties are expected to protect the information they receive.',
+    id: 3,
+    title: '3. Information We Collect',
+    subtitle: 'Data Categories',
+    body: 'We may collect personal information across several operational categories to provide and secure our platform:',
+    bullets: [
+      'Identity and Account Info: Name, username, password credentials, and account identifiers.',
+      'Contact Info: Email address, telephone number, pickup and delivery addresses, and communication preferences.',
+      'Order Info: Item categories, service selections, special instructions, allergies or sensitivities voluntarily provided, order history, pricing, refunds, complaints, and ratings.',
+      'Payment & Transaction Info: Payment token, card type, last four digits, billing status, authorization results, chargebacks, and fraud signals. Full card details are collected directly by the payment processor.',
+      'Location & Delivery Info: Address coordinates, route information, device location where permission is granted, timestamps, proof-of-pickup and proof-of-delivery records.',
+      'Photos & Operational Evidence: Bag, garment, label, stain, damage, pickup, delivery, or incident photographs.',
+      'Device & Usage Data: IP address, device identifiers, operating system, app version, browser, language, log data, crash reports, clicks, and feature interactions.',
+      'Communications: Support messages, call recordings where notice and consent are provided, survey responses, and dispute materials.',
+      'Marketing Info: Campaign engagement, referral activity, and consent records.',
+      'Third-Party Information: Details from Laundry Partners, Delivery Partners, fraud-prevention providers, payment processors, and other service providers where necessary.',
+    ],
   },
   {
-    title: 'Your choices',
-    body:
-      'You can request access, correction, or deletion where applicable, and you can also opt out of non-essential communications. If you want to exercise a privacy right, contact us using the details below.',
+    id: 4,
+    title: '4. How We Use Information',
+    subtitle: 'Authorized Operational Purposes',
+    body: 'We use personal information for purposes a reasonable person would consider appropriate, including to:',
+    bullets: [
+      'Create and manage customer accounts.',
+      'Accept, route, process, track, and deliver orders.',
+      'Connect customers with Laundry Partners and Delivery Partners.',
+      'Process payments, refunds, credits, and chargebacks.',
+      'Communicate service updates and provide customer support.',
+      'Document item condition, pickup, and delivery.',
+      'Investigate complaints, missing items, safety events, and fraud.',
+      'Personalize service and remember preferences.',
+      'Maintain, troubleshoot, secure, and improve the Platform.',
+      'Conduct analytics, forecasting, quality assurance, and business planning using aggregated or de-identified information.',
+      'Send marketing communications where consent or another legal basis exists.',
+      'Comply with tax, accounting, insurance, legal, regulatory, and law-enforcement obligations.',
+      'Establish, exercise, or defend legal claims.',
+    ],
+  },
+  {
+    id: 5,
+    title: '5. Consent',
+    subtitle: 'Express & Implied Consent',
+    body: 'We obtain meaningful consent where required. Depending on the sensitivity and context, consent may be express or implied. We will seek express consent for uses such as precise background location, promotional electronic messages where required, or other sensitive practices.\n\nYou may withdraw consent subject to legal or contractual restrictions and reasonable notice. Withdrawal may limit our ability to provide services that depend on the information, such as location-based pickup and delivery.',
+  },
+  {
+    id: 6,
+    title: '6. Disclosure of Information',
+    subtitle: 'Third-Party Sharing & Partners',
+    body: 'We may disclose personal information to:',
+    bullets: [
+      'Laundry Partners: To fulfill, document, and resolve orders.',
+      'Delivery Partners: To conduct pickup and delivery logistics.',
+      'Payment Processors & Security: Banks, payment processors, and fraud-prevention providers.',
+      'Technology & Service Vendors: Cloud hosting, communications, mapping, analytics, customer-support, cybersecurity, and professional service providers.',
+      'Advisors & Financing Partners: Insurers, auditors, accountants, lawyers, and financing partners where appropriate.',
+      'Regulators & Legal Authorities: Courts, law enforcement, emergency services, or other parties where required or permitted by law.',
+      'Corporate Transactions: A buyer, investor, lender, or successor in connection with a proposed or completed corporate transaction, subject to appropriate safeguards.',
+      'Consented Third Parties: Other parties with your direction or consent.',
+    ],
+  },
+  {
+    id: 7,
+    title: '7. Cross-Border Processing',
+    subtitle: 'International Data Storage',
+    body: 'Although the Platform operates in Canada, service providers may process or store information in other countries, including the United States. Information in another jurisdiction may be accessible to courts, law enforcement, or national-security authorities under that jurisdiction’s laws. Contact the Privacy Officer for information about service-provider locations and safeguards.',
+  },
+  {
+    id: 8,
+    title: '8. Retention',
+    subtitle: 'Retention Schedules & Timelines',
+    body: 'We retain personal information only as long as reasonably necessary for the identified purposes and legal requirements. Retention schedule summary:',
+    bullets: [
+      'Account Records: Life of the account plus 24 months.',
+      'Transaction & Tax Records: At least 6 years after the relevant fiscal year.',
+      'Proof-of-Delivery Photos: 90 days (unless needed for an active dispute).',
+      'Support & Claim Records: 24 months after closure.',
+      'Marketing Consent Records: For as long as needed to demonstrate compliance.',
+      'Security Logs: 12 months (unless an incident requires longer retention).',
+    ],
+  },
+  {
+    id: 9,
+    title: '9. Security',
+    subtitle: 'Technical & Physical Safeguards',
+    body: 'We use administrative, technical, and physical safeguards appropriate to the sensitivity of information, which may include access controls, encryption in transit, secure password practices, payment tokenization, vendor review, employee and contractor confidentiality requirements, logging, monitoring, backups, and incident-response procedures. No system is completely secure, and users should protect their passwords and devices.',
+  },
+  {
+    id: 10,
+    title: '10. Privacy Incidents',
+    subtitle: 'Breach Response Procedures',
+    body: 'We maintain procedures to identify, contain, investigate, document, and respond to privacy and security incidents. Where legally required, we will notify affected individuals and report to the appropriate privacy regulator. We will keep breach records as required by applicable law.',
+  },
+  {
+    id: 11,
+    title: '11. Access and Correction',
+    subtitle: 'Data Access & Rights',
+    body: 'You may request access to personal information under our control and request correction of inaccurate or incomplete information. We may verify identity and may refuse access only where permitted or required by law, such as where disclosure would reveal another person’s personal information or legally privileged information. We will explain any lawful refusal.',
+  },
+  {
+    id: 12,
+    title: '12. Account Deletion',
+    subtitle: 'Right to Erasure & Deactivation',
+    body: 'You may request account deletion through the app or by contacting support. We will delete or de-identify information that is no longer required, while retaining information necessary for legal, tax, fraud-prevention, dispute, security, or other legitimate purposes.',
+  },
+  {
+    id: 13,
+    title: '13. Location Information',
+    subtitle: 'GPS & Address Tracking',
+    body: 'The app may collect location information to provide address suggestions, estimate arrival, route deliveries, document pickup and delivery, support safety, and prevent fraud. Precise location is collected only when permissions and applicable consent requirements are satisfied. You may control device permissions, although disabling location may reduce functionality.',
+  },
+  {
+    id: 14,
+    title: '14. Photos and Images',
+    subtitle: 'Operational Evidence Rules',
+    body: 'Pickup and delivery photographs are intended to document bags, items, locations, or condition. Delivery Partners should avoid capturing faces, house interiors, licence plates, or unrelated personal information unless necessary for safety or dispute documentation. Customers may contact the Privacy Officer to raise concerns about an image.',
+  },
+  {
+    id: 15,
+    title: '15. Analytics and Advertising',
+    subtitle: 'Usage Tracking & Consent',
+    body: 'We may use analytics tools to understand app performance and use. Behavioural advertising or cross-app tracking will not be activated unless described here, supported by appropriate consent, and accurately reflected in app-store privacy disclosures.',
+  },
+  {
+    id: 16,
+    title: '16. Children',
+    subtitle: 'Age Eligibility Restrictions',
+    body: 'The Platform is not directed to children. We do not knowingly create independent accounts for children who lack capacity to contract. A parent or guardian may place household orders. If we learn that personal information was collected from a child without appropriate authorization, we will take reasonable steps to delete it.',
+  },
+  {
+    id: 17,
+    title: '17. Marketing Communications',
+    subtitle: 'CASL Anti-Spam Compliance',
+    body: 'We send promotional electronic messages only in accordance with Canada’s anti-spam rules (CASL) and other applicable law. Messages will identify the sender and provide an unsubscribe method. Transactional messages about orders, safety, account security, receipts, or legal changes are not promotional and may still be sent where necessary.',
+  },
+  {
+    id: 18,
+    title: '18. Changes and Complaints',
+    subtitle: 'Policy Updates & Regulatory Contacts',
+    body: 'We may update this Privacy Policy and will provide notice of material changes. A privacy complaint may be sent to the Privacy Officer. We will investigate and respond within a reasonable time.\n\nYou may also contact the Office of the Information and Privacy Commissioner for British Columbia (OIPC BC) or the Office of the Privacy Commissioner of Canada (OPC) where applicable.',
   },
 ];
 
 export const PRIVACY_CONTACT = [
-  { label: 'Privacy email', value: 'privacy@spinny.example' },
-  { label: 'Support email', value: 'hello@spinny.example' },
-  { label: 'Mailing address', value: '1840 King Street West, Suite 402, Toronto, ON M5V 1X6' },
+  { label: 'Privacy Officer email', value: 'privacy@spinny.app' },
+  { label: 'Support email', value: 'hello@spinny.app' },
+  { label: 'Corporate Office Address', value: 'Spinny, Langley, BC, Canada' },
 ];
 
 // --- About Page Data ("Why Spinny" pillars) ---

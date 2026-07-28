@@ -12,14 +12,14 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Spinny — Buy Back Your Time | Wardrobe, Footwear & Home Care',
+  title: 'Spinny — Laundry Done, Life On | The Easiest Chore You\'ll Never Do Again',
   description:
-    'Spinny is a time-buyback service for your entire wardrobe and home — garments, footwear, leather, and home textiles, picked up and delivered by vetted specialists.',
-  keywords: 'time-buyback service, wardrobe care, footwear care, home textile care, pickup and delivery, laundry, dry cleaning, garment care, on-demand',
+    'Laundry Done, Life On. Spinny is the easiest chore you\'ll never do again — complete wardrobe, footwear, and home care, picked up and delivered by vetted specialists.',
+  keywords: 'laundry done life on, time-buyback service, wardrobe care, footwear care, home textile care, pickup and delivery, laundry, dry cleaning, garment care',
   openGraph: {
-    title: 'Spinny — Buy Back Your Time',
+    title: 'Spinny — Laundry Done, Life On',
     description:
-      'Reclaim your evenings and weekends. Spinny handles pickup, care, and delivery for your whole wardrobe and home — you handle everything else.',
+      'The easiest chore you\'ll never do again. Spinny handles pickup, care, and delivery for your whole wardrobe and home — you handle everything else.',
     type: 'website',
     url: 'https://spinny.ca',
   },

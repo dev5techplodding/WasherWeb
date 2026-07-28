@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import { CONTACT_HERO_CONTENT } from '@/components/data';
 
@@ -31,14 +32,23 @@ export default function ContactHero() {
       ref={sectionRef}
       className="relative overflow-hidden w-full pt-32 pb-24 md:pt-40 md:pb-28 bg-[#0B1726] text-white flex items-center justify-center min-h-[55vh]"
     >
-      {/* ─── Background Ambient Orbs & Grids ─── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      {/* ─── Hero Background Image & Gradient Overlay ─── */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0">
+        <Image
+          src="/images/home_hero_banner.png"
+          alt="Spinny Contact Support Hero Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-30 mix-blend-luminosity scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1726]/90 via-[#0B1726]/75 to-[#0B1726]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        <div className="absolute -top-24 right-10 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(247,148,29,0.22)_0%,transparent_70%)] blur-3xl" />
-        <div className="absolute -bottom-20 -left-10 w-[30rem] h-[30rem] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.14)_0%,transparent_70%)] blur-3xl" />
+        <div className="absolute -top-24 right-10 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(247,148,29,0.25)_0%,transparent_70%)] blur-3xl" />
+        <div className="absolute -bottom-20 -left-10 w-[30rem] h-[30rem] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.18)_0%,transparent_70%)] blur-3xl" />
       </div>
 
-      {/* ─── Main Content ─── */}
+      {/* ─── Main Centered Content ─── */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center">
         <div ref={contentRef} className="flex flex-col items-center max-w-3xl mx-auto">
           {/* Eyebrow Badge */}
@@ -63,11 +73,10 @@ export default function ContactHero() {
               <Link
                 key={btn.label}
                 href={btn.url}
-                className={`inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 ${
-                  btn.variant === 'secondary'
+                className={`inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 ${btn.variant === 'secondary'
                     ? 'bg-white/10 hover:bg-white hover:text-slate-950 text-white border border-white/20 shadow-md backdrop-blur-md'
                     : 'bg-[#F7941D] hover:bg-orange-600 text-white shadow-xl shadow-[#F7941D]/30'
-                }`}
+                  }`}
               >
                 <span>{btn.label}</span>
               </Link>
