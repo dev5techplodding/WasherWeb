@@ -12,7 +12,7 @@ import { gsap } from 'gsap';
 const NAV_LINKS = [
   { label: 'Home', href: '/', section: null },
   { label: 'Services', href: '/services', section: null },
-  { label: 'About', href: '/about', section: null },
+  { label: 'About Us', href: '/about', section: null },
   { label: 'How it Works', href: '/procedure', section: null },
 ];
 

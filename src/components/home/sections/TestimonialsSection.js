@@ -93,7 +93,7 @@ const TESTIMONIALS = [
     role: 'University Professor',
     location: 'Edmonton, AB',
     rating: 5,
-    quote: 'The real-time tracking means I never have to build "wait for laundry" into my day anymore. I can see exactly where my order is — garments, rugs, whatever it is that week — and just get on with my time.',
+    quote: 'The real-time tracking means I never have to build "wait for laundry" into my day anymore. I can see exactly where my order is — clothes, rugs, whatever it is that week — and just get on with my time.',
     avatarColor: '#F28C28',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80',
   },

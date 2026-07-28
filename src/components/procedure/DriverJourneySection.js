@@ -17,20 +17,20 @@ const DRIVER_STEPS = [
       </svg>
     ),
   },
+  // {
+  //   id: 2,
+  //   title: 'Complete Profile',
+  //   badge: 'Step 2',
+  //   desc: 'Fill out your personal information, contact address, emergency contacts, and vehicle type.',
+  //   image: '/screens/cprofile.jpeg',
+  //   icon: (
+  //     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+  //       <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+  //     </svg>
+  //   ),
+  // },
   {
     id: 2,
-    title: 'Complete Profile',
-    badge: 'Step 2',
-    desc: 'Fill out your personal information, contact address, emergency contacts, and vehicle type.',
-    image: '/screens/cprofile.jpeg',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
-    ),
-  },
-  {
-    id: 3,
     title: 'Document Upload',
     badge: 'Step 3',
     desc: 'Upload your driver license, vehicle registration, and valid vehicle insurance policy.',
@@ -42,7 +42,7 @@ const DRIVER_STEPS = [
     ),
   },
   {
-    id: 4,
+    id: 3,
     title: 'Waiting for Approval',
     badge: 'Step 4',
     desc: 'Our operations team completes a background check and document approval within 24 hours.',
@@ -54,8 +54,8 @@ const DRIVER_STEPS = [
     ),
   },
   {
-    id: 5,
-    title: 'Accept Order',
+    id: 4,
+    title: 'start Acepting Orders',
     badge: 'Step 5',
     desc: 'Receive live route notifications on your driver app and accept available order dispatch requests.',
     image: '/screens/corder.jpeg',
@@ -65,20 +65,9 @@ const DRIVER_STEPS = [
       </svg>
     ),
   },
+
   {
-    id: 6,
-    title: 'Pickup the Order',
-    badge: 'Step 6',
-    desc: 'Arrive at customer doorstep, collect items, scan laundry bag barcodes, and confirm pickup.',
-    image: '/screens/orderDetails.jpeg',
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-      </svg>
-    ),
-  },
-  {
-    id: 7,
+    id: 5,
     title: 'Navigate Through Map',
     badge: 'Step 7',
     desc: 'Follow live turn-by-turn GPS navigation maps to facility drop points and delivery locations.',
@@ -90,10 +79,10 @@ const DRIVER_STEPS = [
     ),
   },
   {
-    id: 8,
+    id: 6,
     title: 'Get Delivery Done',
     badge: 'Step 8',
-    desc: 'Hand over freshly cleaned closet-ready garments, capture customer confirmation, and mark order delivered.',
+    desc: 'Hand over freshly cleaned closet-ready clothes, capture customer confirmation, and mark order delivered.',
     image: '/screens/dashboard.jpeg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -195,7 +184,7 @@ export default function DriverJourneySection() {
             </div>
 
             {/* Driver Fleet Features Box */}
-            <div className="w-full max-w-[290px] sm:max-w-[300px] rounded-2xl p-4 bg-white border border-slate-200/90 shadow-md">
+            {/* <div className="w-full max-w-[290px] sm:max-w-[300px] rounded-2xl p-4 bg-white border border-slate-200/90 shadow-md">
               <div className="flex items-center justify-between mb-2.5">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#0E3A66]">
                   Driver Fleet Features
@@ -214,7 +203,7 @@ export default function DriverJourneySection() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column: Timeline Stepper UI Matching Customer & Vendor Sections */}
@@ -250,11 +239,10 @@ export default function DriverJourneySection() {
                     {/* Step Card */}
                     <div
                       onClick={() => setActiveDriverStep(step.id)}
-                      className={`relative cursor-pointer rounded-2xl transition-all duration-300 overflow-hidden ${
-                        isActive
-                          ? 'bg-white border-2 border-indigo-400/80 ring-4 ring-indigo-500/10 p-5 sm:p-6 shadow-lg'
-                          : 'bg-white border border-indigo-100/90 hover:border-indigo-200 hover:shadow px-5 py-4 shadow-sm'
-                      }`}
+                      className={`relative cursor-pointer rounded-2xl transition-all duration-300 overflow-hidden ${isActive
+                        ? 'bg-white border-2 border-indigo-400/80 ring-4 ring-indigo-500/10 p-5 sm:p-6 shadow-lg'
+                        : 'bg-white border border-indigo-100/90 hover:border-indigo-200 hover:shadow px-5 py-4 shadow-sm'
+                        }`}
                     >
                       {/* Active Top Progress Line */}
                       {isActive && (

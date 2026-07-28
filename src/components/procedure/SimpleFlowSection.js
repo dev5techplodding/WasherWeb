@@ -8,7 +8,7 @@ const FLOW_STEPS = [
     step: '01',
     title: 'Schedule Pickup',
     subtitle: '30-Sec Booking',
-    desc: 'Select your preferred 2-hour window and specify what needs care — garments, footwear, or home textiles.',
+    desc: 'Select your preferred 2-hour window and specify what needs care — clothes, footwear, or home textiles.',
     image: '/icons/flow_step1.png',
     badge: 'Quick & Easy',
     details: 'Choose custom wash temperatures, eco-detergent preferences, and buzzer/concierge instructions in under 30 seconds.',
@@ -36,12 +36,12 @@ const FLOW_STEPS = [
   },
   {
     step: '04',
-    title: 'Closet Delivery',
+    title: 'Get delivery',
     subtitle: '5+ Hours Reclaimed',
-    desc: 'Delivered back closet-ready or drawer-ready. Your weekend to-do list disappears permanently.',
+    desc: 'Receive a notification when your items are on the way back — clean, folded, and ready to put away.',
     image: '/icons/flow_step4.png',
     badge: 'Time Bought Back',
-    details: 'Items return neatly folded or hung. Enjoy 5+ hours reclaimed every single week without lifting a finger.',
+    details: 'Enjoy your time back with the peace of mind that your wardrobe and home textiles are professionally cared for.',
     accent: '#8B5CF6',
   },
 ];
@@ -90,11 +90,10 @@ export default function SimpleFlowSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.12 }}
                   onClick={() => setActiveStep(idx)}
-                  className={`group cursor-pointer rounded-[28px] p-6 sm:p-7 bg-white border transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${
-                    isActive
-                      ? 'border-[#F28C28] shadow-[0_20px_45px_rgba(242,140,40,0.18)] scale-[1.02]'
-                      : 'border-slate-100 shadow-[10px_14px_30px_rgba(210,215,228,0.4),-10px_-10px_25px_rgba(255,255,255,0.9)] hover:shadow-[14px_18px_35px_rgba(195,202,218,0.5)] hover:-translate-y-1.5'
-                  }`}
+                  className={`group cursor-pointer rounded-[28px] p-6 sm:p-7 bg-white border transition-all duration-300 flex flex-col justify-between relative overflow-hidden ${isActive
+                    ? 'border-[#F28C28] shadow-[0_20px_45px_rgba(242,140,40,0.18)] scale-[1.02]'
+                    : 'border-slate-100 shadow-[10px_14px_30px_rgba(210,215,228,0.4),-10px_-10px_25px_rgba(255,255,255,0.9)] hover:shadow-[14px_18px_35px_rgba(195,202,218,0.5)] hover:-translate-y-1.5'
+                    }`}
                 >
                   {/* Top Bar: Icon + Step Badge */}
                   <div>

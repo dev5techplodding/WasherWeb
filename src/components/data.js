@@ -61,7 +61,7 @@ export const HELP_CENTER_HERO_CONTENT = {
   eyebrow: 'Help Center',
   heading: 'Support that is easy to find and simple to use.',
   description:
-    'Quick answers to common questions — on orders, garments, footwear, or home items — plus a direct line to our team.',
+    'Quick answers to common questions — on orders, clothes, footwear, or home items — plus a direct line to our team.',
   backgroundImage: '/frames/ezgif-frame-105.jpg',
   rightImage: {
     src: '/frames/ezgif-frame-144.jpg',
@@ -303,22 +303,22 @@ export const CORE_VALUES = [
   {
     title: 'Reclaim 5+ Hours a Week',
     description:
-      'Wardrobe laundry, shoe care, ironing, and home-textile upkeep quietly eat a weekend a month. Spinny hands that time back — permanently, not just this once.',
+      'Wardrobe laundry, shoe care, ironing, and home-textile upkeep quietly cost the average household a full weekend a month. Spinny buys that time back — permanently, not just this once.',
   },
   {
-    title: 'One Service, Entire Living Space',
+    title: 'One Service, Entire Wardrobe & Home',
     description:
-      'Suits and sneakers. Duvets and diaper bags. Curtains and cashmere. Spinny is the single point of contact for every fabric, leather, and textile surface in your home.',
+      'Suits and sneakers. Duvets and diaper bags. Curtains and cashmere. Spinny is the single account for every fabric, leather, and textile surface you own — no juggling five specialists for one household.',
   },
   {
-    title: 'Zero-Effort Concierge Logistics',
+    title: 'Zero-Effort, Doorstep to Doorstep',
     description:
-      'Door-to-door pickup and delivery, closet-ready hanging, drawer-ready folding. Nothing to drop off, nothing to carry further than your own front door.',
+      'Book in under 30 seconds, and a driver handles the rest — door-to-door pickup, closet-ready hanging, drawer-ready folding. Nothing to drop off, nothing to carry further than your own front door.',
   },
   {
-    title: 'Investment-Grade Care',
+    title: 'Investment-Grade Care, Every Time',
     description:
-      'Your favourite sneakers and your grandmother’s duvet don’t belong in a machine built for gym socks. Every item goes to a specialist trained for its specific material.',
+      'Your favourite sneakers and your grandmother’s duvet don’t belong in a machine built for gym socks. Every item is matched to a vetted specialist trained for its exact material.',
   },
 ];
 
@@ -326,13 +326,45 @@ export const DIFFERENTIATORS = [
   'Centralized pickup scheduling that gets an entire household’s laundry, footwear, and home textiles off the calendar in under 30 seconds.',
   'A vetted specialist network — not just laundromats — covering leather, suede, rugs, curtains, and delicate fabrics alike.',
   'Material-aware workflows that protect what you’ve invested in, from sneakers to a wedding dress.',
+  'No forced subscriptions: pay-per-use stays the default, with Spinny Membership as an optional set-and-forget upgrade.',
   'Support that feels human and answers fast, because your time matters after the pickup too.',
 ];
 
 export const MILESTONES = [
-  { year: '2019', label: 'Spinny launched with a simple promise: buy people back the time laundry was quietly taking from them.' },
-  { year: '2022', label: 'Coverage expanded past garments into footwear, leather goods, and home textiles — because a household’s time gets eaten by more than just laundry.' },
-  { year: '2026', label: 'The platform now supports households, offices, and partner fleets across a full wardrobe-and-home ecosystem — bought-back hours, at scale.' },
+  { year: '2019', label: 'Spinny launched in Canada with a simple promise: buy people back the time laundry was quietly taking from them.' },
+  { year: '2022', label: 'Coverage expanded past clothes into footwear, leather goods, and home textiles — because a household’s time gets eaten by more than just laundry.' },
+  { year: '2026', label: 'Now live across major Canadian metro areas with 200+ vendor partners, the platform supports households, offices, and partner fleets across a full wardrobe-and-home ecosystem — bought-back hours, at scale.' },
+];
+
+// --- About Page: Social Proof Stats ---
+export const ABOUT_STATS = [
+  { value: '6,000+', label: 'Five-star reviews' },
+  { value: '99.2%', label: 'Customer satisfaction' },
+  { value: '50,000+', label: 'Items cared for monthly' },
+  { value: '200+', label: 'Vendor partners across Canada' },
+  { value: '48-hr', label: 'Average turnaround time' },
+];
+
+// --- About Page: Three-Sided Marketplace ---
+export const ABOUT_ECOSYSTEM = [
+  {
+    role: 'Customers',
+    title: 'Get your time back',
+    description:
+      'Busy professionals, families, students, and anyone who values their weekend. One app, one account, for a household’s entire wardrobe and home — no juggling five separate errands.',
+  },
+  {
+    role: 'Vendors',
+    title: 'Grow beyond walk-ins',
+    description:
+      'Local laundromats, dry cleaners, footwear and leather specialists, home-textile cleaners, and tailors. Spinny brings online order flow and delivery infrastructure to businesses that couldn’t build it alone.',
+  },
+  {
+    role: 'Drivers',
+    title: 'Flexible, optimized routes',
+    description:
+      'Independent drivers handle pickup and delivery logistics with optimized batch routing — flexible gig-economy work that keeps every vendor’s doorstep promise on schedule.',
+  },
 ];
 
 // --- Procedure Page Data ---
@@ -469,7 +501,7 @@ export const MEMBERSHIP_CONTENT = {
   eyebrow: 'Spinny Membership',
   heading: 'A Set-and-Forget Time Investment.',
   description:
-    'Membership puts your entire wardrobe and home on autopilot. Recurring pickups on your schedule, priority concierge turnaround, and member rates across every category — garments, footwear, and home — billed as one predictable line, not five separate errands.',
+    'Membership puts your entire wardrobe and home on autopilot. Recurring pickups on your schedule, priority concierge turnaround, and member rates across every category — clothes, footwear, and home — billed as one predictable line, not five separate errands.',
   perks: [
     'Recurring pickups: weekly, bi-weekly, or monthly',
     'Priority turnaround across all categories',
@@ -484,7 +516,7 @@ export const APP_HERO_CONTENT = {
   eyebrow: 'Spinny Mobile',
   heading: 'Your time, in your pocket.',
   description:
-    'Book a pickup for anything — garments, sneakers, or a duvet — track your driver, and manage every order from one app.',
+    'Book a pickup for anything — clothes, sneakers, or a duvet — track your driver, and manage every order from one app.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
   accentText: 'Available soon for iOS and Android.',
 };

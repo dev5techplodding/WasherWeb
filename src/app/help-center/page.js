@@ -23,12 +23,12 @@ export default function HelpCenterPage() {
           <FaqAccordion items={HELP_FAQ_ITEMS} title="Answers to common questions" />
         </section>
 
-        <section className="mt-16">
+        {/* <section className="mt-16">
           <FeedbackSection
             topics={FEEDBACK_TOPICS}
             description="Share a service issue, a feature idea, or a general note. The topic you pick helps us route your message faster."
           />
-        </section>
+        </section> */}
 
         <section className="mt-16">
           <PageCTA

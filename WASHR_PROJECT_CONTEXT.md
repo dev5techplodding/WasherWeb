@@ -2,7 +2,7 @@
 
 ## What is Spinny?
 
-**Spinny** is a Canada-based **time-buyback service** for your wardrobe and home. It started as an on-demand laundry and dry cleaning platform — it has since grown into a full concierge for everything a household maintains: garments, footwear and leather goods, home textiles, and special-care items. Spinny connects customers with vetted specialist vendors (laundry, footwear/leather, home-textile, tailoring) and independent drivers, creating a seamless pickup → specialist care → deliver experience through a single app.
+**Spinny** is a Canada-based **time-buyback service** for your wardrobe and home. It started as an on-demand laundry and dry cleaning platform — it has since grown into a full concierge for everything a household maintains: clothes, footwear and leather goods, home textiles, and special-care items. Spinny connects customers with vetted specialist vendors (laundry, footwear/leather, home-textile, tailoring) and independent drivers, creating a seamless pickup → specialist care → deliver experience through a single app.
 
 > **One-liner:** *Not a laundry company. The concierge service that buys back your time — for your whole wardrobe and home, not just your laundry.*
 
@@ -154,7 +154,7 @@ Rather than building mega-facilities, Spinny partners with existing local busine
 
 ### Photography & Imagery Direction
 - Lifestyle shots spanning the full ecosystem — **folded laundry, restored sneakers, a fresh duvet on a bed, a polished leather bag** — not laundry alone
-- **Hands holding fresh garments, polished shoes, or a folded throw** — conveying care and quality across categories
+- **Hands holding fresh clothes, polished shoes, or a folded throw** — conveying care and quality across categories
 - **Urban Canadian settings** — condos, townhouses, modern apartments
 - **Diverse representation** — reflecting Canada's multicultural population
 - **Warm lighting** — golden hour tones, soft shadows
@@ -186,7 +186,7 @@ Rather than building mega-facilities, Spinny partners with existing local busine
 
 - **6,000+** five-star reviews
 - **99.2%** customer satisfaction rate
-- **50,000+** items cared for monthly (garments, footwear, and home textiles)
+- **50,000+** items cared for monthly (clothes, footwear, and home textiles)
 - **200+** vendor partners across Canada
 - **48-hour** average turnaround time
 - **5+ hours** average weekly time reclaimed per household (illustrative estimate — see `HOURS_LEDGER_ROWS` in `src/components/data.js`)

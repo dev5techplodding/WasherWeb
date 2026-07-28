@@ -64,13 +64,13 @@ export default function AboutHero() {
 
           {/* Reduced Full-Width Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] max-w-4xl">
-            Not a Laundry Company.{' '}
-            <span className="text-[#F7941D] block sm:inline">A Time-Buyback Service.</span>
+            Less Laundry.{' '}
+            <span className="text-[#F7941D] block sm:inline">More Life.</span>
           </h1>
 
           {/* Reduced Subheading */}
           <p className="mt-6 text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl">
-            Spinny handles your wardrobe and home textiles — so your weekends stay yours.
+            Spinny is the concierge service that gives your weekend back.
           </p>
 
           {/* Action CTAs */}
@@ -121,6 +121,15 @@ export default function AboutHero() {
               </svg>
             </Link>
           </div>
+
+          {/* Trust Strip */}
+          {/* <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-slate-400 text-xs sm:text-sm font-medium">
+            <span>6,000+ five-star reviews</span>
+            <span className="hidden sm:inline w-1 h-1 rounded-full bg-slate-600" aria-hidden="true" />
+            <span>99.2% customer satisfaction</span>
+            <span className="hidden sm:inline w-1 h-1 rounded-full bg-slate-600" aria-hidden="true" />
+            <span>200+ vendor partners across Canada</span>
+          </div> */}
         </div>
       </div>
 

@@ -39,7 +39,7 @@ const FOOTER_LINKS = {
     title: 'Legal',
     links: [
       { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Terms of Service', href: '/terms-of-service' },
+      { label: 'Terms of Use', href: '/terms-of-service' },
     ],
   },
 };
@@ -277,8 +277,8 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-6">
               {[
-                { label: 'Privacy', href: '/privacy-policy' },
-                { label: 'Terms', href: '/terms-of-service' },
+                { label: 'Privacy Policy', href: '/privacy-policy' },
+                { label: 'Terms of Use', href: '/terms-of-service' },
               ].map((item) => (
                 <a
                   key={item.label}

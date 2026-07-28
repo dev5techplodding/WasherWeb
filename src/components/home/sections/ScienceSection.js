@@ -171,7 +171,7 @@ export default function ScienceSection() {
             </h2>
             {/* Supporting detail */}
             <p className="text-base leading-relaxed mb-4 text-slate-300 font-normal">
-              Say goodbye to sorting, washing, drying, and folding. Spinny pairs custom fabric algorithms with eco-friendly cleaning techniques tailored to every material in your household — from everyday wear to luxury garments and delicate home textiles.
+              Say goodbye to sorting, washing, drying, and folding. Spinny pairs custom fabric algorithms with eco-friendly cleaning techniques tailored to every material in your household — from everyday wear to luxury clothes and delicate home textiles.
             </p>
             <p className="text-sm leading-relaxed mb-8 text-slate-400 font-normal">
               Every item is treated with mineral-softened water and inspected by expert care specialists, protecting your wardrobe from shrinking or fading while giving you back 5+ hours every weekend.

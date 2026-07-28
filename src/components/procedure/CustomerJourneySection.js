@@ -33,7 +33,7 @@ const STEPS = [
   },
   {
     id: 3,
-    title: 'choose Services',
+    title: 'Choose Services',
     badge: 'Fabric Care',
     desc: 'Select wash temperature, eco-detergents, and fold or hanger options.',
     image: '/screens/cservcies.jpeg',

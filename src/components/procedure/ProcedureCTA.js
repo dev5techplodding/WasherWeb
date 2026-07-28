@@ -16,7 +16,7 @@ export default function ProcedureCTA() {
       id: 'customer-journey',
       title: 'Register as Customer',
       role: 'For Households & Individuals',
-      desc: 'Book pickups in under 30 seconds. Full concierge care for garments, footwear & home textiles.',
+      desc: 'Book pickups in under 30 seconds. Full concierge care for clothes, footwear & home textiles.',
       badge: 'Time Bought Back',
       buttonText: 'Get Started',
       buttonStyle:

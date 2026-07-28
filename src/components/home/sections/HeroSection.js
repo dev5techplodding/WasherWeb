@@ -103,7 +103,7 @@ export default function HeroSection() {
 
           {/* Subheading */}
           <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed mb-6 sm:mb-8 max-w-xl text-slate-200">
-            <span className="font-bold text-white">The easiest chore you&apos;ll never do again.</span> Spinny is your concierge time-buyback service for garments, footwear, leather, and home textiles.
+            <span className="font-bold text-white">The easiest chore you&apos;ll never do again.</span> Spinny is your concierge time-buyback service for clothes, footwear, leather, and home textiles.
           </p>
 
           {/* Interactive Search / Address Input Form */}

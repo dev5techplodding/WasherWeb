@@ -26,7 +26,7 @@ const FEATURES = [
     stat: '🏠 100% Home Textiles',
     description:
       'Suits and sneakers. Duvets and diaper bags. Curtains and cashmere. Spinny is the single point of contact for every fabric, leather, and textile surface in your home.',
-    tags: ['Garments', 'Footwear', 'Textiles'],
+    tags: ['clothes', 'Footwear', 'Textiles'],
     accent: '#F28C28',
     glowRgb: '242, 140, 40',
     image: '/icons/unified_care.png',
@@ -149,7 +149,7 @@ export default function AboutSection() {
             className="animate-in text-base md:text-lg leading-relaxed max-w-xl"
             style={{ color: 'var(--washr-text-secondary)' }}
           >
-            Spinny connects you with vetted specialists across garments, footwear, and home textiles — not residential gig workers.
+            Spinny connects you with vetted specialists across clothes, footwear, and home textiles — not residential gig workers.
             The result: your time back, every single time, without a drop in quality.
           </p>
         </div>
