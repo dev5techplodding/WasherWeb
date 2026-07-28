@@ -19,7 +19,7 @@ export const CONTACT_HERO_CONTENT = {
   eyebrow: 'Contact Spinny',
   heading: 'Facing an issue with your order?',
   description:
-    'Questions about orders, vendors, or service — for anything from garments to footwear and home textiles? Send a message and our team will get back to you fast.',
+    'We’re here to help. Send a message with your order details and we will get back to you fast.',
   backgroundImage: '/frames/ezgif-frame-014.jpg',
   buttons: [
     { label: 'Email support', url: 'mailto:hello@spinny.example' },
@@ -560,61 +560,237 @@ export const CAREERS_HERO_CONTENT = {
 
 // --- Terms of Service Page ---
 export const TERMS_HERO_CONTENT = {
-  eyebrow: 'Terms of Service',
-  heading: 'The plain-language terms behind every Spinny order.',
+  eyebrow: 'Spinny • Legal Suite',
+  heading: 'Master Consumer Terms of Use',
   description:
-    'How bookings, payments, vendors, and drivers work together on Spinny.',
+    'These Terms of Use (Part A) form a binding agreement between you and Spinny, governing your access to and use of the Spinny platform, mobile applications, website, and pickup & delivery services.',
   backgroundImage: '/frames/ezgif-frame-008.jpg',
 };
 
 export const TERMS_SECTIONS = [
   {
-    title: 'Booking & scheduling',
-    body: 'When you schedule a pickup through Spinny, you’re reserving a time window with a driver and a service vendor partner. Please have your items ready at the scheduled window; repeated missed pickups may affect your ability to book future orders.',
+    id: 1,
+    title: '1. Agreement and Acceptance',
+    subtitle: 'Binding Legal Contract',
+    body: 'These Terms of Use (the “Terms”) form a binding agreement between you and Spinny, a British Columbia corporation with an address at Unit 120, 5710 201 Street, Langley, British Columbia V3A 8A8, Canada (“Spinny,” “we,” “us,” or “our”). They govern your access to and use of the Spinny mobile application, website, customer support channels, pickup and delivery coordination services, and related technology (collectively, the “Platform”).\n\nBy creating an account, selecting an acceptance box, placing an order, or otherwise using the Platform, you confirm that you have read, understood, and agreed to these Terms and the policies incorporated by reference. If you do not agree, do not use the Platform. Electronic acceptance and electronic records have the same effect as acceptance and records in writing, subject to applicable law.',
   },
   {
-    title: 'Pricing & payment',
-    body: 'Spinny is pay-per-use — there are no required subscriptions or recurring charges outside of membership plans. Pricing is shown before you confirm an order and is charged to your saved payment method once service is complete.',
+    id: 2,
+    title: '2. Platform Role and Marketplace Structure',
+    subtitle: 'Independent Partners & Logistics',
+    body: 'The Platform is a technology marketplace and logistics coordination service. It enables customers to request pickup and delivery of clothing, linens, and other eligible items and to obtain cleaning services from participating third-party laundromats (“Laundry Partners”).\n\nLaundry services are performed by independent Laundry Partners, not by Spinny. Pickup and delivery may be performed by independent delivery contractors (“Delivery Partners”). Laundry Partners and Delivery Partners are independent businesses or contractors and are not employees, agents, joint venturers, franchisees, or representatives of Spinnysolely because they use the Platform.\n\nSpinnymay facilitate communications, payments, refunds, quality reviews, and dispute handling. This facilitation does not make Spinnythe provider of the underlying laundry or dry-cleaning service and does not remove any rights or remedies that cannot lawfully be excluded.',
   },
   {
-    title: 'Vendor & driver relationship',
-    body: 'Service vendors and delivery drivers on Spinny are independent partners, vetted and onboarded through our partner program. Spinny coordinates the order but the physical care is performed by the vendor you’re matched with.',
+    id: 3,
+    title: '3. Eligibility and Accounts',
+    subtitle: 'Capacity & Security',
+    body: 'You must have legal capacity to enter into a contract in your province or territory. A minor may use the Platform only through an account controlled by a parent or legal guardian who accepts responsibility for all activity.\n\nYou must provide accurate, current, and complete information and keep your login credentials secure. You are responsible for orders and activity conducted through your account unless you promptly report unauthorized access. We may require identity, payment, or address verification and may refuse or limit service where reasonably necessary for safety, fraud prevention, legal compliance, or operational reasons.',
   },
   {
-    title: 'Damaged or lost items',
-    body: 'Every order is inspected on pickup and before delivery. If something is damaged or missing, contact us within 48 hours of delivery through the Help Center so we can investigate with the vendor.',
+    id: 4,
+    title: '4. Service Availability',
+    subtitle: 'Operational Coverage',
+    body: 'The Platform may not be available in every city, postal code, or province. Service areas, hours, turnaround estimates, participating Laundry Partners, available service types, and delivery windows may change. Displayed pickup, processing, and delivery times are estimates unless expressly stated as guaranteed.\n\nWe may pause, modify, or discontinue features or service areas. Where a paid order is materially affected, we will provide an appropriate remedy as required by these Terms and applicable law.',
   },
   {
-    title: 'Account & cancellations',
-    body: 'You can cancel or reschedule a pickup from your account before a driver is dispatched. Once a driver has been assigned, cancellation may be subject to a service fee.',
+    id: 5,
+    title: '5. Orders and Customer Instructions',
+    subtitle: 'Special Instructions & Care Requirements',
+    body: 'An order is a request for the selected services at the prices and fees shown before confirmation. We may reject or cancel an order if a service is unavailable, an item is prohibited, the address is unsafe or inaccessible, payment cannot be authorized, suspected fraud exists, or the order cannot reasonably be completed.\n\nYou must provide complete and accurate information about fabric type, stains, allergies, sensitivities, valuable or delicate items, designer items, colour-fastness concerns, and any special care requirements. Special requests are not guaranteed unless expressly accepted in the order record. Laundry Partners may rely on garment care labels and standard professional practices.',
   },
   {
-    title: 'Changes to these terms',
-    body: 'We may update these terms as Spinny grows. Material changes will be communicated by email or in-app notice before they take effect.',
+    id: 6,
+    title: '6. Eligible and Prohibited Items',
+    subtitle: 'Safety & Hazardous Items Policy',
+    body: 'Eligible items generally include ordinary clothing, household linens, and other items accepted in the app. The following must not be included unless the Platform expressly authorizes them: hazardous, biohazardous, contaminated, pest-infested, illegal, stolen, explosive, flammable, corrosive, radioactive, or sharp items; items containing bodily fluids beyond ordinary household soiling; wet items likely to mildew; items containing controlled substances; and any item that may endanger a person, vehicle, premises, or other property.\n\nWe may refuse, isolate, return, safely dispose of, or report prohibited items as reasonably necessary. You are responsible for direct losses and reasonable costs caused by knowingly or negligently including prohibited items, subject to applicable law.',
+  },
+  {
+    id: 7,
+    title: '7. Pockets and Personal Property',
+    subtitle: 'Inspection Responsibility',
+    body: 'You must check and empty every pocket, bag, cover, and compartment before pickup. Do not include cash, jewellery, watches, keys, identification, passports, payment cards, electronics, medication, legal documents, sentimental items, or other valuables.\n\nTo the maximum extent permitted by law, Spinny, Laundry Partners, and Delivery Partners are not responsible for property left inside or attached to submitted items. If property is found, we may attempt to return it, but recovery is not guaranteed and reasonable delivery or handling charges may apply.',
+  },
+  {
+    id: 8,
+    title: '8. Pricing, Taxes and Fees',
+    subtitle: 'Transparent Fee Disclosures',
+    body: 'Prices may be based on weight, item count, service type, distance, speed, time, minimum order amount, special handling, or other disclosed factors. The final amount may change where the actual weight, item category, or requested service differs from the customer’s selection. Material adjustments will be shown or communicated before processing where reasonably practicable.\n\nAll mandatory non-government fees will be disclosed before order confirmation. Applicable sales taxes and government-imposed charges may be added. Optional tips, if offered, are voluntary. Promotions are subject to stated conditions and may not be combined unless expressly allowed.',
+  },
+  {
+    id: 9,
+    title: '9. Payment Authorization',
+    subtitle: 'Credit/Debit Card Charges',
+    body: 'You authorize Spinnyand its payment processors to charge the payment method connected to your account for the order total, approved adjustments, taxes, cancellation charges, redelivery charges, and other amounts clearly disclosed under these Terms. We do not store full payment-card numbers; payment information is tokenized and handled by third-party payment processors.\n\nA temporary authorization hold may be placed before final settlement. You must maintain a valid payment method. We may pause service, seek payment, reverse credits, or suspend an account for unpaid balances, fraudulent chargebacks, or misuse.',
+  },
+  {
+    id: 10,
+    title: '10. Cancellations',
+    subtitle: 'Pre & Post Dispatch Rules',
+    body: 'You may cancel through the Platform or customer support. Unless the checkout screen states otherwise: cancellation is free before a Delivery Partner is assigned or dispatched; a disclosed cancellation fee may apply after dispatch; and once cleaning or processing has begun, amounts already earned or incurred may be non-refundable unless the order is defective, cannot be completed, or applicable law requires otherwise.\n\nWe may cancel an order for safety, fraud, unavailability, payment failure, prohibited items, incorrect information, inaccessible premises, or other reasonable operational grounds. If we cancel for reasons not caused by you, we will refund unearned amounts.',
+  },
+  {
+    id: 11,
+    title: '11. Pickup Requirements',
+    subtitle: 'Preparation & Safe Access',
+    body: 'You must package and label items as instructed and ensure they are ready during the scheduled window. You must provide safe, lawful access to the pickup location and restrain pets. A Delivery Partner is not required to enter a private residence.\n\nIf no one is available and you authorized unattended pickup, the order is considered received when the Delivery Partner documents collection from the authorized location. Risk associated with an unsecured or unsuitable unattended location remains with you to the extent permitted by law.',
+  },
+  {
+    id: 12,
+    title: '12. Delivery and Unattended Drop-off',
+    subtitle: 'Drop-off Rules & Risk',
+    body: 'You must ensure the delivery address is accurate and accessible. Where you authorize unattended delivery, delivery is deemed completed when the order is placed at the authorized location and documented through time, location, photo, or other delivery evidence.\n\nWe are not responsible for theft, weather damage, building access problems, or other loss occurring after a properly completed unattended delivery, except to the extent caused by our failure to follow your authorized instructions or where liability cannot legally be excluded. Failed delivery, storage, and redelivery charges may apply if disclosed.',
+  },
+  {
+    id: 13,
+    title: '13. Photos, Scans and Order Evidence',
+    subtitle: 'Chain of Custody Documentation',
+    body: 'We, Laundry Partners, and Delivery Partners may take photographs, scan labels or bags, record timestamps, and collect approximate or precise location data where enabled to document pickup, condition, processing, delivery, safety incidents, and disputes. Images should avoid unnecessary capture of people or the interior of a residence.\n\nCollection and use of this information are governed by the Privacy Policy. You must not use the Platform to photograph or record another person unlawfully.',
+  },
+  {
+    id: 14,
+    title: '14. Cleaning Risks and Customer Acknowledgements',
+    subtitle: 'Inherent Professional Risks',
+    body: 'Professional cleaning involves inherent risks. Results may be affected by fabric composition, age, previous treatment, hidden defects, weak seams, dyes, embellishments, adhesive, zippers, buttons, care labels, and the nature or duration of stains. Complete stain removal is not guaranteed.\n\nSubject to applicable law, Spinnyand Laundry Partners are not responsible for ordinary wear and tear; pre-existing damage; normal colour loss or fading; shrinkage or distortion consistent with an inaccurate or missing care label; damage caused by manufacturer defects or weak materials; loss of buttons, beads, sequins, or attachments that were loose or defective; or failure to remove stains that cannot reasonably be removed without risking damage.',
+  },
+  {
+    id: 15,
+    title: '15. Inspection and Problem Reporting',
+    subtitle: '48-Hour Reporting Window',
+    body: 'Inspect your order promptly after delivery. Report a missing item, wrong item, visible damage, delivery issue, or material service problem through the Platform within 48 hours after delivery, or as soon as reasonably possible where the problem could not be discovered earlier. Include the order number, description, photographs, receipts if available, and any other requested information.\n\nA short reporting period helps preserve evidence but does not eliminate rights that cannot legally be waived. You must retain the affected item and avoid further cleaning, alteration, repair, or disposal until the investigation is complete, unless reasonably necessary to prevent further damage.',
+  },
+  {
+    id: 16,
+    title: '16. Refunds, Recleaning and Credits',
+    subtitle: 'Customer Remedies',
+    body: 'Where a service issue is substantiated, we may arrange re-cleaning, return the item to the Laundry Partner, issue an account credit, refund some or all of the affected service charge, reimburse reasonable repair costs, or provide compensation under the Lost, Damaged and Problem Garment Policy. The appropriate remedy depends on the circumstances and applicable law.\n\nSpinnymay recover amounts from the responsible Laundry Partner under the partner agreement. A customer’s remedy is not conditional on Spinnysuccessfully collecting from the Laundry Partner where applicable law requires Spinnyto provide the remedy.',
+  },
+  {
+    id: 17,
+    title: '17. Lost or Damaged Items - Liability Framework',
+    subtitle: 'Depreciated Value Cap ($300 CAD)',
+    body: 'Compensation for a confirmed lost or irreparably damaged garment is based on the item’s fair depreciated value, not replacement-new or sentimental value. Unless prohibited by law, compensation for an affected item will not exceed the lowest of: (a) documented fair market value immediately before the loss; (b) ten times the cleaning charge allocated to that item; or (c) CAD $300 per order.\n\nThis limit does not apply to fraud, wilful misconduct, gross negligence where limitation is prohibited, personal injury, statutory consumer rights, or any liability that cannot legally be limited. High-value items should not be submitted unless the Platform offers and you purchase a specific declared-value service.',
+  },
+  {
+    id: 18,
+    title: '18. Third-Party Services',
+    subtitle: 'External Providers',
+    body: 'The Platform may use or link to payment processors, map providers, analytics vendors, app stores, communications providers, and other third parties. Their services may be governed by separate terms. We are not responsible for third-party services outside our control, but we remain responsible for our own obligations and for service providers as required by privacy and consumer law.',
+  },
+  {
+    id: 19,
+    title: '19. Promotions and Referral Programs',
+    subtitle: 'Rules & Fraud Limits',
+    body: 'Promotions, discounts, referral credits, and loyalty benefits have no cash value unless required by law. They may be limited by account, household, device, geography, date, service, or other stated conditions. We may withhold or reverse benefits obtained through error, duplicate accounts, self-referral, fraud, or manipulation. Material promotion terms will be disclosed when offered.',
+  },
+  {
+    id: 20,
+    title: '20. Customer Conduct and Safety',
+    subtitle: 'Community Code of Conduct',
+    body: 'You must treat customer-support personnel, Delivery Partners, and Laundry Partner staff respectfully and must not threaten, harass, discriminate against, stalk, assault, exploit, or interfere with any person. You must not use the Platform for unlawful activity, fraud, unauthorized commercial resale, or to transmit malware or abusive content.\n\nWe may take proportionate safety measures, including ending an interaction, refusing service, preserving evidence, contacting emergency services or law enforcement, and suspending or terminating accounts.',
+  },
+  {
+    id: 21,
+    title: '21. Account Suspension and Termination',
+    subtitle: 'Account Enforcement',
+    body: 'We may warn, restrict, suspend, or terminate access where we reasonably believe there has been fraud, abusive behaviour, repeated payment failure, chargeback abuse, prohibited-item activity, safety risk, legal violation, misuse of promotions, material breach, or conduct harmful to the Platform community. Where appropriate, we will provide notice and an opportunity to respond.\n\nYou may stop using the Platform and request account closure. Provisions concerning payment, claims, intellectual property, privacy, dispute resolution, and limitations survive termination as necessary.',
+  },
+  {
+    id: 22,
+    title: '22. Intellectual Property and Licence',
+    subtitle: 'Limited License',
+    body: 'Spinnyand its licensors own the Platform, software, designs, text, trademarks, logos, data compilations, and related intellectual property. Subject to these Terms, we grant you a personal, limited, revocable, non-exclusive, non-transferable licence to use the consumer Platform for lawful personal purposes.\n\nYou may not copy, sell, sublicense, scrape, reverse engineer, circumvent security, create derivative works, access non-public systems, or use the Platform to build a competing product except where applicable law expressly permits.',
+  },
+  {
+    id: 23,
+    title: '23. User Content and Feedback',
+    subtitle: 'Submission License',
+    body: 'You retain ownership of reviews, messages, photographs, and other content you submit. You grant Spinnya worldwide, non-exclusive, royalty-free licence to host, reproduce, adapt, display, and use that content to provide, secure, improve, and promote the Platform, subject to the Privacy Policy and your legal rights.\n\nYou must have the right to submit the content and must not submit unlawful, misleading, defamatory, infringing, private, or harmful material. Feedback and suggestions may be used without compensation or restriction.',
+  },
+  {
+    id: 24,
+    title: '24. Disclaimers',
+    subtitle: 'As-Available Provision',
+    body: 'The Platform is provided on an “as available” basis. We do not guarantee uninterrupted access, specific Laundry Partner availability, complete stain removal, exact timing, or error-free software. Estimates, ratings, and descriptions are informational and may change.\n\nNothing in these Terms excludes warranties, conditions, guarantees, or remedies imposed by consumer protection law that cannot be excluded. Any disclaimer applies only to the maximum extent permitted by law.',
+  },
+  {
+    id: 25,
+    title: '25. Limitation of Liability',
+    subtitle: 'Liability Caps',
+    body: 'To the maximum extent permitted by law, Spinnywill not be liable for indirect, incidental, special, exemplary, punitive, or consequential losses, including lost profits, loss of opportunity, or loss of data, arising from use of the Platform.\n\nExcept for payment or compensation obligations expressly stated in these Terms, Spinny’s aggregate liability arising from an order will not exceed the greater of: (a) amounts paid to Spinnyfor that order; or (b) the compensation available under the Lost, Damaged and Problem Garment Policy.',
+  },
+  {
+    id: 26,
+    title: '26. Indemnity',
+    subtitle: 'Indemnification Rules',
+    body: 'To the extent permitted by law, you will indemnify Spinnyagainst third-party claims, losses, and reasonable costs arising from your unlawful use of the Platform, intentional misconduct, knowing inclusion of dangerous or prohibited items, infringement of another person’s rights, or material breach of these Terms. This clause does not require you to indemnify Spinnyfor its own negligence, breach, or unlawful conduct.',
+  },
+  {
+    id: 27,
+    title: '27. Informal Dispute Resolution',
+    subtitle: '30-Day Negotiation Requirement',
+    body: 'Before starting arbitration or court proceedings, the claimant must send a written notice describing the dispute, relevant order, requested remedy, and contact information to hello@spinny.app or by mail to Spinny, Unit 120, 5710 201 Street, Langley, BC V3A 8A8.\n\nThe parties will attempt in good faith to resolve the dispute for at least 30 days after receipt of a complete notice. Either party may request a telephone or video conference. This process does not prevent either party from seeking urgent injunctive relief, preserving a limitation period, reporting to a regulator, or using a statutory complaint process.',
+  },
+  {
+    id: 28,
+    title: '28. Arbitration Agreement - Subject to Applicable Law',
+    subtitle: 'Arbitration & Class Action Waiver',
+    body: 'After completing informal resolution, and except for matters permitted in small claims court, requests for urgent injunctive relief, statutory complaints, and disputes that applicable law does not permit to be arbitrated, either party may elect final and binding arbitration. Arbitration will be administered in British Columbia by ADR Institute of Canada, the Vancouver International Arbitration Centre, or another mutually agreed Canadian provider under its applicable consumer or expedited rules. The seat will be Vancouver, British Columbia, the language will be English unless law requires otherwise, and remote participation will be permitted where reasonable.\n\nA consumer may opt out of this arbitration agreement by sending written notice to privacy@spinny.app within 30 days after first accepting these Terms.',
+  },
+  {
+    id: 29,
+    title: '29. Governing Law and Courts',
+    subtitle: 'Jurisdiction: British Columbia, Canada',
+    body: 'These Terms are governed by the laws of British Columbia and the federal laws of Canada applicable there, without regard to conflict-of-laws rules. This choice does not deprive a consumer of mandatory protections of the province or territory where the consumer resides.\n\nFor disputes not resolved by arbitration, the parties submit to the courts of British Columbia, except where applicable consumer law permits or requires proceedings elsewhere or the matter qualifies for another competent tribunal or small claims court.',
+  },
+  {
+    id: 30,
+    title: '30. Changes to Terms',
+    subtitle: 'Notice of Updates',
+    body: 'We may update these Terms for legal, security, operational, or service reasons. We will provide notice of material changes through the Platform, email, or another reasonable method before they take effect where required. Changes will not retroactively remove accrued rights. Continued use after the effective date constitutes acceptance where permitted by law; otherwise, we will request fresh consent.',
+  },
+  {
+    id: 31,
+    title: '31. General',
+    subtitle: 'Severability & Entire Agreement',
+    body: 'If a provision is unenforceable, it will be modified to the minimum extent necessary or severed, and the remaining provisions continue. Failure to enforce a provision is not a waiver. You may not assign these Terms without our consent; we may assign them as part of a merger, financing, reorganization, sale, or transfer of the Platform, subject to applicable law.\n\nThese Terms, together with incorporated policies and order-specific disclosures, form the entire agreement regarding consumer use of the Platform.',
+  },
+  {
+    id: 32,
+    title: '32. Contact Information',
+    subtitle: 'Corporate Address & Contacts',
+    body: 'Spinny\nUnit 120, 5710 201 Street, Langley, British Columbia V3A 8A8, Canada\nCustomer Support: hello@spinny.app\nLegal Notices & Disputes: privacy@spinny.app\nPrivacy Officer: privacy@spinny.app',
   },
 ];
 
 // --- Cookie Policy Page ---
 export const COOKIE_HERO_CONTENT = {
-  eyebrow: 'Cookie Policy',
-  heading: 'How Spinny uses cookies.',
+  eyebrow: 'Cookie & Tracking Notice',
+  heading: 'Part J — Cookie and Tracking Technologies Notice',
   description:
-    'How cookies help us remember your preferences and improve the site.',
+    'How Spinny uses cookies, SDKs, local storage, and tracking technologies across the Spinny website and mobile application.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
 };
 
 export const COOKIE_CATEGORIES = [
   {
-    title: 'Essential',
-    desc: 'Required for the site to function — keeping you signed in and remembering items in an active booking. These cannot be turned off.',
+    title: '1. Technologies Used',
+    desc: 'The website and app may use cookies, local storage, software development kits (SDKs), pixels, and similar technologies for authentication, security, preferences, analytics, crash reporting, attribution, and marketing.',
   },
   {
-    title: 'Performance',
-    desc: 'Help us understand how the site is used so we can find and fix issues, anonymized wherever possible.',
+    title: '2. Strictly Necessary & Core Functionality',
+    desc: 'Strictly necessary technologies support login, security, checkout, and core functionality. These cannot be disabled as they are required for service operation.',
   },
   {
-    title: 'Preference',
-    desc: 'Remember choices like your service area or saved address so you don’t have to re-enter them.',
+    title: '3. Preferences & Settings',
+    desc: 'Preference technologies remember settings, language, saved pickup locations, and operational preferences.',
+  },
+  {
+    title: '4. Analytics & Performance',
+    desc: 'Analytics technologies measure performance and feature usage to help us troubleshoot and improve the Platform.',
+  },
+  {
+    title: '5. Controls & Undisclosed Tracking Policy',
+    desc: 'Users may control browser cookies, device advertising settings, app tracking permissions, and consent choices. We do not include advertising or cross-app tracking software in the production app unless disclosed, consented to where required, and reflected in Apple and Google privacy declarations.',
   },
 ];
 
