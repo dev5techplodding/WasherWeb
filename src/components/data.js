@@ -9,7 +9,7 @@ export const ABOUT_HERO_CONTENT = {
   backgroundImage: '/frames/ezgif-frame-008.jpg',
   buttons: [
     { label: 'Contact us', url: '/contact' },
-    { label: 'See procedure', url: '/procedure', variant: 'secondary' },
+    { label: 'See process', url: '/procedure', variant: 'secondary' },
   ],
   accentText:
     'For households and commercial teams who want their weekends back, not just clean clothes.',

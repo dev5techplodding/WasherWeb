@@ -1,0 +1,35 @@
+{
+  "project_name": "spinny-promo",
+  "visual_style": {
+    "art_style": "Premium minimalism, photorealistic cinematic, editorial/magazine-quality lifestyle photography, subtle glassmorphism accents on app-UI moments only",
+    "color_palette": "Spinny Orange #F28C28 as sole saturated accent; Deep Navy #122840 and Blue #1B3A5C for grounding/interiors; Warm Gray #F8F9FA and Peach #FFB993 for soft daytime scenes; warm golden-hour tones throughout",
+    "lighting": "Warm, natural, golden-hour; soft shadows; no harsh or fluorescent lighting",
+    "composition": "Clean, uncluttered frames with intentional negative space; rule-of-thirds on hero subjects"
+  },
+  "motion_language": {
+    "movement_quality": "Smooth, fluid, confident, unhurried",
+    "pacing": "Apple-keynote-inspired: deliberate holds on key beats, smooth transitions, no chaotic fast cuts",
+    "camera_style": "Cinematic dolly/tracking/push shots; occasional slow handheld warmth; no shaky or whip-pan movement"
+  },
+  "subject_consistency": {
+    "main_subject": "Busy urban Canadian professional, 25-45, diverse/multicultural, modern casual-professional wardrobe, recurs as the customer throughline across all scenes",
+    "environment": "Modern Canadian metro condo/apartment interior and its doorstep/hallway; golden-hour interior light; no specific city landmarks"
+  },
+  "constraints": {
+    "avoid": [
+      "dirty or messy 'before' imagery",
+      "competitor brand colors (gold/yellow reading as Rinse)",
+      "generic laundromat stock-photo look",
+      "cold or corporate visual tone",
+      "cluttered frames",
+      "laundry-only framing that ignores footwear/leather/home-textile scope"
+    ],
+    "maintain": [
+      "Spinny Orange (#F28C28) as the only saturated accent color",
+      "warm, friendly, confident brand tone",
+      "the 'time bought back' emotional payoff as the throughline",
+      "item variety across the montage: laundry, footwear, leather, home textiles",
+      "Spinny logo (orange-and-blue swirl 'S' mark) visible at payoff"
+    ]
+  }
+}
