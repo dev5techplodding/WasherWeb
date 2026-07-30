@@ -10,7 +10,7 @@ const METRICS = [
   {
     feature: 'Required Verification Docs',
     customer: 'None (Mobile / Email)',
-    vendor: 'Business Reg & Liability Insurance',
+    vendor: 'Business Registration and Liability Insurance',
     driver: 'ID, Driver License & Insurance',
   },
   {
