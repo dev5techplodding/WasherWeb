@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { label: 'Home', href: '/', section: null },
   { label: 'Services', href: '/services', section: null },
   { label: 'Why Spinny', href: '/why-spinny', section: null },
+  { label: 'The Spinny 4', href: '/the-spinny-4', section: null },
   { label: 'About Us', href: '/about', section: null },
   { label: 'How it Works', href: '/process', section: null },
 ];
@@ -170,7 +171,7 @@ export default function Navbar() {
             </Link>
 
             {/* ─── Desktop Links ─── */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-0.5 lg:gap-1">
               {NAV_LINKS.map((link) => {
                 const isActive = pathname === link.href;
                 const textColor = scrolled ? 'var(--washr-blue)' : 'var(--washr-white)';
@@ -179,7 +180,7 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="relative px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-200 group cursor-pointer overflow-hidden"
+                    className="relative px-2.5 lg:px-3.5 py-2 text-xs lg:text-sm font-semibold rounded-lg transition-colors duration-200 group cursor-pointer overflow-hidden whitespace-nowrap"
                     style={{ color: textColor }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.backgroundColor = scrolled
@@ -211,26 +212,50 @@ export default function Navbar() {
             </div>
 
             {/* ─── Desktop CTA ─── */}
-            <div className="hidden md:flex items-center gap-3">
-              {/* <Link
-                href="/app"
-                className="text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer"
-                style={{ color: scrolled ? 'var(--washr-blue)' : 'var(--washr-white)' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = scrolled
-                    ? 'var(--washr-gray)'
-                    : 'rgba(255,255,255,0.12)';
+            <div className="hidden md:flex items-center gap-2">
+              {/* Google Play Navbar Icon Button */}
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 shrink-0"
+                style={{
+                  backgroundColor: scrolled ? 'rgba(15, 23, 42, 0.06)' : 'rgba(255, 255, 255, 0.15)',
+                  border: scrolled ? '1px solid rgba(15, 23, 42, 0.1)' : '1px solid rgba(255, 255, 255, 0.25)',
                 }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                }}
+                aria-label="Google Play Store"
+                title="Google Play Store"
               >
-                Get the App
-              </Link> */}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                  <path d="M3.6 1.83C3.37 2.07 3.25 2.45 3.25 2.96V21.04C3.25 21.55 3.37 21.93 3.6 22.17L3.68 22.24L13.79 12.13V11.87L3.68 1.76L3.6 1.83Z" fill="#00A0FF" />
+                  <path d="M17.15 15.5L13.79 12.13V11.87L17.15 8.5L17.23 8.55L21.2 10.81C22.33 11.45 22.33 12.55 21.2 13.19L17.23 15.45L17.15 15.5Z" fill="#FFCC00" />
+                  <path d="M17.23 15.45L13.79 12L3.6 22.17C3.97 22.57 4.59 22.62 5.3 22.22L17.23 15.45Z" fill="#FF3A44" />
+                  <path d="M17.23 8.55L5.3 1.78C4.59 1.38 3.97 1.43 3.6 1.83L13.79 12L17.23 8.55Z" fill="#00E676" />
+                </svg>
+              </a>
+
+              {/* App Store Navbar Icon Button */}
+              <a
+                href="https://apps.apple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 shrink-0"
+                style={{
+                  backgroundColor: scrolled ? 'rgba(15, 23, 42, 0.06)' : 'rgba(255, 255, 255, 0.15)',
+                  color: scrolled ? 'var(--washr-blue)' : '#fff',
+                  border: scrolled ? '1px solid rgba(15, 23, 42, 0.1)' : '1px solid rgba(255, 255, 255, 0.25)',
+                }}
+                aria-label="Apple App Store"
+                title="Apple App Store"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.35c.66-.8 1.11-1.92.99-3.04-.96.04-2.12.64-2.8 1.44-.6.7-1.13 1.84-.99 2.94 1.07.08 2.15-.54 2.8-1.34z" />
+                </svg>
+              </a>
 
               <Link
                 href="/help-center"
-                className="text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer"
+                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-colors duration-200 cursor-pointer whitespace-nowrap"
                 style={{ color: scrolled ? 'var(--washr-blue)' : 'var(--washr-white)' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = scrolled
@@ -254,7 +279,7 @@ export default function Navbar() {
                   ref={ctaBtnRef}
                   href="https://spinnylaundry.com/login"
                   id="nav-cta"
-                  className="block text-sm font-bold px-5 py-2.5 rounded-full text-white transition-all duration-200 hover:shadow-[0_4px_20px_rgba(242,140,40,0.45)] active:scale-[0.96] cursor-pointer"
+                  className="block text-xs font-bold px-4 py-2 rounded-full text-white transition-all duration-200 hover:shadow-[0_4px_20px_rgba(242,140,40,0.45)] active:scale-[0.96] cursor-pointer"
                   style={{
                     backgroundColor: 'var(--washr-orange)',
                     boxShadow: '0 2px 12px rgba(242, 140, 40, 0.3)',
@@ -358,8 +383,38 @@ export default function Navbar() {
 
             {/* Mobile CTAs */}
             <div className="mobile-cta-group flex flex-col gap-3 pt-6 border-t" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
+              <div className="grid grid-cols-2 gap-2.5 mb-1">
+                <a
+                  href="https://play.google.com/store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}
+                  className="mobile-link flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-white/10 text-white text-xs font-bold border border-white/15"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.6 1.83C3.37 2.07 3.25 2.45 3.25 2.96V21.04C3.25 21.55 3.37 21.93 3.6 22.17L3.68 22.24L13.79 12.13V11.87L3.68 1.76L3.6 1.83Z" fill="#00A0FF" />
+                    <path d="M17.15 15.5L13.79 12.13V11.87L17.15 8.5L17.23 8.55L21.2 10.81C22.33 11.45 22.33 12.55 21.2 13.19L17.23 15.45L17.15 15.5Z" fill="#FFCC00" />
+                    <path d="M17.23 15.45L13.79 12L3.6 22.17C3.97 22.57 4.59 22.62 5.3 22.22L17.23 15.45Z" fill="#FF3A44" />
+                    <path d="M17.23 8.55L5.3 1.78C4.59 1.38 3.97 1.43 3.6 1.83L13.79 12L17.23 8.55Z" fill="#00E676" />
+                  </svg>
+                  <span>Google Play</span>
+                </a>
+                <a
+                  href="https://apps.apple.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}
+                  className="mobile-link flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-white/10 text-white text-xs font-bold border border-white/15"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.35c.66-.8 1.11-1.92.99-3.04-.96.04-2.12.64-2.8 1.44-.6.7-1.13 1.84-.99 2.94 1.07.08 2.15-.54 2.8-1.34z" />
+                  </svg>
+                  <span>App Store</span>
+                </a>
+              </div>
+
               <Link
-                href="https://washr.org/login"
+                href="https://spinnylaundry.com/login"
                 onClick={handleLinkClick}
                 className="mobile-link w-full py-4 rounded-full text-white font-bold text-center text-base transition-all duration-300 active:scale-[0.98]"
                 style={{
@@ -369,17 +424,6 @@ export default function Navbar() {
               >
                 Login
               </Link>
-              {/* <Link
-                href="/app"
-                onClick={handleLinkClick}
-                className="mobile-link w-full py-4 rounded-full font-semibold text-center text-base transition-all duration-300"
-                style={{
-                  color: 'rgba(255,255,255,0.7)',
-                  border: '1.5px solid rgba(255,255,255,0.15)',
-                }}
-              >
-                Get the App
-              </Link> */}
               <Link
                 href="/help-center"
                 onClick={handleLinkClick}

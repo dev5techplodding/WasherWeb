@@ -40,7 +40,7 @@ export default function processHero({ onExploreClick, onStartClick }) {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-white mb-6">
+            <h1 className="text-3One Pickupxl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-white mb-6">
               How {' '}
               <span className="text-[#F7941D] font-black">
                 Spinny
