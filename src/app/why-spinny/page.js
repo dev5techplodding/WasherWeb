@@ -2,6 +2,7 @@ import Image from 'next/image';
 import HoursLedger from '@/components/home/sections/HoursLedger';
 import AppDownloadBanner from '@/components/process/AppDownloadBanner';
 import AppStoreButtons from '@/components/AppStoreButtons';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
   title: 'Why Spinny | Reclaim Your Time',
@@ -54,6 +55,7 @@ export default function WhySpinnyPage() {
 
 
       <section className="relative w-full pt-10 pb-10 lg:pt-10 lg:pb-10 text-white overflow-hidden bg-[#0B1726]"></section>
+      <ScrollToTop />
 
       {/* 2. HOURS LEDGER SECTION (IN THE MIDDLE) */}
       <HoursLedger />

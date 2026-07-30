@@ -4,6 +4,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import FeedbackSection from '@/components/FeedbackSection';
 import PageCTA from '@/components/PageCTA';
 import HelpStats from '@/components/help-center/sections/HelpStats';
+import AppDownloadBanner from '@/components/process/AppDownloadBanner';
 
 export const metadata = {
   title: 'Help Center | Spinny',
@@ -38,7 +39,11 @@ export default function HelpCenterPage() {
             secondary={{ label: 'Contact us', url: '/contact' }}
           />
         </section> */}
+
       </div>
+      <AppDownloadBanner />
+
+
     </main>
   );
 }
