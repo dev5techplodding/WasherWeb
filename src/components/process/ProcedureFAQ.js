@@ -26,7 +26,7 @@ const FAQS = [
   },
 ];
 
-export default function ProcedureFAQ() {
+export default function processFAQ() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (

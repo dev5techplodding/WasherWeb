@@ -45,7 +45,7 @@ export default function HeroSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push('/procedure');
+    router.push('/process');
   };
 
   return (
@@ -154,7 +154,7 @@ export default function HeroSection() {
           {/* CTA buttons */}
           <div className="relative flex flex-col sm:flex-row gap-4 sm:gap-5 justify-start items-stretch sm:items-center w-full sm:w-auto mb-6">
             <Link
-              href="/procedure"
+              href="/process"
               className="group relative px-8 py-4 sm:px-9 sm:py-4 rounded-full text-white font-bold text-sm sm:text-base tracking-wide overflow-hidden transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] text-center cursor-pointer shadow-lg"
               style={{
                 backgroundColor: 'var(--washr-orange)',
@@ -183,7 +183,7 @@ export default function HeroSection() {
               Buy back your first evening in 30 seconds.
             </span>
             <Link
-              href="/procedure"
+              href="/process"
               className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold transition-colors duration-200 hover:underline"
               style={{ color: 'var(--washr-orange)' }}
             >

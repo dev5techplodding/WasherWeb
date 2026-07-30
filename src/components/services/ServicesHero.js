@@ -26,6 +26,13 @@ export default function ServicesHero() {
     return () => ctx.revert();
   }, []);
 
+  const handleScrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -70,11 +77,11 @@ export default function ServicesHero() {
 
           {/* Action CTAs */}
           <div className="mt-9 flex flex-wrap items-center justify-start gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-base font-bold bg-[#F7941D] hover:bg-orange-600 text-white shadow-xl shadow-[#F7941D]/30 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
+            <button
+              onClick={() => handleScrollTo('ecosystem')}
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-base font-bold bg-[#F7941D] hover:bg-orange-600 text-white shadow-xl shadow-[#F7941D]/30 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group cursor-pointer"
             >
-              <span>Get Started</span>
+              <span>Explore Services</span>
               <svg
                 width="16"
                 height="16"
@@ -91,30 +98,7 @@ export default function ServicesHero() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </Link>
-
-            <Link
-              href="/procedure"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-base font-bold bg-white/10 hover:bg-white hover:text-slate-950 text-white border border-white/20 shadow-md backdrop-blur-md transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
-            >
-              <span>View Procedure</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                className="transition-transform duration-200 group-hover:translate-x-1"
-                aria-hidden="true"
-              >
-                <path
-                  d="M3 8H13M13 8L9 4M13 8L9 12"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Link>
+            </button>
           </div>
         </div>
       </div>

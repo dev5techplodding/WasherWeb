@@ -176,7 +176,7 @@ export default function SimpleFlowSection() {
 
           <div className="shrink-0">
             <a
-              href="/procedure"
+              href="/process"
               className="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-gradient-to-r from-[#F28C28] to-[#E07B17] hover:from-[#E07B17] hover:to-[#C66708] text-white font-bold text-sm shadow-lg shadow-orange-500/25 transition-all hover:scale-105"
             >
               Start Registration Flow →

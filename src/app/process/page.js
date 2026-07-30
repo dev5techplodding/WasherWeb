@@ -1,28 +1,28 @@
-import ProcedureHero from '@/components/procedure/ProcedureHero';
-import JourneyIntroCards from '@/components/procedure/JourneyIntroCards';
-import SimpleFlowSection from '@/components/procedure/SimpleFlowSection';
-import CustomerJourneySection from '@/components/procedure/CustomerJourneySection';
-import VendorJourneySection from '@/components/procedure/VendorJourneySection';
-import DriverJourneySection from '@/components/procedure/DriverJourneySection';
-import ComparisonSection from '@/components/procedure/ComparisonSection';
-import AppDownloadBanner from '@/components/procedure/AppDownloadBanner';
-import ProcedureFAQ from '@/components/procedure/ProcedureFAQ';
-import ProcedureCTA from '@/components/procedure/ProcedureCTA';
+import ProcedureHero from '@/components/process/ProcedureHero';
+import JourneyIntroCards from '@/components/process/JourneyIntroCards';
+import SimpleFlowSection from '@/components/process/SimpleFlowSection';
+import CustomerJourneySection from '@/components/process/CustomerJourneySection';
+import VendorJourneySection from '@/components/process/VendorJourneySection';
+import DriverJourneySection from '@/components/process/DriverJourneySection';
+import ComparisonSection from '@/components/process/ComparisonSection';
+import AppDownloadBanner from '@/components/process/AppDownloadBanner';
+import ProcedureFAQ from '@/components/process/ProcedureFAQ';
+import ProcedureCTA from '@/components/process/ProcedureCTA';
 
 export const metadata = {
-  title: 'Registration Procedure | Spinny Ecosystem',
+  title: 'Registration process | Spinny Ecosystem',
   description:
     'Experience the cinematic registration journey for customers, laundry vendors, and delivery partners joining the Spinny laundry ecosystem.',
   keywords: 'Spinny, laundry registration, customer onboarding, vendor portal, driver route, garment care',
   openGraph: {
-    title: 'Registration Procedure | Spinny Ecosystem',
+    title: 'Registration process | Spinny Ecosystem',
     description:
       'Discover how customers, vendors, and delivery professionals join Canada’s premium laundry ecosystem.',
     type: 'website',
   },
 };
 
-export default function ProcedurePage() {
+export default function processPage() {
   return (
     <main className="min-h-screen bg-white text-[#0E3A66] selection:bg-[#F7941D] selection:text-white">
       {/* 1. HERO SECTION */}

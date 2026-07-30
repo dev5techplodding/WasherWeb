@@ -1,7 +1,7 @@
 import AppHero from '@/components/app/sections/AppHero';
 import AppFeatures from '@/components/app/sections/AppFeatures';
 import AppScreens from '@/components/app/sections/AppScreens';
-import AppDownloadBanner from '@/components/procedure/AppDownloadBanner';
+import AppDownloadBanner from '@/components/process/AppDownloadBanner';
 
 export const metadata = {
   title: 'Get the Spinny App | Spinny',

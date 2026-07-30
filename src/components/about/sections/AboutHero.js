@@ -99,10 +99,10 @@ export default function AboutHero() {
             </Link>
 
             <Link
-              href="/procedure"
+              href="/process"
               className="inline-flex items-center gap-2.5 px-9 py-4 rounded-full text-base font-bold bg-white/10 hover:bg-white hover:text-slate-950 text-white border border-white/20 shadow-md backdrop-blur-md transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] group"
             >
-              <span>See Procedure</span>
+              <span>See process</span>
               <svg
                 width="16"
                 height="16"

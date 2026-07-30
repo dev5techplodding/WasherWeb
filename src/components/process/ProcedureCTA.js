@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import AppStoreButtons from '@/components/AppStoreButtons';
 
-export default function ProcedureCTA() {
+export default function processCTA() {
   const handleScrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {

@@ -55,7 +55,7 @@ export default function JourneyIntroCards() {
             Three Onboarding Journeys
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-normal">
-            Select your role below to explore the registration procedure, required details, and platform access.
+            Select your role below to explore the registration process, required details, and platform access.
           </p>
         </div>
 

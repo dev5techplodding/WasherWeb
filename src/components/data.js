@@ -9,7 +9,7 @@ export const ABOUT_HERO_CONTENT = {
   backgroundImage: '/frames/ezgif-frame-008.jpg',
   buttons: [
     { label: 'Contact us', url: '/contact' },
-    { label: 'See process', url: '/procedure', variant: 'secondary' },
+    { label: 'See process', url: '/process', variant: 'secondary' },
   ],
   accentText:
     'For households and commercial teams who want their weekends back, not just clean clothes.',
@@ -23,14 +23,14 @@ export const CONTACT_HERO_CONTENT = {
   backgroundImage: '/frames/ezgif-frame-014.jpg',
   buttons: [
     { label: 'Email support', url: 'mailto:hello@spinny.example' },
-    { label: 'View procedure', url: '/procedure', variant: 'secondary' },
+    { label: 'View process', url: '/process', variant: 'secondary' },
   ],
   accentText:
     'Most replies land within one business day.',
 };
 
-export const PROCEDURE_HERO_CONTENT = {
-  eyebrow: 'Procedure',
+export const process_HERO_CONTENT = {
+  eyebrow: 'process',
   heading: 'Getting your time back, in three simple journeys.',
   description:
     'A simple path for every role: create a profile, verify the essentials, and get approved.',
@@ -51,7 +51,7 @@ export const SERVICES_HERO_CONTENT = {
   backgroundImage: '/frames/ezgif-frame-031.jpg',
   buttons: [
     { label: 'Get the app', url: '/app' },
-    { label: 'View procedure', url: '/procedure', variant: 'secondary' },
+    { label: 'View process', url: '/process', variant: 'secondary' },
   ],
   accentText:
     'Handled by trained specialists across commercial-grade facilities, matched to each material.',
@@ -234,13 +234,13 @@ export const PRIVACY_SECTIONS = [
     id: 9,
     title: '9. Security',
     subtitle: 'Technical & Physical Safeguards',
-    body: 'We use administrative, technical, and physical safeguards appropriate to the sensitivity of information, which may include access controls, encryption in transit, secure password practices, payment tokenization, vendor review, employee and contractor confidentiality requirements, logging, monitoring, backups, and incident-response procedures. No system is completely secure, and users should protect their passwords and devices.',
+    body: 'We use administrative, technical, and physical safeguards appropriate to the sensitivity of information, which may include access controls, encryption in transit, secure password practices, payment tokenization, vendor review, employee and contractor confidentiality requirements, logging, monitoring, backups, and incident-response processs. No system is completely secure, and users should protect their passwords and devices.',
   },
   {
     id: 10,
     title: '10. Privacy Incidents',
-    subtitle: 'Breach Response Procedures',
-    body: 'We maintain procedures to identify, contain, investigate, document, and respond to privacy and security incidents. Where legally required, we will notify affected individuals and report to the appropriate privacy regulator. We will keep breach records as required by applicable law.',
+    subtitle: 'Breach Response processs',
+    body: 'We maintain processs to identify, contain, investigate, document, and respond to privacy and security incidents. Where legally required, we will notify affected individuals and report to the appropriate privacy regulator. We will keep breach records as required by applicable law.',
   },
   {
     id: 11,
@@ -367,7 +367,7 @@ export const ABOUT_ECOSYSTEM = [
   },
 ];
 
-// --- Procedure Page Data ---
+// --- process Page Data ---
 export const USER_GROUPS = [
   {
     title: 'Customers',
@@ -392,7 +392,7 @@ export const USER_GROUPS = [
     steps: [
       'Submit business details, ownership information, and facility location.',
       'Upload compliance documents, insurance certificates, and operating licenses if required.',
-      'Complete an onboarding call to review service standards, turnaround expectations, and quality control procedures.',
+      'Complete an onboarding call to review service standards, turnaround expectations, and quality control processs.',
       'Receive a partner code, access credentials, and the first batch assignment once approval is completed.',
     ],
     requirements: [
@@ -553,7 +553,7 @@ export const PRICING_HERO_CONTENT = {
   backgroundImage: '/frames/ezgif-frame-105.jpg',
   buttons: [
     { label: 'Schedule a pickup', url: '/contact' },
-    { label: 'See how it works', url: '/procedure', variant: 'secondary' },
+    { label: 'See how it works', url: '/process', variant: 'secondary' },
   ],
   accentText: 'Final pricing is confirmed at checkout based on service type and item count.',
 };

@@ -59,6 +59,15 @@ export default function ServiceEcosystem() {
   const headingRef = useRef(null);
   const gridRef = useRef(null);
 
+  const handleCardClick = () => {
+    const el = document.getElementById('services');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/services#services';
+    }
+  };
+
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) return;
@@ -101,20 +110,23 @@ export default function ServiceEcosystem() {
             className="animate-in pill-badge mb-4 inline-flex"
             style={{
               color: 'var(--washr-orange)',
-              backgroundColor: 'rgba(242,140,40,0.08)',
-              border: '1px solid rgba(242,140,40,0.18)',
+              backgroundColor: 'rgba(242,140,40,0.1)',
+              border: '1px solid rgba(242,140,40,0.2)',
             }}
           >
-            The Service Ecosystem
+            THE SERVICE ECOSYSTEM
           </span>
 
           <h2
             id="ecosystem-heading"
-            className="animate-in text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.12] mb-5"
-            style={{ color: 'var(--washr-blue-deep)' }}
+            className="animate-in text-3xl sm:text-4xl md:text-5xl font-black tracking-tight mb-4"
+            style={{
+              color: 'var(--washr-blue)',
+              fontFamily: 'AvenirNext, var(--font-sans)',
+            }}
           >
-            Everything you own, organized{' '}
-            <span style={{ color: 'var(--washr-orange)' }}>by what it needs.</span>
+            Everything you own,<br />
+            organized <span style={{ color: 'var(--washr-orange)' }}>by what it needs.</span>
           </h2>
 
           <p
@@ -132,7 +144,8 @@ export default function ServiceEcosystem() {
             return (
               <article
                 key={category.id}
-                className="eco-card group relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-500 cursor-default border border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(27,58,92,0.14)] hover:-translate-y-1.5 overflow-hidden"
+                onClick={handleCardClick}
+                className="eco-card group relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-500 cursor-pointer border border-slate-200/80 bg-white/90 backdrop-blur-md shadow-sm hover:shadow-[0_20px_50px_-12px_rgba(27,58,92,0.14)] hover:-translate-y-1.5 overflow-hidden"
               >
                 {/* Top Accent Gradient Line on Hover */}
                 <div
@@ -193,10 +206,10 @@ export default function ServiceEcosystem() {
                   </div>
                 </div>
 
-                {/* Card Footer: Sub-item Pills & Dark Arrow Circle Button */}
-                <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
+                {/* Card Footer: Sub-item Pills & Explore Service Button */}
+                <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
                   {/* Item Badges */}
-                  <div className="flex flex-wrap gap-1.5 max-w-[80%]">
+                  <div className="flex flex-wrap gap-1.5 flex-1 min-w-0">
                     {category.items.map((item) => (
                       <span
                         key={item}
@@ -207,12 +220,12 @@ export default function ServiceEcosystem() {
                     ))}
                   </div>
 
-                  {/* Dark Circular Arrow Button */}
+                  {/* Explore Service Button */}
                   <div
-                    className="w-10 h-10 rounded-full bg-[#0E243A] text-white flex items-center justify-center shrink-0 shadow-md group-hover:bg-[#122840] group-hover:translate-x-1 transition-all duration-300"
-                    aria-hidden="true"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#0E243A] text-white text-xs font-bold shrink-0 shadow-md group-hover:bg-[#F28C28] transition-all duration-300"
                   >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <span>Explore Service</span>
+                    <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </div>

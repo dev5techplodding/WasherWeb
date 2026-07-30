@@ -22,7 +22,7 @@ const FOOTER_LINKS = {
     links: [
       { label: 'About Spinny', href: '/about' },
       { label: 'How It Works', href: '/#how-it-works-trigger' },
-      { label: 'Vendor Partners', href: '/procedure' },
+      { label: 'Vendor Partners', href: '/process' },
       { label: 'Get the App', href: '/app' },
     ],
   },

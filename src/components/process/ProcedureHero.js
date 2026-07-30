@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function ProcedureHero({ onExploreClick, onStartClick }) {
+export default function processHero({ onExploreClick, onStartClick }) {
   const handleScrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -36,15 +36,16 @@ export default function ProcedureHero({ onExploreClick, onStartClick }) {
             {/* Eyebrow Badge / Logo */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-[#F7941D] text-xs sm:text-sm font-bold tracking-wider uppercase mb-6 backdrop-blur-md shadow-[0_2px_12px_rgba(247,148,29,0.15)]">
               <span className="w-2 h-2 rounded-full bg-[#F7941D] animate-pulse" />
-              <span className="font-extrabold tracking-widest text-[#F7941D]">SPINNY GO</span>
+              <span className="font-extrabold tracking-widest text-[#F7941D]">SPINNY </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-white mb-6">
-              Spinny is the{' '}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-white mb-6">
+              How {' '}
               <span className="text-[#F7941D] font-black">
-                freedom to care for your entire closet, on your schedule.
-              </span>
+                Spinny
+              </span> {' '}
+              works ?
             </h1>
 
             {/* Subheading */}
@@ -53,23 +54,13 @@ export default function ProcedureHero({ onExploreClick, onStartClick }) {
             </p>
 
             {/* Action CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <div className="flex items-center justify-center lg:justify-start">
               <button
-                onClick={onStartClick || (() => handleScrollTo('journey-intro'))}
+                onClick={onExploreClick || (() => handleScrollTo('journey-intro'))}
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#F7941D] hover:bg-orange-600 text-white font-bold text-base shadow-xl shadow-[#F7941D]/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center space-x-2"
               >
-                <span>Log in to get access</span>
-                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-
-              <button
-                onClick={onExploreClick || (() => handleScrollTo('customer-journey'))}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white hover:text-slate-950 text-white font-bold text-base border border-white/20 shadow-md backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center space-x-2"
-              >
                 <span>Explore Process</span>
-                <svg className="w-4 h-4 text-[#F7941D] group-hover:text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>

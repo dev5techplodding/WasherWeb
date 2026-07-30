@@ -91,7 +91,7 @@ export default function Seemless() {
         {/* CTA Buttons */}
         <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
-            href="/procedure"
+            href="/process"
             className="group relative px-10 py-5 rounded-full text-white font-bold text-sm tracking-wide overflow-hidden transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] text-center cursor-pointer"
             style={{
               backgroundColor: 'var(--washr-orange)',

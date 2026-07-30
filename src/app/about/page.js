@@ -29,7 +29,7 @@ export default function AboutPage() {
             title="Ready to buy back your time?"
             description="Schedule your first pickup in under 30 seconds, or see exactly how the process works before you book."
             primary={{ label: 'Contact Us', url: '/contact' }}
-            secondary={{ label: 'See Procedure', url: '/procedure' }}
+            secondary={{ label: 'See process', url: '/process' }}
           />
         </div>
       </div>
