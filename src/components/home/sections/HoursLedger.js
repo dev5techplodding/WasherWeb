@@ -43,7 +43,7 @@ export default function HoursLedger() {
     <section
       ref={sectionRef}
       id="hours-ledger"
-      className="py-24 md:py-32 relative bg-white"
+      className="py-14 md:py-24 relative bg-white"
       aria-labelledby="ledger-heading"
     >
       <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16">

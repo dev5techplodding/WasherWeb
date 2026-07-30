@@ -13,9 +13,9 @@ export default function TheSpinny4Page() {
   return (
     <main className="min-h-screen bg-white text-[#0E3A66]">
       {/* 1. HERO HEADER */}
-      <section className="relative w-full pt-36 pb-20 lg:pt-44 lg:pb-24 text-white overflow-hidden bg-[#0B1726]">
+      {/* <section className="relative w-full pt-36 pb-20 lg:pt-44 lg:pb-24 text-white overflow-hidden bg-[#0B1726]">
         {/* Background Image with Dark Overlay */}
-        <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
           <Image
             src="/ironing.jpg"
             alt="The Spinny 4 Background"
@@ -27,7 +27,7 @@ export default function TheSpinny4Page() {
         </div>
 
         {/* Ambient Glows & Grid Pattern */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
+      {/* <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           <div className="absolute -top-24 right-10 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(247,148,29,0.25)_0%,transparent_70%)] blur-3xl" />
           <div className="absolute -bottom-20 -left-10 w-[30rem] h-[30rem] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.15)_0%,transparent_70%)] blur-3xl" />
@@ -50,8 +50,11 @@ export default function TheSpinny4Page() {
 
           <AppStoreButtons className="justify-center" />
         </div>
-      </section>
+      </section> */}
 
+      <section className="relative w-full pt-10 pb-10 lg:pt-10 lg:pb-10 text-white overflow-hidden bg-[#0B1726]">
+
+      </section>
       {/* 2. SIMPLE 4-STEP PROCESS SECTION (IN THE MIDDLE) */}
       <SimpleFlowSection />
 

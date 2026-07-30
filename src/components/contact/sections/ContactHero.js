@@ -11,6 +11,7 @@ export default function ContactHero() {
   const contentRef = useRef(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced || !sectionRef.current) return;
 

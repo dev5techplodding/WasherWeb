@@ -81,7 +81,7 @@ export default function HeroSection() {
           {/* Eyebrow Slogan Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-[#F28C28] text-xs sm:text-sm font-extrabold uppercase tracking-widest mb-4 backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-[#F28C28] animate-pulse" />
-            <span>Laundry Done, Life On</span>
+            <span>Spinny</span>
           </div>
 
           {/* Main big headlines */}

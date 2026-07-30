@@ -13,27 +13,27 @@ export default function WhySpinnyPage() {
   return (
     <main className="min-h-screen bg-white text-[#0E3A66]">
       {/* 1. HERO HEADER */}
-      <section className="relative w-full pt-36 pb-20 lg:pt-44 lg:pb-24 text-white overflow-hidden bg-[#0B1726]">
-        {/* Background Image with Dark Overlay */}
-        <div className="absolute inset-0 z-0">
+      {/* <section className="relative w-full pt-36 pb-20 lg:pt-44 lg:pb-24 text-white overflow-hidden bg-[#0B1726]"> */}
+      {/* Background Image with Dark Overlay */}
+      {/* <div className="absolute inset-0 z-0">
           <Image
             src="/banner1.png"
             alt="Why Spinny Background"
             fill
             priority
             className="object-cover object-center"
-          />
-          {/* <div className="absolute inset-0 bg-gradient-to-b from-[#0B1726]/90 via-[#0B1726]/80 to-[#0B1726]" /> */}
-        </div>
+          /> */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-[#0B1726]/90 via-[#0B1726]/80 to-[#0B1726]" /> */}
+      {/* </div> */}
 
-        {/* Ambient Glows & Grid Pattern */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
+      {/* Ambient Glows & Grid Pattern */}
+      {/* <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           <div className="absolute -top-24 right-10 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(247,148,29,0.25)_0%,transparent_70%)] blur-3xl" />
           <div className="absolute -bottom-20 -left-10 w-[30rem] h-[30rem] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.15)_0%,transparent_70%)] blur-3xl" />
-        </div>
+        </div> */}
 
-        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-20">
+      {/* <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-[#F7941D] text-xs sm:text-sm font-bold tracking-wider uppercase mb-6 backdrop-blur-md shadow-[0_2px_12px_rgba(247,148,29,0.15)]">
             <span className="w-2 h-2 rounded-full bg-[#F7941D] animate-pulse" />
             <span>WHY SPINNY</span>
@@ -46,11 +46,14 @@ export default function WhySpinnyPage() {
 
           <p className="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed font-normal max-w-2xl mx-auto mb-8">
             Stop spending your valuable weekends doing laundry, dry cleaning runs, and shoe care. Let Spinny handle the load while you focus on what actually matters.
-          </p>
+          </p> */}
 
-          <AppStoreButtons className="justify-center" />
-        </div>
-      </section>
+      {/* <AppStoreButtons className="justify-center" /> */}
+      {/* </div> */}
+      {/* </section> */}
+
+
+      <section className="relative w-full pt-10 pb-10 lg:pt-10 lg:pb-10 text-white overflow-hidden bg-[#0B1726]"></section>
 
       {/* 2. HOURS LEDGER SECTION (IN THE MIDDLE) */}
       <HoursLedger />

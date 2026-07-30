@@ -1,9 +1,12 @@
+'use client';
+
+import { useEffect } from 'react';
 import { PRIVACY_CONTACT } from '@/components/data';
 
 const INFOS = [
   {
     label: 'Email Support',
-    value: 'hello@washr.example',
+    value: 'hi@spinnylaundry.com',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -33,6 +36,10 @@ const INFOS = [
 ];
 
 export default function ContactInfo() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="mt-20 scroll-mt-28">
       <div className="grid gap-6 md:grid-cols-3">
@@ -59,18 +66,18 @@ export default function ContactInfo() {
               Priority Service
             </p>
             <h2 className="text-2xl md:text-3xl font-bold leading-tight">
-              Looking for commercial partner services?
+              Need specialized care for your wardrobe or home items?
             </h2>
             <p className="mt-4 text-sm md:text-base leading-7 text-white/75 max-w-3xl">
-              We offer dedicated routes, customized detergents, invoicing, and high-capacity options for hotels, gyms, salons, and offices. Drop us a note via email or select "Vendor Partnership" in the form above and our operations manager will contact you directly.
+              From delicate garments and designer footwear to large home textiles, our personal concierge team is here to help. Send us a note via the form above or email our support team directly.
             </p>
           </div>
           <div className="flex gap-4">
             <a
-              href="mailto:partners@washr.example"
+              href="mailto:hi@spinnylaundry.com"
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-bold text-washr-blue-deep transition hover:bg-slate-50 active:scale-[0.98]"
             >
-              Email Business Team
+              Email Customer Care
             </a>
           </div>
         </div>

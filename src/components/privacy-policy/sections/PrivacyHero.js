@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { PRIVACY_HERO_CONTENT } from '@/components/data';
+import AppDownloadBanner from '@/components/process/AppDownloadBanner';
+import AppStoreButtons from '@/components/AppStoreButtons';
 
 export default function PrivacyHero() {
   const sectionRef = useRef(null);
@@ -59,7 +61,7 @@ export default function PrivacyHero() {
 
           {/* CTAs */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            {PRIVACY_HERO_CONTENT.buttons.map((btn) => (
+            {/* {PRIVACY_HERO_CONTENT.buttons.map((btn) => (
               <Link
                 key={btn.label}
                 href={btn.url}
@@ -71,7 +73,8 @@ export default function PrivacyHero() {
               >
                 <span>{btn.label}</span>
               </Link>
-            ))}
+            ))} */}
+            <AppStoreButtons />
           </div>
         </div>
       </div>

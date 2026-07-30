@@ -30,14 +30,14 @@ export default function HelpCenterPage() {
           />
         </section> */}
 
-        <section className="mt-16">
+        {/* <section className="mt-16">
           <PageCTA
             title="Still need help? Start with support and we’ll route it correctly."
             description="If the FAQ did not cover your question, send feedback or contact the support team directly. We’ll point you to the right next step."
             primary={{ label: 'Send feedback', url: '#feedback' }}
             secondary={{ label: 'Contact us', url: '/contact' }}
           />
-        </section>
+        </section> */}
       </div>
     </main>
   );

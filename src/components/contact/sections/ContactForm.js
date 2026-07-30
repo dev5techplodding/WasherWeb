@@ -5,7 +5,7 @@ import { useState } from 'react';
 const TOPICS = [
   'General Inquiry',
   'Service or Order Support',
-  'Vendor Partnership',
+  'Special Care & Custom Requests',
   'Driver Onboarding',
   'Billing Questions',
   'Privacy Concerns',

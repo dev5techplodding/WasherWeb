@@ -106,7 +106,7 @@ export default function JourneyIntroCards() {
                   onClick={() => handleScrollTo(item.id)}
                   className="w-full py-3 px-4 rounded-xl bg-slate-50 hover:bg-[#0E3A66] text-[#0E3A66] hover:text-white font-semibold text-sm transition-all duration-200 border border-slate-200 hover:border-transparent flex items-center justify-center space-x-2"
                 >
-                  <span>Explore {item.role} Flow</span>
+                  <span>Explore </span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>

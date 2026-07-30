@@ -34,7 +34,7 @@ const DRIVER_STEPS = [
     title: 'Document Upload',
     badge: 'Step 3',
     desc: 'Upload your driver license, vehicle registration, and valid vehicle insurance policy.',
-    image: '/screens/vendrorDocumentation.jpg',
+    image: '/screens/driverDoc.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
@@ -55,7 +55,7 @@ const DRIVER_STEPS = [
   },
   {
     id: 4,
-    title: 'start Acepting Orders',
+    title: 'Start Accepting Orders',
     badge: 'Step 5',
     desc: 'Receive live route notifications on your driver app and accept available order dispatch requests.',
     image: '/screens/corder.jpeg',
@@ -83,7 +83,7 @@ const DRIVER_STEPS = [
     title: 'Get Delivery Done',
     badge: 'Step 8',
     desc: 'Hand over freshly cleaned closet-ready clothes, capture customer confirmation, and mark order delivered.',
-    image: '/screens/dashboard1.png',
+    image: '/screens/driverdash.png',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

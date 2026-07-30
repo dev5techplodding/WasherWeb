@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import Link from 'next/link';
+
 const FOOTER_LINKS = {
   services: {
     title: 'Services',
@@ -21,9 +23,9 @@ const FOOTER_LINKS = {
     title: 'Company',
     links: [
       { label: 'About Spinny', href: '/about' },
-      { label: 'How It Works', href: '/#how-it-works-trigger' },
-      { label: 'Vendor Partners', href: '/process' },
-      { label: 'Get the App', href: '/app' },
+      { label: 'How It Works', href: '/process' },
+      { label: 'Why Spinny', href: '/why-spinny' },
+      // { label: 'Get the App', href: '/app' },
     ],
   },
   support: {
@@ -32,7 +34,6 @@ const FOOTER_LINKS = {
       { label: 'Help Center', href: '/help-center' },
       { label: 'Contact Us', href: '/contact' },
       { label: 'FAQs', href: '/help-center#faq' },
-      { label: 'Service Areas', href: '/service-areas' },
     ],
   },
   legal: {
@@ -205,13 +206,15 @@ export default function Footer() {
             {/* ─── Brand Column ─── */}
             <div ref={brandRef} className="lg:col-span-4 flex flex-col items-start text-left">
               <div className="mb-5">
-                <Image
-                  src="/darklogo.png"
-                  alt="Spinny"
-                  width={130}
-                  height={40}
-                  className="h-9 w-auto"
-                />
+                <Link href="/">
+                  <Image
+                    src="/darklogo.png"
+                    alt="Spinny"
+                    width={130}
+                    height={40}
+                    className="h-9 w-auto"
+                  />
+                </Link>
               </div>
               <p className="text-sm leading-relaxed mb-6 max-w-sm text-slate-300 font-normal">
                 <strong className="text-white font-semibold block mb-1">Laundry Done, Life On.</strong>
@@ -245,7 +248,7 @@ export default function Footer() {
                   <ul className="space-y-3">
                     {column.links.map((link) => (
                       <li key={link.label}>
-                        <a
+                        <Link
                           href={link.href}
                           className="footer-link group relative inline-block text-sm transition-colors duration-200 text-slate-300 hover:text-white font-normal"
                         >
@@ -254,7 +257,7 @@ export default function Footer() {
                             className="absolute -bottom-0.5 left-0 h-[1.5px] w-0 group-hover:w-full transition-all duration-300 origin-left bg-[#F7941D]"
                             aria-hidden="true"
                           />
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -280,13 +283,13 @@ export default function Footer() {
                 { label: 'Privacy Policy', href: '/privacy-policy' },
                 { label: 'Terms of Use', href: '/terms-of-service' },
               ].map((item) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   className="text-xs transition-colors duration-200 text-slate-400 hover:text-white font-normal"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

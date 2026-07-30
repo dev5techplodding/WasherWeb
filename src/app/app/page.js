@@ -1,21 +1,19 @@
 import AppHero from '@/components/app/sections/AppHero';
 import AppFeatures from '@/components/app/sections/AppFeatures';
 import AppScreens from '@/components/app/sections/AppScreens';
-import AppDownloadBanner from '@/components/process/AppDownloadBanner';
 
 export const metadata = {
-  title: 'Get the Spinny App | Spinny',
+  title: 'Get the App | Spinny Mobile',
   description:
-    'Book pickups, track drivers, and manage every order from the Spinny mobile app. Coming soon to iOS and Android.',
+    'Download the Spinny mobile app for iOS and Android. Book pickups, track laundry status in real-time, and manage wardrobe care.',
 };
 
 export default function AppPage() {
   return (
-    <main className="min-h-screen bg-white pb-20">
+    <main className="min-h-screen bg-white text-[#0E3A66] selection:bg-[#F7941D] selection:text-white">
       <AppHero />
       <AppFeatures />
       <AppScreens />
-      <AppDownloadBanner />
     </main>
   );
 }
