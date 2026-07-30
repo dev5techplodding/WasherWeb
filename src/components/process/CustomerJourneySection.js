@@ -36,7 +36,7 @@ const STEPS = [
     title: 'Choose Services',
     badge: 'Fabric Care',
     desc: 'Select wash temperature, eco-detergents, and fold or hanger options.',
-    image: '/screens/cservcies.jpeg',
+    image: '/screens/choseservice3.jpeg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -48,7 +48,7 @@ const STEPS = [
     title: 'Encrypted Checkout',
     badge: 'Encrypted',
     desc: 'Transparent itemized billing with Apple Pay, Google Pay, or Card setup.',
-    image: '/screens/ccheckout.jpeg',
+    image: '/screens/ccheckout.png',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -60,7 +60,7 @@ const STEPS = [
     title: 'Live Driver Tracking',
     badge: 'Real-time GPS',
     desc: 'Track your assigned valet driver in real-time as they arrive for pickup.',
-    image: '/screens/drivertracking.jpeg',
+    image: '/screens/drivertracking.png',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a2 2 0 104 0m-4 0a2 2 0 114 0m-6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
@@ -104,7 +104,7 @@ export default function CustomerJourneySection() {
               <span>Customer Onboarding</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0E3A66] tracking-tight">
-              Six Steps to Seamless Care
+              5 Steps to Seamless Care
             </h2>
           </div>
           <p className="text-slate-600 max-w-md text-sm sm:text-base font-normal">

@@ -58,7 +58,7 @@ const VENDOR_STEPS = [
     title: 'Start Accepting Order',
     badge: 'Step 5',
     desc: 'Once approved, unlock your facility dashboard and start accepting incoming customer order dispatches.',
-    image: '/screens/dashboard.jpeg',
+    image: '/screens/dashboard1.png',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -159,8 +159,8 @@ export default function VendorJourneySection() {
                     <div
                       onClick={() => setActiveVendorStep(step.id)}
                       className={`relative cursor-pointer rounded-2xl transition-all duration-300 overflow-hidden ${isActive
-                          ? 'bg-white border-2 border-indigo-400/80 ring-4 ring-indigo-500/10 p-5 sm:p-6 shadow-lg'
-                          : 'bg-white border border-indigo-100/90 hover:border-indigo-200 hover:shadow px-5 py-4 shadow-sm'
+                        ? 'bg-white border-2 border-indigo-400/80 ring-4 ring-indigo-500/10 p-5 sm:p-6 shadow-lg'
+                        : 'bg-white border border-indigo-100/90 hover:border-indigo-200 hover:shadow px-5 py-4 shadow-sm'
                         }`}
                     >
                       {/* Active Top Progress Line */}

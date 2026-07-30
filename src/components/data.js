@@ -73,7 +73,7 @@ export const HELP_CENTER_HERO_CONTENT = {
     },
   },
   buttons: [
-    { label: 'Send feedback', url: '#feedback' },
+    { label: 'Send Email', url: 'mailto:hello@spinny.app' },
     { label: 'Read FAQs', url: '#faq', variant: 'secondary' },
   ],
   accentText:
