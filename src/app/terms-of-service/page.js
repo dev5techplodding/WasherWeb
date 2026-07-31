@@ -1,5 +1,6 @@
 import TermsHero from '@/components/terms-of-service/sections/TermsHero';
 import { TERMS_SECTIONS } from '@/components/data';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
   title: 'Master Consumer Terms of Use | Spinny',
@@ -9,6 +10,7 @@ export const metadata = {
 export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-white pb-20">
+      <ScrollToTop />
       <TermsHero />
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-20">
