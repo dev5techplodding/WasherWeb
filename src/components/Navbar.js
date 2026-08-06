@@ -255,7 +255,7 @@ export default function Navbar() {
 
               <Link
                 href="/help-center"
-                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-colors duration-200 cursor-pointer whitespace-nowrap"
+                className="text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-colors duration-200 cursor-pointer whitespace-nowrap flex items-center gap-1.5"
                 style={{ color: scrolled ? 'var(--washr-blue)' : 'var(--washr-white)' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = scrolled
@@ -266,7 +266,11 @@ export default function Navbar() {
                   e.currentTarget.style.backgroundColor = 'transparent';
                 }}
               >
-                Help Center
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--washr-orange)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                </svg>
+                <span>Help Center</span>
               </Link>
 
               {/* Magnetic CTA */}
@@ -427,13 +431,17 @@ export default function Navbar() {
               <Link
                 href="/help-center"
                 onClick={handleLinkClick}
-                className="mobile-link w-full py-4 rounded-full font-semibold text-center text-base transition-all duration-300"
+                className="mobile-link w-full py-4 rounded-full font-semibold text-center text-base transition-all duration-300 flex items-center justify-center gap-2"
                 style={{
-                  color: 'rgba(255,255,255,0.7)',
+                  color: 'rgba(255,255,255,0.85)',
                   border: '1.5px solid rgba(255,255,255,0.15)',
                 }}
               >
-                Help Center
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--washr-orange)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                </svg>
+                <span>Help Center</span>
               </Link>
             </div>
           </div>

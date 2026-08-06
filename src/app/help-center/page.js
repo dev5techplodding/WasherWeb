@@ -5,6 +5,7 @@ import FeedbackSection from '@/components/FeedbackSection';
 import PageCTA from '@/components/PageCTA';
 import HelpStats from '@/components/help-center/sections/HelpStats';
 import AppDownloadBanner from '@/components/process/AppDownloadBanner';
+import ContactInfo from '@/components/contact/sections/ContactInfo';
 
 export const metadata = {
   title: 'Help Center | Spinny',
@@ -18,7 +19,8 @@ export default function HelpCenterPage() {
       <HelpCenterHero />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <HelpStats />
+        {/* <HelpStats /> */}
+        <ContactInfo />
 
         <section className="mt-16">
           <FaqAccordion items={HELP_FAQ_ITEMS} title="Answers to common questions" />

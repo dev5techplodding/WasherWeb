@@ -41,6 +41,7 @@ const FOOTER_LINKS = {
     links: [
       { label: 'Privacy Policy', href: '/privacy-policy' },
       { label: 'Terms of Use', href: '/terms-of-service' },
+      { label: 'Claim Policy', href: '/claim-policy' },
     ],
   },
 };
@@ -282,6 +283,7 @@ export default function Footer() {
               {[
                 { label: 'Privacy Policy', href: '/privacy-policy' },
                 { label: 'Terms of Use', href: '/terms-of-service' },
+                { label: 'Claim Policy', href: '/claim-policy' },
               ].map((item) => (
                 <Link
                   key={item.label}

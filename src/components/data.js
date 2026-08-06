@@ -886,3 +886,60 @@ export const STATUS_SYSTEMS = [
   'Vendor partner portal',
   'Notifications (email & SMS)',
 ];
+
+// --- Claim Policy Page ---
+export const CLAIM_POLICY_HERO = {
+  eyebrow: 'Spinny • Dispute Resolution & Support',
+  heading: 'Claim Policy',
+  description:
+    'Official Dispute Resolution, SLA Categorization, and Depreciation & Compensation Policy for Spinny Garment Care Services across Canada.',
+  backgroundImage: '/frames/ezgif-frame-008.jpg',
+};
+
+export const CLAIM_CATEGORIES = [
+  {
+    category: 'Category 1: Investigation & Claim (Garment Issues)',
+    applicable:
+      'Garment Damage, Garment Lost, Garment Missing, Wrong Deliveries, Color Bleeding, Color Fading, Shrinkage, Burn Mark Damage, Stain Not Removed, Foul Odors, Poor Ironing, and Missing Buttons.',
+    sla: '48 to 72 Hours',
+    badgeColor: 'amber',
+    process:
+      'Support requests purchase receipts and photographic evidence. The laundry vendor is notified to investigate and revert within 48 hours. If service failure is established, claims are processed via refund or structured depreciation compensation.',
+  },
+  {
+    category: 'Category 2: Operational Delays (Check-Expedite-Apology)',
+    applicable: 'Pickup Delays, Delivery Delays, and Logistics Routing Bottlenecks.',
+    sla: 'Strictly within 2 Hours (120 Minutes)',
+    badgeColor: 'blue',
+    process:
+      'Logistics dispatch contacts the driver, tracks real-time location, expedites transit, and issues a formal delivery update and apology ticket to the customer.',
+  },
+  {
+    category: 'Category 3: Investigation & Action (Driver Misconduct & Safety)',
+    applicable: 'Driver Misconduct, Professional Conduct Violations, and Customer Privacy Issues.',
+    sla: 'High Priority (Immediate Escalation)',
+    badgeColor: 'rose',
+    process:
+      'Incident ticket is created and immediately escalated to the Driver Fleet Operations Manager. Communication logs are audited, formal warning notices issued, and driver payout profiles flagged for commission impact or internal sanctions.',
+    privacyNote:
+      'Customer and driver contact numbers are strictly masked via platform routing services to maintain data privacy at all times.',
+  },
+];
+
+export const DEPRECIATION_TABLE = [
+  { age: 'Less than 6 Months', depreciation: '0%', compensation: '100%' },
+  { age: '6 Months – 1 Year', depreciation: '20%', compensation: '80%' },
+  { age: '1 Year – 2 Years', depreciation: '30%', compensation: '70%' },
+  { age: '2 Years – 3 Years', depreciation: '40%', compensation: '60%' },
+  { age: '3 Years – 5 Years', depreciation: '60%', compensation: '40%' },
+  { age: 'Over 5 Years', depreciation: '90%', compensation: '10%' },
+  { age: 'No Receipt Provided', depreciation: 'N/A', compensation: '0% (Claim Declined)' },
+];
+
+export const SLA_MATRIX = [
+  { stage: 'Ticket Generation & Email Acknowledgement', sla: 'Immediate / Within 30 Minutes' },
+  { stage: 'Logistics & Operational Issue Resolution', sla: 'Within 2 Hours (Target < 120 Mins)' },
+  { stage: 'Vendor Investigation Window', sla: 'Within 48 Hours' },
+  { stage: 'Final Investigation & Claim Decision', sla: '48 – 72 Hours' },
+  { stage: 'Refund / Compensation Processing', sla: 'As per platform payout and payment gateway schedule' },
+];
