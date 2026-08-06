@@ -12,7 +12,7 @@ import { gsap } from 'gsap';
 const NAV_LINKS = [
   { label: 'Home', href: '/', section: null },
   { label: 'Services', href: '/services', section: null },
-  { label: 'Why Spinny', href: '/why-spinny', section: null },
+  { label: 'Why Spinny ?', href: '/why-spinny', section: null },
   { label: 'The Spinny 4', href: '/the-spinny-4', section: null },
   { label: 'About Us', href: '/about', section: null },
   { label: 'How it Works', href: '/process', section: null },

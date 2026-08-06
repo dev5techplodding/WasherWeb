@@ -12,12 +12,12 @@ import ProcedureCTA from '@/components/process/ProcedureCTA';
 export const metadata = {
   title: 'Registration process | Spinny Ecosystem',
   description:
-    'Experience the cinematic registration journey for customers, laundry vendors, and delivery partners joining the Spinny laundry ecosystem.',
-  keywords: 'Spinny, laundry registration, customer onboarding, vendor portal, driver route, garment care',
+    'Experience the cinematic registration journey for customers, care vendors, and delivery partners joining the Spinny ecosystem.',
+  keywords: 'Spinny, vendor registration, customer onboarding, vendor portal, driver route, garment care',
   openGraph: {
     title: 'Registration process | Spinny Ecosystem',
     description:
-      'Discover how customers, vendors, and delivery professionals join Canada’s premium laundry ecosystem.',
+      'Discover how customers, vendors, and delivery professionals join Canada’s premium care ecosystem.',
     type: 'website',
   },
 };

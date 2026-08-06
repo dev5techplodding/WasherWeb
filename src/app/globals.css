@@ -356,6 +356,92 @@ a:focus-visible {
 }
 
 /* ─────────────────────────────────────────────────
+   Motto Map — animated "nearby partners" visual
+   ───────────────────────────────────────────────── */
+@keyframes map-pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+  }
+}
+
+.map-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--washr-orange);
+  animation: map-pulse-ring 2.6s cubic-bezier(0.4, 0, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes map-route-draw {
+  0% {
+    stroke-dashoffset: 24;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -24;
+    opacity: 0;
+  }
+}
+
+.map-route-line {
+  stroke-dasharray: 5 4;
+  animation: map-route-draw 3.2s ease-in-out infinite;
+}
+
+@keyframes map-pin-float {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-6px);
+  }
+}
+
+.map-pin-float {
+  animation: map-pin-float 3.6s ease-in-out infinite;
+}
+
+@keyframes map-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.map-card-in {
+  animation: map-card-in 0.6s var(--washr-ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-pulse-ring,
+  .map-route-line,
+  .map-pin-float,
+  .map-card-in {
+    animation: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────────────
    Polaroid Border & Shadow
    ───────────────────────────────────────────────── */
 .polaroid-frame {

@@ -159,7 +159,7 @@ export default function ScienceSection() {
                 border: '1px solid rgba(242, 140, 40, 0.25)',
               }}
             >
-              Laundry Done, Life On • Smart Fabric Care
+              We&apos;ll Take the Chores, You Take the Time • Smart Fabric Care
             </span>
             {/* Bold claim */}
             <h2

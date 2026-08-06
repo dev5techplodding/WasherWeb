@@ -50,7 +50,7 @@ export default function processHero({ onExploreClick, onStartClick }) {
 
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-10 font-normal">
-              Whether you&apos;re scheduling your first pickup, joining as a trusted laundry partner, or becoming a delivery professional, Spinny makes every step seamless.
+              Whether you&apos;re scheduling your first pickup, joining as a trusted care partner, or becoming a delivery professional, Spinny makes every step seamless.
             </p>
 
             {/* Action CTAs */}

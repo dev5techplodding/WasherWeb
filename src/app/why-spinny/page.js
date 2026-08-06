@@ -3,11 +3,13 @@ import HoursLedger from '@/components/home/sections/HoursLedger';
 import AppDownloadBanner from '@/components/process/AppDownloadBanner';
 import AppStoreButtons from '@/components/AppStoreButtons';
 import ScrollToTop from '@/components/ScrollToTop';
+import { BRAND_MOTTO } from '@/components/data';
+import MottoMapSection from '@/components/home/sections/MottoMapSection';
 
 export const metadata = {
   title: 'Why Spinny | Reclaim Your Time',
   description:
-    'Discover why thousands trust Spinny to buy back their weekends. Compare traditional laundry time load against effortless concierge care.',
+    'Discover why thousands trust Spinny to buy back their weekends. Compare traditional chore time load against effortless concierge care.',
 };
 
 export default function WhySpinnyPage() {
@@ -46,7 +48,7 @@ export default function WhySpinnyPage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed font-normal max-w-2xl mx-auto mb-8">
-            Stop spending your valuable weekends doing laundry, dry cleaning runs, and shoe care. Let Spinny handle the load while you focus on what actually matters.
+            Stop spending your valuable weekends doing chores, dry cleaning runs, and shoe care. Let Spinny handle the load while you focus on what actually matters.
           </p> */}
 
       {/* <AppStoreButtons className="justify-center" /> */}
@@ -54,8 +56,29 @@ export default function WhySpinnyPage() {
       {/* </section> */}
 
 
-      <section className="relative w-full pt-10 pb-10 lg:pt-10 lg:pb-10 text-white overflow-hidden bg-[#0B1726]"></section>
+      {/* <section className="relative w-full pt-16 pb-14 lg:pt-20 lg:pb-16 text-white overflow-hidden bg-[#0B1726]">
+        <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-[#F7941D] text-xs sm:text-sm font-bold tracking-wider uppercase mb-5 backdrop-blur-md">
+            {BRAND_MOTTO.eyebrow}
+          </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.12] text-white mb-4">
+            {BRAND_MOTTO.headingLead}{' '}
+            <span className="text-[#F7941D]">{BRAND_MOTTO.headingAccent}</span>
+          </h1>
+          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
+            {BRAND_MOTTO.full}
+          </p>
+        </div>
+      </section> */}
+
+      <section className="relative w-full pt-10 pb-10 lg:pt-10 lg:pb-10 text-white overflow-hidden bg-[#0B1726]">
+
+      </section>
+
+
       <ScrollToTop />
+
+      <MottoMapSection />
 
       {/* 2. HOURS LEDGER SECTION (IN THE MIDDLE) */}
       <HoursLedger />

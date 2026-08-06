@@ -1,18 +1,29 @@
 // Centralized Project Datasets
 
+// --- Brand Motto / Core Value Proposition ---
+// Single source of truth so the landing page and the "Why Spinny?" section
+// never drift out of sync with each other.
+export const BRAND_MOTTO = {
+  eyebrow: 'The Spinny Promise',
+  headingLead: 'Any specialist. ',  // <br/>
+  headingAccent: 'Any service.', // Your whole city.',
+  full: 'The freedom to choose any specialist, any service, anywhere in your city.',
+  short: 'Any specialist. Any service. Your whole city.',
+};
+
 // --- Hero Contents ---
 export const ABOUT_HERO_CONTENT = {
   eyebrow: 'About Us',
-  heading: 'Not a Laundry Company. A Time-Buyback Service.',
+  heading: 'Not One Category. A Time-Buyback Platform.',
   description:
-    'Spinny takes care of your entire wardrobe and home — from suits and sneakers to duvets and diaper bags — so the hours it used to cost are yours again.',
+    'Spinny takes care of your entire wardrobe and home — from suits and sneakers to duvets and diaper bags — so the hours it used to cost are yours again. Any specialist, any service, anywhere in your city.',
   backgroundImage: '/frames/ezgif-frame-008.jpg',
   buttons: [
     { label: 'Contact us', url: '/contact' },
     { label: 'See process', url: '/process', variant: 'secondary' },
   ],
   accentText:
-    'For households and commercial teams who want their weekends back, not just clean clothes.',
+    'For households and commercial teams who’d rather have their weekend back than spend it on chores.',
 };
 
 export const CONTACT_HERO_CONTENT = {
@@ -45,16 +56,16 @@ export const process_HERO_CONTENT = {
 
 export const SERVICES_HERO_CONTENT = {
   eyebrow: 'Our Services',
-  heading: 'One pickup. Everything handled.',
+  heading: '80+ services. One pickup. Your choice of specialist.',
   description:
-    'Shirts, suits, sneakers, duvets, and bags </br>- all cleaned and cared for by specialists, then returned ready to use.',
+    'Shirts, suits, sneakers, duvets, and bags </br>- cared for by the local specialist you choose, then returned ready to use.',
   backgroundImage: '/frames/ezgif-frame-031.jpg',
   buttons: [
     { label: 'Get the app', url: '/app' },
     { label: 'View process', url: '/process', variant: 'secondary' },
   ],
   accentText:
-    'Handled by trained specialists across commercial-grade facilities, matched to each material.',
+    'Browse real local specialists by rating, distance, and price — matched to each material, picked by you.',
 };
 
 export const HELP_CENTER_HERO_CONTENT = {
@@ -141,7 +152,7 @@ export const PRIVACY_SECTIONS = [
     id: 1,
     title: '1. Scope',
     subtitle: 'Applicable Platforms & Users',
-    body: 'This Privacy Policy explains how Spinny collects, uses, discloses, stores, and protects personal information through the Spinny Platform. It applies to customers, prospective customers, website visitors, customer-support contacts, and individuals whose information is submitted in connection with an order. Separate workforce and contractor privacy notices should be provided to Delivery Partners and Laundry Partner personnel.',
+    body: 'This Privacy Policy explains how Spinny collects, uses, discloses, stores, and protects personal information through the Spinny Platform. It applies to customers, prospective customers, website visitors, customer-support contacts, and individuals whose information is submitted in connection with an order. Separate workforce and contractor privacy notices should be provided to Delivery Partners and Care Partner personnel.',
   },
   {
     id: 2,
@@ -164,7 +175,7 @@ export const PRIVACY_SECTIONS = [
       'Device & Usage Data: IP address, device identifiers, operating system, app version, browser, language, log data, crash reports, clicks, and feature interactions.',
       'Communications: Support messages, call recordings where notice and consent are provided, survey responses, and dispute materials.',
       'Marketing Info: Campaign engagement, referral activity, and consent records.',
-      'Third-Party Information: Details from Laundry Partners, Delivery Partners, fraud-prevention providers, payment processors, and other service providers where necessary.',
+      'Third-Party Information: Details from Care Partners, Delivery Partners, fraud-prevention providers, payment processors, and other service providers where necessary.',
     ],
   },
   {
@@ -175,7 +186,7 @@ export const PRIVACY_SECTIONS = [
     bullets: [
       'Create and manage customer accounts.',
       'Accept, route, process, track, and deliver orders.',
-      'Connect customers with Laundry Partners and Delivery Partners.',
+      'Connect customers with Care Partners and Delivery Partners.',
       'Process payments, refunds, credits, and chargebacks.',
       'Communicate service updates and provide customer support.',
       'Document item condition, pickup, and delivery.',
@@ -200,7 +211,7 @@ export const PRIVACY_SECTIONS = [
     subtitle: 'Third-Party Sharing & Partners',
     body: 'We may disclose personal information to:',
     bullets: [
-      'Laundry Partners: To fulfill, document, and resolve orders.',
+      'Care Partners: To fulfill, document, and resolve orders.',
       'Delivery Partners: To conduct pickup and delivery logistics.',
       'Payment Processors & Security: Banks, payment processors, and fraud-prevention providers.',
       'Technology & Service Vendors: Cloud hosting, communications, mapping, analytics, customer-support, cybersecurity, and professional service providers.',
@@ -303,7 +314,7 @@ export const CORE_VALUES = [
   {
     title: 'Reclaim 5+ Hours a Week',
     description:
-      'Wardrobe laundry, shoe care, ironing, and home-textile upkeep quietly cost the average household a full weekend a month. Spinny buys that time back — permanently, not just this once.',
+      'Wardrobe care, shoe care, ironing, and home-textile upkeep quietly cost the average household a full weekend a month. Spinny buys that time back — permanently, not just this once.',
   },
   {
     title: 'One Service, Entire Wardrobe & Home',
@@ -323,16 +334,17 @@ export const CORE_VALUES = [
 ];
 
 export const DIFFERENTIATORS = [
-  'Centralized pickup scheduling that gets an entire household’s laundry, footwear, and home textiles off the calendar in under 30 seconds.',
-  'A vetted specialist network — not just laundromats — covering leather, suede, rugs, curtains, and delicate fabrics alike.',
+  'You choose your own specialist — browse real local businesses by name, rating, distance, and price. Other platforms assign you a facility; Spinny lets you pick.',
+  'Centralized pickup scheduling that gets an entire household’s wardrobe, footwear, and home textiles off the calendar in under 30 seconds.',
+  'A vetted specialist network spanning leather, suede, rugs, curtains, and delicate fabrics — not a single walk-in shop.',
   'Material-aware workflows that protect what you’ve invested in, from sneakers to a wedding dress.',
   'No forced subscriptions: pay-per-use stays the default, with Spinny Membership as an optional set-and-forget upgrade.',
   'Support that feels human and answers fast, because your time matters after the pickup too.',
 ];
 
 export const MILESTONES = [
-  { year: '2019', label: 'Spinny launched in Canada with a simple promise: buy people back the time laundry was quietly taking from them.' },
-  { year: '2022', label: 'Coverage expanded past clothes into footwear, leather goods, and home textiles — because a household’s time gets eaten by more than just laundry.' },
+  { year: '2019', label: 'Spinny launched in Canada with a simple promise: buy people back the time chores were quietly taking from them.' },
+  { year: '2022', label: 'Coverage expanded past clothes into footwear, leather goods, and home textiles — because a household’s time gets eaten by more than one category of chore.' },
   { year: '2026', label: 'Now live across major Canadian metro areas with 200+ vendor partners, the platform supports households, offices, and partner fleets across a full wardrobe-and-home ecosystem — bought-back hours, at scale.' },
 ];
 
@@ -342,7 +354,7 @@ export const ABOUT_STATS = [
   { value: '99.2%', label: 'Customer satisfaction' },
   { value: '50,000+', label: 'Items cared for monthly' },
   { value: '200+', label: 'Vendor partners across Canada' },
-  { value: '48-hr', label: 'Average turnaround time' },
+  { value: '80+', label: 'Services, one app' },
 ];
 
 // --- About Page: Three-Sided Marketplace ---
@@ -357,7 +369,7 @@ export const ABOUT_ECOSYSTEM = [
     role: 'Vendors',
     title: 'Grow beyond walk-ins',
     description:
-      'Local laundromats, dry cleaners, footwear and leather specialists, home-textile cleaners, and tailors. Spinny brings online order flow and delivery infrastructure to businesses that couldn’t build it alone.',
+      'Independent care businesses — dry cleaners, footwear and leather specialists, home-textile cleaners, and tailors. Spinny brings online order flow and delivery infrastructure to businesses that couldn’t build it alone.',
   },
   {
     role: 'Drivers',
@@ -376,7 +388,7 @@ export const USER_GROUPS = [
     steps: [
       'Create an account with name, mobile number, and email address.',
       'Add your pickup address, preferred service window, and delivery notes such as buzzer code or concierge desk instructions.',
-      'Choose your first service type — wash & fold, dry cleaning, footwear revival, or a home-textile pickup.',
+      'Choose your first service and specialist — everyday wardrobe care, dry cleaning, footwear revival, or a home-textile pickup.',
       'Confirm the order details, review the summary, and receive status notifications by email or text.',
     ],
     requirements: [
@@ -436,7 +448,7 @@ export const HELP_STATS = [
 export const HOME_MARQUEE_1 = [
   'Buy Back Your Time',
   'Wardrobe, Footwear & Home',
-  'Vetted Specialist Network',
+  'Choose Your Own Specialist',
   'Real-Time Order Tracking',
   '100% Satisfaction Guaranteed',
 ];
@@ -445,11 +457,11 @@ export const HOME_MARQUEE_2 = [
   '5+ Hours Reclaimed Weekly',
   'Leather, Suede & Home Textiles',
   'Set-and-Forget Membership',
-  'Certified Commercial Facilities',
-  '24h Speed Turnaround',
+  'Any Specialist, Any Service',
+  '80+ Services, Your Whole City',
 ];
 
-// --- Service Ecosystem (lifestyle categories, not just laundry) ---
+// --- Service Ecosystem (lifestyle categories, not one narrow category) ---
 export const SERVICE_ECOSYSTEM = [
   {
     id: 'wardrobe',
@@ -561,7 +573,7 @@ export const PRICING_HERO_CONTENT = {
 export const PRICING_TIERS = [
   {
     title: 'Wash & Fold',
-    desc: 'Everyday laundry, cleaned, dried, and neatly folded per bag.',
+    desc: 'Everyday wardrobe items, cleaned, dried, and neatly folded per bag.',
   },
   {
     title: 'Dry Clean Press',
@@ -610,7 +622,7 @@ export const TERMS_SECTIONS = [
     id: 2,
     title: '2. Platform Role and Marketplace Structure',
     subtitle: 'Independent Partners & Logistics',
-    body: 'The Platform is a technology marketplace and logistics coordination service. It enables customers to request pickup and delivery of clothing, linens, and other eligible items and to obtain cleaning services from participating third-party laundromats (“Laundry Partners”).\n\nLaundry services are performed by independent Laundry Partners, not by Spinny. Pickup and delivery may be performed by independent delivery contractors (“Delivery Partners”). Laundry Partners and Delivery Partners are independent businesses or contractors and are not employees, agents, joint venturers, franchisees, or representatives of Spinnysolely because they use the Platform.\n\nSpinnymay facilitate communications, payments, refunds, quality reviews, and dispute handling. This facilitation does not make Spinnythe provider of the underlying laundry or dry-cleaning service and does not remove any rights or remedies that cannot lawfully be excluded.',
+    body: 'The Platform is a technology marketplace and logistics coordination service. It enables customers to request pickup and delivery of clothing, linens, and other eligible items and to obtain care services from participating third-party specialist businesses (“Care Partners”).\n\nCare services are performed by independent Care Partners, not by Spinny. Pickup and delivery may be performed by independent delivery contractors (“Delivery Partners”). Care Partners and Delivery Partners are independent businesses or contractors and are not employees, agents, joint venturers, franchisees, or representatives of Spinnysolely because they use the Platform.\n\nSpinnymay facilitate communications, payments, refunds, quality reviews, and dispute handling. This facilitation does not make Spinnythe provider of the underlying care or dry-cleaning service and does not remove any rights or remedies that cannot lawfully be excluded.',
   },
   {
     id: 3,
@@ -622,13 +634,13 @@ export const TERMS_SECTIONS = [
     id: 4,
     title: '4. Service Availability',
     subtitle: 'Operational Coverage',
-    body: 'The Platform may not be available in every city, postal code, or province. Service areas, hours, turnaround estimates, participating Laundry Partners, available service types, and delivery windows may change. Displayed pickup, processing, and delivery times are estimates unless expressly stated as guaranteed.\n\nWe may pause, modify, or discontinue features or service areas. Where a paid order is materially affected, we will provide an appropriate remedy as required by these Terms and applicable law.',
+    body: 'The Platform may not be available in every city, postal code, or province. Service areas, hours, turnaround estimates, participating Care Partners, available service types, and delivery windows may change. Displayed pickup, processing, and delivery times are estimates unless expressly stated as guaranteed.\n\nWe may pause, modify, or discontinue features or service areas. Where a paid order is materially affected, we will provide an appropriate remedy as required by these Terms and applicable law.',
   },
   {
     id: 5,
     title: '5. Orders and Customer Instructions',
     subtitle: 'Special Instructions & Care Requirements',
-    body: 'An order is a request for the selected services at the prices and fees shown before confirmation. We may reject or cancel an order if a service is unavailable, an item is prohibited, the address is unsafe or inaccessible, payment cannot be authorized, suspected fraud exists, or the order cannot reasonably be completed.\n\nYou must provide complete and accurate information about fabric type, stains, allergies, sensitivities, valuable or delicate items, designer items, colour-fastness concerns, and any special care requirements. Special requests are not guaranteed unless expressly accepted in the order record. Laundry Partners may rely on garment care labels and standard professional practices.',
+    body: 'An order is a request for the selected services at the prices and fees shown before confirmation. We may reject or cancel an order if a service is unavailable, an item is prohibited, the address is unsafe or inaccessible, payment cannot be authorized, suspected fraud exists, or the order cannot reasonably be completed.\n\nYou must provide complete and accurate information about fabric type, stains, allergies, sensitivities, valuable or delicate items, designer items, colour-fastness concerns, and any special care requirements. Special requests are not guaranteed unless expressly accepted in the order record. Care Partners may rely on garment care labels and standard professional practices.',
   },
   {
     id: 6,
@@ -640,7 +652,7 @@ export const TERMS_SECTIONS = [
     id: 7,
     title: '7. Pockets and Personal Property',
     subtitle: 'Inspection Responsibility',
-    body: 'You must check and empty every pocket, bag, cover, and compartment before pickup. Do not include cash, jewellery, watches, keys, identification, passports, payment cards, electronics, medication, legal documents, sentimental items, or other valuables.\n\nTo the maximum extent permitted by law, Spinny, Laundry Partners, and Delivery Partners are not responsible for property left inside or attached to submitted items. If property is found, we may attempt to return it, but recovery is not guaranteed and reasonable delivery or handling charges may apply.',
+    body: 'You must check and empty every pocket, bag, cover, and compartment before pickup. Do not include cash, jewellery, watches, keys, identification, passports, payment cards, electronics, medication, legal documents, sentimental items, or other valuables.\n\nTo the maximum extent permitted by law, Spinny, Care Partners, and Delivery Partners are not responsible for property left inside or attached to submitted items. If property is found, we may attempt to return it, but recovery is not guaranteed and reasonable delivery or handling charges may apply.',
   },
   {
     id: 8,
@@ -676,13 +688,13 @@ export const TERMS_SECTIONS = [
     id: 13,
     title: '13. Photos, Scans and Order Evidence',
     subtitle: 'Chain of Custody Documentation',
-    body: 'We, Laundry Partners, and Delivery Partners may take photographs, scan labels or bags, record timestamps, and collect approximate or precise location data where enabled to document pickup, condition, processing, delivery, safety incidents, and disputes. Images should avoid unnecessary capture of people or the interior of a residence.\n\nCollection and use of this information are governed by the Privacy Policy. You must not use the Platform to photograph or record another person unlawfully.',
+    body: 'We, Care Partners, and Delivery Partners may take photographs, scan labels or bags, record timestamps, and collect approximate or precise location data where enabled to document pickup, condition, processing, delivery, safety incidents, and disputes. Images should avoid unnecessary capture of people or the interior of a residence.\n\nCollection and use of this information are governed by the Privacy Policy. You must not use the Platform to photograph or record another person unlawfully.',
   },
   {
     id: 14,
     title: '14. Cleaning Risks and Customer Acknowledgements',
     subtitle: 'Inherent Professional Risks',
-    body: 'Professional cleaning involves inherent risks. Results may be affected by fabric composition, age, previous treatment, hidden defects, weak seams, dyes, embellishments, adhesive, zippers, buttons, care labels, and the nature or duration of stains. Complete stain removal is not guaranteed.\n\nSubject to applicable law, Spinnyand Laundry Partners are not responsible for ordinary wear and tear; pre-existing damage; normal colour loss or fading; shrinkage or distortion consistent with an inaccurate or missing care label; damage caused by manufacturer defects or weak materials; loss of buttons, beads, sequins, or attachments that were loose or defective; or failure to remove stains that cannot reasonably be removed without risking damage.',
+    body: 'Professional cleaning involves inherent risks. Results may be affected by fabric composition, age, previous treatment, hidden defects, weak seams, dyes, embellishments, adhesive, zippers, buttons, care labels, and the nature or duration of stains. Complete stain removal is not guaranteed.\n\nSubject to applicable law, Spinnyand Care Partners are not responsible for ordinary wear and tear; pre-existing damage; normal colour loss or fading; shrinkage or distortion consistent with an inaccurate or missing care label; damage caused by manufacturer defects or weak materials; loss of buttons, beads, sequins, or attachments that were loose or defective; or failure to remove stains that cannot reasonably be removed without risking damage.',
   },
   {
     id: 15,
@@ -694,7 +706,7 @@ export const TERMS_SECTIONS = [
     id: 16,
     title: '16. Refunds, Recleaning and Credits',
     subtitle: 'Customer Remedies',
-    body: 'Where a service issue is substantiated, we may arrange re-cleaning, return the item to the Laundry Partner, issue an account credit, refund some or all of the affected service charge, reimburse reasonable repair costs, or provide compensation under the Lost, Damaged and Problem Garment Policy. The appropriate remedy depends on the circumstances and applicable law.\n\nSpinnymay recover amounts from the responsible Laundry Partner under the partner agreement. A customer’s remedy is not conditional on Spinnysuccessfully collecting from the Laundry Partner where applicable law requires Spinnyto provide the remedy.',
+    body: 'Where a service issue is substantiated, we may arrange re-cleaning, return the item to the Care Partner, issue an account credit, refund some or all of the affected service charge, reimburse reasonable repair costs, or provide compensation under the Lost, Damaged and Problem Garment Policy. The appropriate remedy depends on the circumstances and applicable law.\n\nSpinnymay recover amounts from the responsible Care Partner under the partner agreement. A customer’s remedy is not conditional on Spinnysuccessfully collecting from the Care Partner where applicable law requires Spinnyto provide the remedy.',
   },
   {
     id: 17,
@@ -718,7 +730,7 @@ export const TERMS_SECTIONS = [
     id: 20,
     title: '20. Customer Conduct and Safety',
     subtitle: 'Community Code of Conduct',
-    body: 'You must treat customer-support personnel, Delivery Partners, and Laundry Partner staff respectfully and must not threaten, harass, discriminate against, stalk, assault, exploit, or interfere with any person. You must not use the Platform for unlawful activity, fraud, unauthorized commercial resale, or to transmit malware or abusive content.\n\nWe may take proportionate safety measures, including ending an interaction, refusing service, preserving evidence, contacting emergency services or law enforcement, and suspending or terminating accounts.',
+    body: 'You must treat customer-support personnel, Delivery Partners, and Care Partner staff respectfully and must not threaten, harass, discriminate against, stalk, assault, exploit, or interfere with any person. You must not use the Platform for unlawful activity, fraud, unauthorized commercial resale, or to transmit malware or abusive content.\n\nWe may take proportionate safety measures, including ending an interaction, refusing service, preserving evidence, contacting emergency services or law enforcement, and suspending or terminating accounts.',
   },
   {
     id: 21,
@@ -742,7 +754,7 @@ export const TERMS_SECTIONS = [
     id: 24,
     title: '24. Disclaimers',
     subtitle: 'As-Available Provision',
-    body: 'The Platform is provided on an “as available” basis. We do not guarantee uninterrupted access, specific Laundry Partner availability, complete stain removal, exact timing, or error-free software. Estimates, ratings, and descriptions are informational and may change.\n\nNothing in these Terms excludes warranties, conditions, guarantees, or remedies imposed by consumer protection law that cannot be excluded. Any disclaimer applies only to the maximum extent permitted by law.',
+    body: 'The Platform is provided on an “as available” basis. We do not guarantee uninterrupted access, specific Care Partner availability, complete stain removal, exact timing, or error-free software. Estimates, ratings, and descriptions are informational and may change.\n\nNothing in these Terms excludes warranties, conditions, guarantees, or remedies imposed by consumer protection law that cannot be excluded. Any disclaimer applies only to the maximum extent permitted by law.',
   },
   {
     id: 25,

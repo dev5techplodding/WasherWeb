@@ -33,7 +33,7 @@ const VENDOR_STEPS = [
     id: 3,
     title: 'Service Listing',
     badge: 'Step 3',
-    desc: 'List your available laundry services, treatment specialties, pricing, and daily processing capacity.',
+    desc: 'List your available care services, treatment specialties, pricing, and daily processing capacity.',
     image: '/screens/vendroservices.jpg',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -90,7 +90,7 @@ export default function VendorJourneySection() {
           <div>
             <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-slate-100 text-[#0E3A66] text-xs font-bold uppercase tracking-wider mb-4 border border-slate-200">
               <span className="w-2 h-2 rounded-full bg-[#059669] animate-pulse" />
-              <span>Commercial Laundry Partners</span>
+              <span>Commercial Care Partners</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0E3A66] tracking-tight">
               Scale Facility Throughput

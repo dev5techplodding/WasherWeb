@@ -37,7 +37,7 @@ const TESTIMONIALS = [
     role: 'Marketing Director',
     location: 'Toronto, ON',
     rating: 5,
-    quote: 'I\'ve tried every laundry service in the city. Spinny is the only one that actually gives me my evenings back — my dry cleaning comes back flawless, and I never think about it in between.',
+    quote: 'I\'ve tried every care service in the city. Spinny is the only one that actually gives me my evenings back — my dry cleaning comes back flawless, and I never think about it in between.',
     avatarColor: '#1B3A5C',
     featured: true,
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80',
@@ -49,7 +49,7 @@ const TESTIMONIALS = [
     role: 'Software Engineer',
     location: 'Vancouver, BC',
     rating: 5,
-    quote: 'As someone who works 12-hour days, Spinny gave me back my weekends. The pickup and delivery is seamless — I literally set a schedule and forget about laundry entirely.',
+    quote: 'As someone who works 12-hour days, Spinny gave me back my weekends. The pickup and delivery is seamless — I literally set a schedule and forget about the chore entirely.',
     avatarColor: '#2A5580',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -60,7 +60,7 @@ const TESTIMONIALS = [
     role: 'Pediatric Nurse',
     location: 'Calgary, AB',
     rating: 5,
-    quote: 'Between two kids and night shifts, I don\'t have an hour to spare on laundry. Spinny\'s hypoallergenic option means I don\'t have to choose between my daughter\'s sensitive skin and getting my evening back.',
+    quote: 'Between two kids and night shifts, I don\'t have an hour to spare on chores. Spinny\'s hypoallergenic option means I don\'t have to choose between my daughter\'s sensitive skin and getting my evening back.',
     avatarColor: '#F28C28',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -71,7 +71,7 @@ const TESTIMONIALS = [
     role: 'Restaurant Owner',
     location: 'Montreal, QC',
     rating: 5,
-    quote: 'We use Spinny for all our restaurant linens and staff uniforms. It\'s freed up hours every week that used to go to managing an in-house laundry run — it\'s become essential to how we operate.',
+    quote: 'We use Spinny for all our restaurant linens and staff uniforms. It\'s freed up hours every week that used to go to managing an in-house cleaning run — it\'s become essential to how we operate.',
     avatarColor: '#1B3A5C',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -93,7 +93,7 @@ const TESTIMONIALS = [
     role: 'University Professor',
     location: 'Edmonton, AB',
     rating: 5,
-    quote: 'The real-time tracking means I never have to build "wait for laundry" into my day anymore. I can see exactly where my order is — clothes, rugs, whatever it is that week — and just get on with my time.',
+    quote: 'The real-time tracking means I never have to build "wait around" into my day anymore. I can see exactly where my order is — clothes, rugs, whatever it is that week — and just get on with my time.',
     avatarColor: '#F28C28',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80',
   },
@@ -408,7 +408,7 @@ export default function TestimonialsSection() {
             <AnimatedStat value="4.9" suffix="/5" label="Average Rating" triggerRef={statsRef} />
             <AnimatedStat value="10000" suffix="+" label="Orders Completed" triggerRef={statsRef} />
             <AnimatedStat value="99.2" suffix="%" label="On-Time Delivery" triggerRef={statsRef} />
-            <AnimatedStat value="24" suffix="h" label="Avg. Turnaround" triggerRef={statsRef} />
+            <AnimatedStat value="80" suffix="+" label="Specialists to Choose From" triggerRef={statsRef} />
           </div>
         </div>
       </div>

@@ -217,7 +217,7 @@ export default function Footer() {
                 </Link>
               </div>
               <p className="text-sm leading-relaxed mb-6 max-w-sm text-slate-300 font-normal">
-                <strong className="text-white font-semibold block mb-1">Laundry Done, Life On.</strong>
+                <strong className="text-white font-semibold block mb-1">We&apos;ll Take the Chores, You Take the Time.</strong>
                 The easiest chore you&apos;ll never do again — complete wardrobe, footwear, and home care delivered seamlessly to your doorstep.
               </p>
 

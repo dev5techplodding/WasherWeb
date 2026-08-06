@@ -11,13 +11,13 @@ const JOURNEYS = [
     description:
       'Schedule pickups, select custom garment preferences, track order status in real-time, and manage automated deliveries.',
     image: '/images/journey_customer_onboarding.png',
-    tag: 'On-Demand Laundry',
+    tag: 'On-Demand Care',
   },
   {
     id: 'vendor-journey',
     role: 'Vendor',
     time: '5 Mins',
-    title: 'Laundry Partner',
+    title: 'Care Partner',
     description:
       'Connect your commercial facility, receive optimized order batches, streamline capacity, and grow revenue predictably.',
     image: '/images/journey_vendor_partner.png',

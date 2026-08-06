@@ -5,7 +5,7 @@ import AppScreens from '@/components/app/sections/AppScreens';
 export const metadata = {
   title: 'Get the App | Spinny Mobile',
   description:
-    'Download the Spinny mobile app for iOS and Android. Book pickups, track laundry status in real-time, and manage wardrobe care.',
+    'Download the Spinny mobile app for iOS and Android. Book pickups, track order status in real-time, and manage wardrobe care.',
 };
 
 export default function AppPage() {

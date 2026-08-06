@@ -64,7 +64,7 @@ export default function AboutHero() {
 
           {/* Reduced Full-Width Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] max-w-4xl">
-            Less Laundry.{' '}
+            Fewer Chores.{' '}
             <span className="text-[#F7941D] block sm:inline">More Life.</span>
           </h1>
 

@@ -17,7 +17,7 @@ export default function AppFeatures() {
             className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold tracking-tight leading-[1.15]"
             style={{ color: 'var(--washr-blue-deep)' }}
           >
-            Less time managing laundry. More time for everything else.
+            Less time managing chores. More time for everything else.
           </h2>
         </div>
 

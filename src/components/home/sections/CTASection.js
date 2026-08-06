@@ -132,7 +132,7 @@ export default function CTASection() {
       id="cta"
       className="py-24 md:py-32 relative overflow-hidden"
       style={{
-        background: '#FFB993',
+        background: 'linear-gradient(135deg, var(--washr-blue-deep) 0%, var(--washr-blue) 55%, var(--washr-blue-light) 100%)',
       }}
       aria-labelledby="cta-heading"
     >
@@ -140,27 +140,38 @@ export default function CTASection() {
       <div
         ref={orb1Ref}
         className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(242,140,40,0.08) 0%, transparent 70%)', filter: 'blur(40px)' }}
+        style={{ background: 'radial-gradient(circle, rgba(242,140,40,0.22) 0%, transparent 70%)', filter: 'blur(40px)' }}
         aria-hidden="true"
       />
       <div
         ref={orb2Ref}
         className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(42,85,128,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }}
+        style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }}
         aria-hidden="true"
       />
       <div
         ref={orb3Ref}
         className="absolute top-2/3 left-1/3 w-48 h-48 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(242,140,40,0.06) 0%, transparent 70%)', filter: 'blur(30px)' }}
+        style={{ background: 'radial-gradient(circle, rgba(242,140,40,0.16) 0%, transparent 70%)', filter: 'blur(30px)' }}
+        aria-hidden="true"
+      />
+
+      {/* ─── Ambient grid texture (echoes hero/why-spinny dark sections) ─── */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            'linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)',
+          backgroundSize: '4rem 4rem',
+        }}
         aria-hidden="true"
       />
 
       {/* ─── Multi-layer Wavy SVG Top ─── */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none rotate-180">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[50px] md:h-[70px]">
-          <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,10 1200,50 L1200,120 L0,120 Z" fill="var(--washr-gray)" opacity="0.3" />
-          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="var(--washr-gray)" />
+          <path d="M0,40 C200,90 400,10 600,50 C800,90 1000,10 1200,50 L1200,120 L0,120 Z" fill="#FFFFFF" opacity="0.06" />
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="#FFFFFF" opacity="0.1" />
         </svg>
       </div>
 
@@ -184,7 +195,7 @@ export default function CTASection() {
               id="cta-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white"
             >
-              Ready to Reclaim{' '}
+              Ready to Reclaim{' '}<br />
               <span style={{ color: 'var(--washr-orange)' }}>Your Time?</span>
             </h2>
 
@@ -230,7 +241,7 @@ export default function CTASection() {
             <div className="relative">
               <div className="relative aspect-square">
                 <Image
-                  src="/washingmachine.gif"
+                  src="/timesave.png"
                   alt="Washing machine animation — Spinny premium garment care"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -240,25 +251,7 @@ export default function CTASection() {
               </div>
 
               {/* Floating stat card with ticker animation */}
-              <div
-                className="absolute -bottom-5 -left-5 md:-left-8 rounded-3xl bg-white border border-washr-gray-mid px-5 py-4 z-10"
-                style={{ boxShadow: 'var(--washr-shadow-lg)' }}
-              >
-                <div className="flex items-center gap-3">
-                  <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(242, 140, 40, 0.1)' }}
-                  >
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                      <path d="M10 2L12 7.5L18 8L13.5 12L15 18L10 14.5L5 18L6.5 12L2 8L8 7.5L10 2Z" fill="var(--washr-orange)" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-lg font-extrabold" style={{ color: 'var(--washr-blue)' }}>99.2%</div>
-                    <div className="text-xs" style={{ color: 'var(--washr-text-muted)' }}>Satisfaction Rate</div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

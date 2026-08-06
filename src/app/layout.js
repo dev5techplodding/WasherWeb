@@ -12,14 +12,14 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Spinny — Laundry Done, Life On | The Easiest Chore You\'ll Never Do Again',
+  title: 'Spinny — Buy Back Your Weekend | Any Specialist, Any Service, Your Whole City',
   description:
-    'Laundry Done, Life On. Spinny is the easiest chore you\'ll never do again — complete wardrobe, footwear, and home care, picked up and delivered by vetted specialists.',
-  keywords: 'laundry done life on, time-buyback service, wardrobe care, footwear care, home textile care, pickup and delivery, laundry, dry cleaning, garment care',
+    'We\'ll take the chores, you take the time. Spinny is the concierge time-buyback platform for your whole wardrobe, footwear, and home — pick your own care specialist by preference, budget, and availability.',
+  keywords: 'buy back your weekend, time-buyback service, wardrobe care, footwear care, home textile care, pickup and delivery, dry cleaning, garment care, choose your specialist',
   openGraph: {
-    title: 'Spinny — Laundry Done, Life On',
+    title: 'Spinny — Buy Back Your Weekend',
     description:
-      'The easiest chore you\'ll never do again. Spinny handles pickup, care, and delivery for your whole wardrobe and home — you handle everything else.',
+      'The easiest chore you\'ll never do again. Spinny handles pickup, care, and delivery for your whole wardrobe and home — you choose the specialist, we handle everything else.',
     type: 'website',
     url: 'https://spinny.ca',
   },

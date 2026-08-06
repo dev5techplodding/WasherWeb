@@ -77,33 +77,25 @@ export default function HeroSection() {
 
       {/* ─── Main Content Area ─── */}
       <div className="relative z-10 flex-1 flex flex-col justify-center max-w-2xl w-full">
-        <div ref={contentRef} className="flex flex-col items-start text-left gap-0 max-w-2xl">
+        <div ref={contentRef} className="flex flex-col items-start text-left gap-0 max-w-2xl w-full">
           {/* Eyebrow Slogan Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-[#F28C28] text-xs sm:text-sm font-extrabold uppercase tracking-widest mb-4 backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-[#F28C28] animate-pulse" />
             <span>Spinny</span>
           </div>
 
-          {/* Main big headlines */}
+          {/* Main big headline */}
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[1.05] mb-1 font-sans text-white"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[1.05] mb-5 font-sans text-left"
             style={{ fontFamily: 'AvenirNext, var(--font-sans)' }}
           >
-            LAUNDRY DONE.
-          </h1>
-          <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-[1.05] mb-5 font-sans"
-            style={{
-              color: 'var(--washr-orange)',
-              fontFamily: 'AvenirNext, var(--font-sans)',
-            }}
-          >
-            LIFE ON.
+            <span className="block text-white">BUY BACK</span>
+            <span className="block text-[var(--washr-orange)]">YOUR WEEKEND.</span>
           </h1>
 
-          {/* Subheading */}
-          <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed mb-6 sm:mb-8 max-w-xl text-slate-200">
-            <span className="font-bold text-white">The easiest chore you&apos;ll never do again.</span> Spinny is your concierge time-buyback service for clothes, footwear, leather, and home textiles.
+          {/* Subheading — motto follows the time promise immediately, per brand voice order */}
+          <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed mb-6 sm:mb-8 max-w-2xl w-full text-slate-200 text-left">
+            <span className="font-bold text-white">Any specialist. Any service. Your whole city.</span> Spinny is the concierge time-buyback platform for clothes, footwear, leather, and home textiles — you choose the care specialist, by preference, budget, or availability.
           </p>
 
           {/* Interactive Search / Address Input Form */}

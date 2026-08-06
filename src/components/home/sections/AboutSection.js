@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { BRAND_MOTTO } from '@/components/data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +14,7 @@ const FEATURES = [
     badge: 'Time Buyback',
     stat: '⚡ ~5 hrs saved/wk',
     description:
-      'Wardrobe laundry, shoe care, ironing, and home-textile upkeep quietly eat a weekend a month. Spinny hands that time back — permanently, not just this once.',
+      'Wardrobe care, shoe care, ironing, and home-textile upkeep quietly eat a weekend a month. Spinny hands that time back — permanently, not just this once.',
     tags: ['No Weekend Chores', 'Autopilot Care'],
     accent: '#F28C28',
     glowRgb: '242, 140, 40',
@@ -61,7 +62,7 @@ const STATS = [
   { value: '4.9', suffix: '★', label: 'Average Rating' },
   { value: '10K+', label: 'Orders Completed' },
   { value: '99.2%', label: 'On-Time Delivery' },
-  { value: '24h', label: 'Turnaround Time' },
+  { value: '80+', label: 'Services to Choose From' },
 ];
 
 export default function AboutSection() {
@@ -113,7 +114,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="py-24 md:py-32 relative bg-slate-50/50"
+      className="py-14 md:py-22 relative bg-slate-50/50"
       aria-labelledby="about-heading"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
@@ -128,7 +129,7 @@ export default function AboutSection() {
               border: '1px solid rgba(242,140,40,0.18)',
             }}
           >
-            Why Spinny
+            Why Spinny?
           </span>
 
           <h2
@@ -141,7 +142,7 @@ export default function AboutSection() {
               className="relative"
               style={{ color: 'var(--washr-orange)' }}
             >
-              Just a Laundry Service
+              Just a Cleaning Service
             </span>
           </h2>
 
@@ -152,6 +153,29 @@ export default function AboutSection() {
             Spinny connects you with vetted specialists across clothes, footwear, and home textiles — not residential gig workers.
             The result: your time back, every single time, without a drop in quality.
           </p>
+
+          {/* ── Brand Motto Callout ── */}
+          <div
+            className="animate-in mt-8 flex items-start gap-4 rounded-2xl px-5 py-4 max-w-2xl"
+            style={{
+              backgroundColor: 'rgba(242,140,40,0.06)',
+              border: '1px solid rgba(242,140,40,0.18)',
+            }}
+          >
+            <span
+              className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-base"
+              style={{ backgroundColor: 'rgba(242,140,40,0.14)', color: 'var(--washr-orange)' }}
+              aria-hidden="true"
+            >
+              ✨
+            </span>
+            <p
+              className="text-sm sm:text-base font-semibold leading-relaxed"
+              style={{ color: 'var(--washr-blue-deep)' }}
+            >
+              {BRAND_MOTTO.full}
+            </p>
+          </div>
         </div>
 
         {/* ── Stats Bar ── */}

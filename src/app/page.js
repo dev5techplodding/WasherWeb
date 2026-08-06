@@ -1,6 +1,7 @@
 import Preloader from '@/components/Preloader';
 import PageProgress from '@/components/PageProgress';
 import HeroSection from '@/components/home/sections/HeroSection';
+import MottoMapSection from '@/components/home/sections/MottoMapSection';
 import Seemless from '@/components/home/sections/Seemless';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import AboutSection from '@/components/home/sections/AboutSection';
@@ -26,8 +27,11 @@ export default function Home() {
       {/* ─── Hero: Giant text split + interactive centered mockup ─── */}
       <HeroSection />
 
+      {/* ─── Brand Motto: Animated map connecting customers to nearby care specialists ─── */}
+      <MottoMapSection />
+
       {/* ─── Seemless: Tactile split-text and mouse parallax experience ─── */}
-      <Seemless />
+      {/* <Seemless /> */}
 
       {/* ─── Marquee Ticker 1: Orange horizontal sliding text ─── */}
       <MarqueeTicker
@@ -66,7 +70,7 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* ─── Membership: Set-and-forget time investment hook ─── */}
-      <MembershipSection />
+      {/* <MembershipSection /> */}
 
       {/* ─── CTA: Conversion wavy section with signup forms ─── */}
       <CTASection />

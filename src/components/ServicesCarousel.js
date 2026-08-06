@@ -61,7 +61,7 @@ const mapApiService = (item, index) => {
 
   const categoryText = item.basePrice
     ? `From $${item.basePrice}`
-    : item.category || 'Laundry Care';
+    : item.category || 'Garment Care';
 
   return {
     id: item._id || item.id || `service-${index}`,

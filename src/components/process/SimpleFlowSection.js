@@ -28,7 +28,7 @@ const FLOW_STEPS = [
     step: '03',
     title: 'Specialist Care',
     subtitle: 'Material Matched',
-    desc: 'Your items are routed to vetted specialist facilities — laundry, cobbler, leather studio, or rug cleaner.',
+    desc: 'Your items are routed to vetted specialist facilities — dry cleaner, cobbler, leather studio, or rug cleaner.',
     image: '/icons/flow_step3.png',
     badge: 'Investment Care',
     details: 'Material inspection, tailored stain treatment, and commercial-grade eco cleaning protect your investments.',

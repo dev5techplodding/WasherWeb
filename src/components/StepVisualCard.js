@@ -262,7 +262,7 @@ function DeliverMockup({ isActive }) {
 
       {/* Interactive feedback card */}
       <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-[0_2px_8px_rgba(27,58,92,0.03)] flex flex-col items-center gap-2 text-center">
-        <span className="text-[9px] font-black text-[var(--washr-blue)] uppercase tracking-wider">How was your laundry?</span>
+        <span className="text-[9px] font-black text-[var(--washr-blue)] uppercase tracking-wider">How was your order?</span>
         <div className="flex gap-1">
           {[1, 2, 3, 4, 5].map((star) => {
             const isFilled = star <= (hoverRating || rating);

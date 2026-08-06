@@ -99,7 +99,7 @@ export default function Preloader() {
           className="flex flex-col items-center gap-1.5 text-center px-4 mt-1"
         >
           <div className="text-white text-sm sm:text-md font-black tracking-[0.25em] uppercase">
-            Laundry Done, Life On.
+            We&apos;ll Take the Chores, You Take the Time.
           </div>
           <div className="text-[#F28C28]  sm:text-md font-semibold tracking-wide">
             The easiest chore you&apos;ll never do again.

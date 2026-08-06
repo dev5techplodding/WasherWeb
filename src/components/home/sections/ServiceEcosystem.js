@@ -99,7 +99,7 @@ export default function ServiceEcosystem() {
     <section
       ref={sectionRef}
       id="ecosystem"
-      className="py-24 md:py-32 relative bg-slate-50/50"
+      className="py-15 md:py-25 relative bg-slate-50/50"
       aria-labelledby="ecosystem-heading"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
@@ -133,7 +133,7 @@ export default function ServiceEcosystem() {
             className="animate-in text-base md:text-lg leading-relaxed"
             style={{ color: 'var(--washr-text-secondary)' }}
           >
-            Not a laundry menu — a map of your household, grouped by lifestyle need instead of wash type.
+            Not a single-category menu — a map of your household, grouped by lifestyle need instead of item type.
           </p>
         </div>
 
