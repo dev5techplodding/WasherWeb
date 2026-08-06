@@ -898,7 +898,7 @@ export const CLAIM_POLICY_HERO = {
 
 export const CLAIM_CATEGORIES = [
   {
-    category: 'Category 1: Investigation & Claim (Garment Issues)',
+    category: 'Investigation & Claim (Service Issues)',
     applicable:
       'Garment Damage, Garment Lost, Garment Missing, Wrong Deliveries, Color Bleeding, Color Fading, Shrinkage, Burn Mark Damage, Stain Not Removed, Foul Odors, Poor Ironing, and Missing Buttons.',
     sla: '48 to 72 Hours',
@@ -907,7 +907,7 @@ export const CLAIM_CATEGORIES = [
       'Support requests purchase receipts and photographic evidence. The laundry vendor is notified to investigate and revert within 48 hours. If service failure is established, claims are processed via refund or structured depreciation compensation.',
   },
   {
-    category: 'Category 2: Operational Delays (Check-Expedite-Apology)',
+    category: 'Operational Delays',
     applicable: 'Pickup Delays, Delivery Delays, and Logistics Routing Bottlenecks.',
     sla: 'Strictly within 2 Hours (120 Minutes)',
     badgeColor: 'blue',
@@ -915,7 +915,7 @@ export const CLAIM_CATEGORIES = [
       'Logistics dispatch contacts the driver, tracks real-time location, expedites transit, and issues a formal delivery update and apology ticket to the customer.',
   },
   {
-    category: 'Category 3: Investigation & Action (Driver Misconduct & Safety)',
+    category: 'Investigation & Action',
     applicable: 'Driver Misconduct, Professional Conduct Violations, and Customer Privacy Issues.',
     sla: 'High Priority (Immediate Escalation)',
     badgeColor: 'rose',
